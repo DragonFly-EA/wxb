@@ -399,17 +399,17 @@
                         <ul>
                             <div id="output1"></div>
                             <div id="output2"></div>
-{{--                            <li><a href=""><h4>Dar Es Salaam to Kigali</h4><span><p>From</p><h5>USD 896</h5></span></a>--}}
-{{--                            </li>--}}
-{{--                            <li><a href=""><h4>Kigali to Mumbai</h4><span><p>From</p><h5>USD 896</h5></span></a></li>--}}
-{{--                            <li><a href=""><h4>London to Lagos</h4><span><p>From</p><h5>USD 1095</h5></span></a></li>--}}
-{{--                            <li><a href=""><h4>Duala to Kigali</h4><span><p>From</p><h5>USD 1095</h5></span></a></li>--}}
-{{--                            <li><a href=""><h4>Kigali to Nairobi</h4><span><p>From</p><h5>USD 990</h5></span></a></li>--}}
-{{--                            <li><a href=""><h4>Kigali to London</h4><span><p>From</p><h5>USD 990</h5></span></a></li>--}}
-{{--                            <li><a href=""><h4>London to Johannesburg</h4><span><p>From</p><h5>USD 789</h5></span></a>--}}
-{{--                            </li>--}}
-{{--                            <li><a href=""><h4>Johannesburg to Amsterdam</h4>--}}
-{{--                                    <span><p>From</p><h5>USD 789</h5></span></a></li>--}}
+                            {{--                            <li><a href=""><h4>Dar Es Salaam to Kigali</h4><span><p>From</p><h5>USD 896</h5></span></a>--}}
+                            {{--                            </li>--}}
+                            {{--                            <li><a href=""><h4>Kigali to Mumbai</h4><span><p>From</p><h5>USD 896</h5></span></a></li>--}}
+                            {{--                            <li><a href=""><h4>London to Lagos</h4><span><p>From</p><h5>USD 1095</h5></span></a></li>--}}
+                            {{--                            <li><a href=""><h4>Duala to Kigali</h4><span><p>From</p><h5>USD 1095</h5></span></a></li>--}}
+                            {{--                            <li><a href=""><h4>Kigali to Nairobi</h4><span><p>From</p><h5>USD 990</h5></span></a></li>--}}
+                            {{--                            <li><a href=""><h4>Kigali to London</h4><span><p>From</p><h5>USD 990</h5></span></a></li>--}}
+                            {{--                            <li><a href=""><h4>London to Johannesburg</h4><span><p>From</p><h5>USD 789</h5></span></a>--}}
+                            {{--                            </li>--}}
+                            {{--                            <li><a href=""><h4>Johannesburg to Amsterdam</h4>--}}
+                            {{--                                    <span><p>From</p><h5>USD 789</h5></span></a></li>--}}
                         </ul>
                     </div>
                 </div>
@@ -497,7 +497,7 @@
         </div>
 
     </section>
-
+    <script src="{{asset('assets/site/js/deals.js')}}"></script>
 @endsection
 
 

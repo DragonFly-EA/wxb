@@ -14,8 +14,8 @@
 
     <!-- GSAP CDN -->
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>-->
-
-
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{{asset('assets/site/css/nice-select.css')}}">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-brands/css/uicons-brands.css'>
     <link rel='stylesheet'
