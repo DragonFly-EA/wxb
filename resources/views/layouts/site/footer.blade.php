@@ -140,8 +140,6 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 
     <div class="back-to-top-wrapper">

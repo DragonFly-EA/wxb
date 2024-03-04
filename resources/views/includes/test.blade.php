@@ -134,9 +134,6 @@
 
 
                                     </div> <!-- End div center   -->
-                                    <select class="form-control data-select fromselection" name=""
-                                            id="selectFrom">
-                                    </select>
 
 
                                     <div class="cont_select_center">
@@ -167,10 +164,6 @@
                                             </div>
                                         </div>
                                     </div> <!-- End div center   -->
-                                    <select name="" onchange=""
-                                            class="form-control singleItem data-select toselection"
-                                            onclick="return false;" id="selectTo">
-                                    </select>
                                 </li>
                                 <li>
                                     <div class="date-picker-form">
