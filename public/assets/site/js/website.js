@@ -10,9 +10,9 @@ $(document).ready(function () {
     });
     // Fetch airports, countries data, and route fares
     $.when(
-        $.getJSON("https://wb.digilab.co.ke/api/airports"),
-        $.getJSON("https://wb.digilab.co.ke/Db/countries.json"),
-        $.getJSON("https://wb.digilab.co.ke/Db/routeFares.json")
+        $.getJSON("https://flyingwithdragonfly.com/dist/phoenix/V1.0/phpActions/retrieveAirportsInfo.php"),
+        $.getJSON("https://flyingwithdragonfly.com/dist/phoenix/V1.0/db/countries.json"),
+        $.getJSON("https://flyingwithdragonfly.com/dist/phoenix/V1.0/db/routeFares.json")
     ).done(function (airports, countries_data, fares) {
         handleData(airports[0], countries_data[0], fares[0]);
     });
@@ -22,24 +22,6 @@ $(document).ready(function () {
     $("#offers").on("change", function () {
         loadOffers();
     });
-    // // Fetch current location
-    // $.getJSON("https://wb.digilab.co.ke/api/geolocation", function (location) {
-    //     current_location = location;
-    // });
-    // // Fetch airports, countries data, and route fares
-    // $.when(
-    //     $.getJSON("https://wb.digilab.co.ke/api/airports"),
-    //     $.getJSON("https://wb.digilab.co.ke/Db/countries.json"),
-    //     $.getJSON("https://wb.digilab.co.ke/Db/routeFares.json")
-    // ).done(function (airports, countries_data, fares) {
-    //     handleData(airports[0], countries_data[0], fares[0]);
-    // });
-    // $("#selectFrom").on("change", function () {
-    //     loadAirports();
-    // });
-    // $("#offers").on("change", function () {
-    //     loadOffers();
-    // });
 });
 
 function loadAirports() {
@@ -77,7 +59,7 @@ function handleData(airports, countries_data, fares) {
     appendAirportScheduleData(airports, countries_data, current_location);
     appendOffers(airports, countries_data, current_location);
 
-    let current_city = $("#selectFrom").val();
+    let current_city = "NBO";
     //Airport To
     appendDestinationJson(
         airports.filter((x) =>
@@ -174,9 +156,9 @@ function appendOfferFrom(airports, countries_data, select, current_location) {
                             </div>
                            </li>
                          </ul>`;
-        document.getElementById("first_offer").innerHTML = option;
+        // document.getElementById("first_offer").innerHTML = option;
     }
-    const numberOfAirportsToSelect = 4;
+    const numberOfAirportsToSelect = 8;
     const selected4Airports = [];
 
     while (

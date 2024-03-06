@@ -102,9 +102,9 @@
                             <ul>
                                 <li>
                                     <div class="cont_select_center">
-
+                                        <select name="" id="selectFrom"></select>
                                         <!-- Custom select structure -->
-                                        <div class="select_mate select_mate1" data-mate-select="active">
+                                        <div class="select_mate select_mate1" data-mate-select="active" style="display: none">
 
                                             <select name="" onchange="" onclick="return false;" id="">
                                                 <option value=""><h5>From </h5> <br>
@@ -134,15 +134,12 @@
 
 
                                     </div> <!-- End div center   -->
-                                    <select class="form-control data-select fromselection" name=""
-                                            id="selectFrom">
-                                    </select>
 
 
                                     <div class="cont_select_center">
-
+                                        <select name="" id="selectTo"></select>
                                         <!-- Custom select structure -->
-                                        <div class="select_mate select_mate2" data-mate-select="active">
+                                        <div class="select_mate select_mate2" data-mate-select="active" style="display: none">
 
                                             <select name="" onchange="" onclick="return false;" id="">
                                                 <option value=""><h5>To </h5> <br>
@@ -167,10 +164,6 @@
                                             </div>
                                         </div>
                                     </div> <!-- End div center   -->
-                                    <select name="" onchange=""
-                                            class="form-control singleItem data-select toselection"
-                                            onclick="return false;" id="selectTo">
-                                    </select>
                                 </li>
                                 <li>
                                     <div class="date-picker-form">
