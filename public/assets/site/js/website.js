@@ -161,19 +161,12 @@ function appendOfferFrom(airports, countries_data, select, current_location) {
     const numberOfAirportsToSelect = 8;
     const selected4Airports = [];
 
-    while (
-        selected4Airports.length < numberOfAirportsToSelect &&
-        airports.length > 0
-        ) {
+    while (selected4Airports.length < numberOfAirportsToSelect && airports.length > 0) {
         const randomIndex = Math.floor(Math.random() * airports.length);
         const selectedAirport = airports[randomIndex];
 
         // Check if the selected airport is not already in the selectedAirports array
-        if (
-            !selected4Airports.some(
-                (airport) => airport.iata_code === selectedAirport.iata_code
-            )
-        ) {
+        if (!selected4Airports.some((airport) => airport.iata_code === selectedAirport.iata_code)) {
             selected4Airports.push(selectedAirport);
         }
     }
@@ -181,6 +174,7 @@ function appendOfferFrom(airports, countries_data, select, current_location) {
     let offer_deals = fullDeals.filter((x) => {
         return x.city.includes(current_location);
     });
+    console.log(offer_deals);
 
     for (let i = 0; i < selected4Airports.length; i++) {
         other_offers += `                        <li data-aos="fade-left">

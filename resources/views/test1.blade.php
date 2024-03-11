@@ -42,17 +42,21 @@
         $('#datepicker').datepicker({
             format: 'yyyy-mm-dd',
             autoclose: true,
-            startDate: '+1d',
-            endDate: '+1y',
+            startDate: 'today',
+            endDate: '+1m',
             beforeShowDay: function(date){
-                var price = 100;
-                var currentDate = date.toISOString().slice(0,10);
-                var cssClass = 'has-price';
-                var content = '<span class="date-price">' + date.getDate() + ' $' + price + '</span>';
+                var currentDate = new Date();
+                var currentMonth = currentDate.getMonth();
+                var nextMonth = new Date(currentDate.getFullYear(), currentMonth + 1, 0);
+                var nextMonthStartDate = new Date(currentDate.getFullYear(), currentMonth + 1, 1);
+                var nextMonthEndDate = new Date(currentDate.getFullYear(), currentMonth + 2, 0);
+
                 return {
-                    classes: cssClass,
-                    tooltip: '',
-                    content: content
+                    startDate: nextMonthStartDate,
+                    endDate: nextMonthEndDate,
+                    enabled: date >= nextMonthStartDate && date <= nextMonth,
+                    classes: 'has-price',
+                    content: date.getDate() + ' $100'
                 };
             }
         });

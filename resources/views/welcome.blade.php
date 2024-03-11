@@ -155,204 +155,6 @@
                     <div class="dont-miss-offer-columns-style dont-miss-offer-column2">
                         <ul id="first_offer"></ul>
                         <ul id="other_offers">
-{{--                            <li data-aos="">--}}
-{{--                                <a href="">--}}
-{{--                                    <figure><img src="{{asset('assets/site/images/London.jpg')}}"></figure>--}}
-{{--                                    <div class="dont-miss-offer-details">--}}
-{{--                                        <div class="dont-miss-offer-details-hover">--}}
-{{--                                            <div class="dont-miss-offer-details-visible">--}}
-{{--                                                <b>--}}
-{{--                                                    <h4>London</h4>--}}
-{{--                                                    <p>Round Trip</p>--}}
-{{--                                                </b>--}}
-{{--                                                <b>--}}
-{{--                                                    <!--<p>Economy From</p>-->--}}
-{{--                                                    <h4>From USD 297</h4>--}}
-{{--                                                </b>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="dont-miss-offer-details-invisible">--}}
-{{--                                                <ul>--}}
-{{--                                                    <li><a href="book.html">Book Now</a></li>--}}
-{{--                                                    <li><a href="destination.html">Explore</a></li>--}}
-{{--                                                </ul>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-
-{{--                                    </div>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-
-{{--                            <li data-aos="">--}}
-{{--                                <a href="">--}}
-{{--                                    <figure><img src="{{asset('assets/site/images/Paris.jpg')}}"></figure>--}}
-{{--                                    <div class="dont-miss-offer-details">--}}
-{{--                                        <div class="dont-miss-offer-details-hover">--}}
-{{--                                            <div class="dont-miss-offer-details-visible">--}}
-{{--                                                <b>--}}
-{{--                                                    <h4>Paris</h4>--}}
-{{--                                                    <p>Round Trip</p>--}}
-{{--                                                </b>--}}
-{{--                                                <b>--}}
-{{--                                                    <!--<p>Economy From</p>-->--}}
-{{--                                                    <h4>From USD 297</h4>--}}
-{{--                                                </b>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="dont-miss-offer-details-invisible">--}}
-{{--                                                <ul>--}}
-{{--                                                    <li><a href="book.html">Book Now</a></li>--}}
-{{--                                                    <li><a href="destination.html">Explore</a></li>--}}
-{{--                                                </ul>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-
-{{--                            <li data-aos="">--}}
-{{--                                <a href="">--}}
-{{--                                    <figure><img src="{{asset('assets/site/images/Abuja.jpg')}}"></figure>--}}
-{{--                                    <div class="dont-miss-offer-details">--}}
-{{--                                        <div class="dont-miss-offer-details-hover">--}}
-{{--                                            <div class="dont-miss-offer-details-visible">--}}
-{{--                                                <b>--}}
-{{--                                                    <h4>Abuja</h4>--}}
-{{--                                                    <p>Round Trip</p>--}}
-{{--                                                </b>--}}
-{{--                                                <b>--}}
-{{--                                                    <!--<p>Economy From</p>-->--}}
-{{--                                                    <h4>From USD 297</h4>--}}
-{{--                                                </b>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="dont-miss-offer-details-invisible">--}}
-{{--                                                <ul>--}}
-{{--                                                    <li><a href="book.html">Book Now</a></li>--}}
-{{--                                                    <li><a href="destination.html">Explore</a></li>--}}
-{{--                                                </ul>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-
-{{--                            <li data-aos="">--}}
-{{--                                <a href="">--}}
-{{--                                    <figure><img src="{{asset('assets/site/images/Dubai.jpg')}}"></figure>--}}
-{{--                                    <div class="dont-miss-offer-details">--}}
-{{--                                        <div class="dont-miss-offer-details-hover">--}}
-{{--                                            <div class="dont-miss-offer-details-visible">--}}
-{{--                                                <b>--}}
-{{--                                                    <h4>Dubai</h4>--}}
-{{--                                                    <p>Round Trip</p>--}}
-{{--                                                </b>--}}
-{{--                                                <b>--}}
-{{--                                                    <!--<p>Economy From</p>-->--}}
-{{--                                                    <h4>From USD 297</h4>--}}
-{{--                                                </b>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="dont-miss-offer-details-invisible">--}}
-{{--                                                <ul>--}}
-{{--                                                    <li><a href="book.html">Book Now</a></li>--}}
-{{--                                                    <li><a href="destination.html">Explore</a></li>--}}
-{{--                                                </ul>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-
-{{--                            <li data-aos="">--}}
-{{--                                <a href="">--}}
-{{--                                    <figure><img src="{{asset('assets/site/images/Accra.jpg')}}"></figure>--}}
-{{--                                    <div class="dont-miss-offer-details">--}}
-{{--                                        <div class="dont-miss-offer-details-hover">--}}
-{{--                                            <div class="dont-miss-offer-details-visible">--}}
-{{--                                                <b>--}}
-{{--                                                    <h4>Accra</h4>--}}
-{{--                                                    <p>Round Trip</p>--}}
-{{--                                                </b>--}}
-{{--                                                <b>--}}
-{{--                                                    <!--<p>Economy From</p>-->--}}
-{{--                                                    <h4>From USD 297</h4>--}}
-{{--                                                </b>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="dont-miss-offer-details-invisible">--}}
-{{--                                                <ul>--}}
-{{--                                                    <li><a href="book.html">Book Now</a></li>--}}
-{{--                                                    <li><a href="destination.html">Explore</a></li>--}}
-{{--                                                </ul>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-
-{{--                                    </div>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-
-{{--                            <li data-aos="">--}}
-{{--                                <a href="">--}}
-{{--                                    <figure><img src="{{asset('assets/site/images/Ethiopia.jpg')}}"></figure>--}}
-{{--                                    <div class="dont-miss-offer-details">--}}
-{{--                                        <div class="dont-miss-offer-details-hover">--}}
-{{--                                            <div class="dont-miss-offer-details-visible">--}}
-{{--                                                <b>--}}
-{{--                                                    <h4>Ethiopia</h4>--}}
-{{--                                                    <p>Round Trip</p>--}}
-{{--                                                </b>--}}
-{{--                                                <b>--}}
-{{--                                                    <!--<p>Economy From</p>-->--}}
-{{--                                                    <h4>From USD 297</h4>--}}
-{{--                                                </b>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="dont-miss-offer-details-invisible">--}}
-{{--                                                <ul>--}}
-{{--                                                    <li><a href="book.html">Book Now</a></li>--}}
-{{--                                                    <li><a href="destination.html">Explore</a></li>--}}
-{{--                                                </ul>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-
-{{--                            <li data-aos="">--}}
-{{--                                <a href="">--}}
-{{--                                    <figure><img src="{{asset('assets/site/images/Nairobi.jpg')}}"></figure>--}}
-{{--                                    <div class="dont-miss-offer-details">--}}
-{{--                                        <div class="dont-miss-offer-details-hover">--}}
-{{--                                            <div class="dont-miss-offer-details-visible">--}}
-{{--                                                <b>--}}
-{{--                                                    <h4>Nairobi</h4>--}}
-{{--                                                    <p>Round Trip</p>--}}
-{{--                                                </b>--}}
-{{--                                                <b>--}}
-{{--                                                    <!--<p>Economy From</p>-->--}}
-{{--                                                    <h4>From USD 297</h4>--}}
-{{--                                                </b>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="dont-miss-offer-details-invisible">--}}
-{{--                                                <ul>--}}
-{{--                                                    <li><a href="book.html">Book Now</a></li>--}}
-{{--                                                    <li><a href="destination.html">Explore</a></li>--}}
-{{--                                                </ul>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-
-{{--                            <li data-aos="">--}}
-{{--                                <a href="">--}}
-{{--                                    <figure style="opacity:0"><img src="{{asset('assets/site/images/Nairobi.jpg')}}">--}}
-{{--                                    </figure>--}}
-{{--                                    <div class="find-more-wrap">--}}
-{{--                                        <h5>Business Class accommodations on extended flights</h5>--}}
-{{--                                        <b>Enhanced, digital, sustainable, revamped dining.</b>--}}
-{{--                                        <span>Find out more</span>--}}
-{{--                                    </div>--}}
-
-
-{{--                                </a>--}}
-
-{{--                            </li>--}}
                         </ul>
                     </div>
 
@@ -438,17 +240,12 @@
                                                     <figure><img src="{{asset('assets/site/images/app-store.png')}}">
                                                     </figure>
                                                 </a>
-
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-
                         </li>
-
-
                     </ul>
                 </div>
             </div>
@@ -483,14 +280,12 @@
                     </li>
                 </ul>
             </div>
-
         </div>
-
     </section>
     <script type="text/javascript"
             src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script src="{{asset('assets/site/js/deals.js')}}"></script>
-    <script src="{{asset('assets/site/js/website.js')}}"></script>
+    <script src="{{asset('assets/site/js/destinations.js')}}"></script>
 @endsection
 
 
