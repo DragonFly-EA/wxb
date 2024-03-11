@@ -1,0 +1,63 @@
+.desktop-main-links ul li > ul{
+    top:150px;
+}
+.promo-code-form{
+    width:100%;
+}
+
+
+
+
+@media handheld, only screen and (max-width: 1200px){
+    .desktop-main-links ul li a{padding:29px 10px 14px 10px;font-size:16px;}
+}
+
+@media handheld, only screen and (max-width: 1024px){
+    .submit-form-button button {
+        padding: 21px 4px; 
+    }
+    .desktop-main-links{
+        padding-left:10px;
+    }
+    .desktop-account-signup ul{
+        padding:20px 10px 0 0;
+    }
+    .desktop-main-links ul li > ul{
+        top:134px;
+        width: 96%;
+    }
+    .desktop-main-links ul li a {
+        padding: 22px 10px 14px 10px;
+        font-size: 16px;
+    }
+    .home-slider-wrapper .bx-wrapper .bx-caption{
+        padding:7% 0 0 2%;
+    }
+    .home-form-wrapper{
+        padding:0 10px;
+    }
+}
+@media handheld, only screen and (max-width: 768px){
+  .desktop-main-links {
+        width: 100%;
+        padding: 0;
+    }  
+    .desktop-main-links ul li > ul {
+    position: relative;
+    width: 100%;
+    top: 0;
+    }
+}
+@media handheld, only screen and (max-width: 600px){
+    .home-news-snip-wrapper ul li {
+        display: block;
+        display: flex;
+        flex-direction: column;
+    }
+    .home-news-content {
+        width: 100%;
+        order: 2;
+    }
+}
+
+

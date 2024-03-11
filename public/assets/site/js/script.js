@@ -7,6 +7,7 @@ $(window).on('load', function () { // makes sure the whole site is loaded
 
 $(document).ready(function () {
 
+
     $(".mobile-menu-icon.fi-rr-bars-sort").click(function () {
         $(".hidden-mobile").slideDown();
     });
@@ -24,7 +25,103 @@ $(document).ready(function () {
         $(".form-passenger-dropdown").slideToggle();
     });
 
-    $('select').niceSelect();
+    $(".show-customize-round-trip").click(function () {
+        $(".hide-customize-round-trip").slideToggle();
+        $(".hide-customize-passenger-trip").slideUp();
+        $(".hide-customize-class-trip").slideUp();
+    });
+
+    $(".show-customize-passenger-trip").click(function () {
+        $(".hide-customize-passenger-trip").slideToggle();
+        $(".hide-customize-round-trip").slideUp();
+        $(".hide-customize-class-trip").slideUp();
+    });
+
+    $(".show-customize-class-trip").click(function () {
+        $(".hide-customize-class-trip").slideToggle();
+        $(".hide-customize-round-trip").slideUp();
+        $(".hide-customize-passenger-trip").slideUp();
+    });
+
+    $(".round-trip-hide span").click(function () {
+        $(".hide-customize-round-trip").slideUp();
+    });
+
+    $(".passenger-hide-ctn button").click(function () {
+        $(".hide-customize-passenger-trip").slideUp();
+    });
+
+    $(".round-trip-hide span").click(function () {
+        $(".hide-customize-class-trip").slideUp();
+    });
+    $(".show-float-group-first").click(function () {
+        $(".hide-float-group-first").slideToggle();
+        $(".hide-float-group-second").slideUp();
+    });
+
+    $(".show-float-group-second").click(function () {
+        $(".hide-float-group-second").slideToggle();
+        $(".hide-float-group-first").slideUp();
+    });
+
+    $(".float-group-lists li").click(function () {
+        $(".hide-float-group-first").slideUp();
+        $(".hide-float-group-second").slideUp();
+    });
+
+    $(".lang-links-visible").click(function () {
+        $(".lang-links-invisible").slideToggle();
+    });
+
+
+    $(".open").click(function () {
+        $(".modalDialog1").modal("show");
+    });
+    $(".thanks-btn1").on('click', function () {
+        $(".modalDialog1").css("display", "none");
+    });
+    $(".close1").on('click', function () {
+        $(".modalDialog1").css("display", "none");
+    });
+    $(".modal-backdrop1").click(function () {
+        $(".modalDialog1").css("display", "none");
+    });
+
+    // $('select').niceSelect();
+
+
+    $('#datepicker').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        startDate: '+1d',
+
+        // endDate: '+1y',
+        beforeShowDay: function (date) {
+            var price = 100;
+            var currentDate = date.toISOString().slice(0, 10);
+            var cssClass = 'has-price';
+            var content = '<span class="date-price"><b></b><div class="date">' + date.getDate() + '</div> <div class="price">$' + price + '</div></span>';
+            return {
+                classes: cssClass,
+                tooltip: '',
+                content: content
+            };
+        }
+    });
+});
+
+
+$(document).ready(function () {
+    $('.drop-select1').select2({
+        minimumResultsForSearch: Infinity
+    });
+});
+
+$(document).ready(function () {
+    $('.drop-select2').select2({
+        //  placeholder: "Select origin",
+        //  allowClear: true
+    });
 });
 
 
@@ -97,20 +194,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
-
-// $(function () {
-//     $('input[name="daterange"]').daterangepicker({
-//         opens: 'left',
-//         locale: {
-//             format: 'DD/MM/YYYY'
-//         },
-//         autoApply: false,
-//     }, function (start, end, label) {
-//         console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-//     });
-//
-// });
 
 
 jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
@@ -245,7 +328,8 @@ function crear_select() {
             li[i].innerHTML = select_optiones[i].innerHTML;
             ul_cont[0].appendChild(li[i]);
 
-        }; // Fin For select_optiones
+        }
+        ; // Fin For select_optiones
     }
     ; // fin for divs_cont_select
 } // Fin Function
@@ -279,7 +363,7 @@ function open_select(idx) {
         if (slect_open == 'false') {
             document.querySelectorAll("[data-indx-select='" + idx1 + "']")[0].setAttribute('data-selec-open', 'true');
             document.querySelectorAll("[data-indx-select='" + idx1 + "'] > .cont_list_select_mate > ul")[0].style.height = hg + "px";
-            document.querySelectorAll("[data-indx-select='" + idx1 + "'] > .icon_select_mate")[0].style.transform = 'rotate(180deg)';
+            document.querySelectorAll("[data-indx-select='" + idx1 + "'] > .icon_select_mate")[0].style.transform = 'rotate(0deg)';
         } else {
             document.querySelectorAll("[data-indx-select='" + idx1 + "']")[0].setAttribute('data-selec-open', 'false');
             document.querySelectorAll("[data-indx-select='" + idx1 + "'] > .icon_select_mate")[0].style.transform = 'rotate(0deg)';
@@ -432,7 +516,9 @@ $('.go-top').click(function (event) {
     $('html, body').animate({scrollTop: 0}, 300);
 })
 
-// window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+  //  scrollFunction()
+};
 
 
 // Initialize AOS
@@ -567,25 +653,3 @@ function showContent(index) {
     // Apply the translation to slide in the desired content
     content.style.transform = 'translateX(' + translateValue + ')';
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

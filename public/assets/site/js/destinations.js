@@ -24,7 +24,7 @@ function handleData() {
     airport_data.sort((a, b) => {
         const municipalityA = (a.municipality || "").toUpperCase();
         const municipalityB = (b.municipality || "").toUpperCase();
-        return municipalityA.localeCompare(municipalityB, undefined, { ignorePunctuation: true });
+        return municipalityA.localeCompare(municipalityB, undefined, {ignorePunctuation: true});
     });
     let selectedAirports = airport_data.filter(airport =>
         fullDeals.find(deal => deal.city === current_city)
@@ -33,7 +33,8 @@ function handleData() {
 
     let destinationsHTML = selectedAirports.map(airport => {
         let priceFrom = getDealPriceFrom(current_city, airport.iata_code);
-        return `<li data-aos="fade-left">
+        return `<li>
+                <a href="">
                     <figure>
                         <img src="https://wb.digilab.co.ke/img/${airport.iata_code}.jpg" alt="${airport.municipality}" onerror="handleImageError(event)">
                     </figure>
@@ -56,8 +57,20 @@ function handleData() {
                             </div>
                         </div>
                     </div>
+                </a>
                 </li>`;
     }).join("");
+    destinationsHTML+=`                                <li data-aos="">
+                                    <a href="">
+                                        <figure style="opacity:0"><img
+                                                src="https://wb.digilab.co.ke/img/JRO.jpg"></figure>
+                                        <div class="find-more-wrap">
+                                            <h5>Business Class accommodations on extended flights</h5>
+                                            <b>Enhanced, digital, sustainable, revamped dining.</b>
+                                            <span>Find out more</span>
+                                        </div>
+                                    </a>
+                                </li>`
 
     $("#other_offers").html(destinationsHTML);
 }
