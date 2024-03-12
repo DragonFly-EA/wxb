@@ -58,7 +58,10 @@ $(document).ready(function () {
         $(".hide-float-group-first").slideToggle();
         $(".hide-float-group-second").slideUp();
     });
-
+    $(".show-float-group-first").on('input',function () {
+        $(".hide-float-group-first").slideDown();
+        // $(".hide-float-group-second").slideUp();
+    })
     $(".show-float-group-second").click(function () {
         $(".hide-float-group-second").slideToggle();
         $(".hide-float-group-first").slideUp();

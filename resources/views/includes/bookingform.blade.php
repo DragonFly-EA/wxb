@@ -187,112 +187,11 @@
                                                                 <span><h4>Flights To:</h4><i
                                                                         class="fa-solid fa-xmark"></i></span>
                                                 </li>
-
-                                                <li>
-                                                    <div class="float-group-country">
-                                                        <h5>Germany</h5>
-                                                        <p>Berlin</p>
-                                                    </div>
-                                                    <div class="float-group-airport">
-                                                        <h5>BER</h5>
-                                                        <p>Berlin Brandenburg Airport</p>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <div class="float-group-country">
-                                                        <h5>Germany</h5>
-                                                        <p>Frankfurt am Main</p>
-                                                    </div>
-                                                    <div class="float-group-airport">
-                                                        <h5>FRA</h5>
-                                                        <p>FRA, Frankfurt am Main Airport</p>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <div class="float-group-country">
-                                                        <h5>Benin</h5>
-                                                        <p>Cotoniu</p>
-                                                    </div>
-                                                    <div class="float-group-airport">
-                                                        <h5>COO</h5>
-                                                        <p>Cadjehoun Airport</p>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <div class="float-group-country">
-                                                        <h5>Germany</h5>
-                                                        <p>Berlin</p>
-                                                    </div>
-                                                    <div class="float-group-airport">
-                                                        <h5>BER</h5>
-                                                        <p>Berlin Brandenburg Airport</p>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <div class="float-group-country">
-                                                        <h5>Germany</h5>
-                                                        <p>Frankfurt am Main</p>
-                                                    </div>
-                                                    <div class="float-group-airport">
-                                                        <h5>FRA</h5>
-                                                        <p>FRA, Frankfurt am Main Airport</p>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <div class="float-group-country">
-                                                        <h5>Benin</h5>
-                                                        <p>Cotoniu</p>
-                                                    </div>
-                                                    <div class="float-group-airport">
-                                                        <h5>COO</h5>
-                                                        <p>Cadjehoun Airport</p>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <div class="float-group-country">
-                                                        <h5>Germany</h5>
-                                                        <p>Berlin</p>
-                                                    </div>
-                                                    <div class="float-group-airport">
-                                                        <h5>BER</h5>
-                                                        <p>Berlin Brandenburg Airport</p>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <div class="float-group-country">
-                                                        <h5>Germany</h5>
-                                                        <p>Frankfurt am Main</p>
-                                                    </div>
-                                                    <div class="float-group-airport">
-                                                        <h5>FRA</h5>
-                                                        <p>FRA, Frankfurt am Main Airport</p>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <div class="float-group-country">
-                                                        <h5>Benin</h5>
-                                                        <p>Cotoniu</p>
-                                                    </div>
-                                                    <div class="float-group-airport">
-                                                        <h5>COO</h5>
-                                                        <p>Cadjehoun Airport</p>
-                                                    </div>
-                                                </li>
+                                                <span id="selectTo"></span>
                                             </ul>
                                         </div>
                                     </div>
-
-
                                 </li>
-
                                 <li class="open">
 
                                     <div class="date-inputs-wrapper">

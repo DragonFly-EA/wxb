@@ -67,12 +67,16 @@ function appendAirportData(airports, countries_data, current_location) {
 
             listItem.appendChild(div);
             listItem.appendChild(div1);
-            // Adding click event listener to handle selection
             listItem.addEventListener("click", function() {
-                // Update the input field with the selected airport data
                 document.querySelector(".float-group-first input").value = airport.name + ", " + airport.iata_code+", "+airport.municipality;
+                appendData(airports.filter((x) =>
+                    fullDeals
+                        .find((deal) => deal.city === airport.iata_code)
+                        .routes.map((route) => route.city)
+                        .includes(x.iata_code)
+                ),countries_data)
+                $(".hide-float-group-first").slideUp();
             });
-
             options.push(listItem);
         } catch (e) {
             // Handle error
@@ -90,4 +94,41 @@ function searchFromDestinations() {
         return false;
     });
     appendAirportData(filteredAirports, countries, current_location);
+}
+function appendData(airports,countries_data) {
+    let select = $("#selectTo");
+    let options = [];
+    airports.forEach(airport => {
+        try{
+            let listItem = document.createElement("li"); // Create new list item for each airport
+            let div = document.createElement("div");
+            let div1 = document.createElement('div');
+            div1.className = "float-group-airport";
+            div.className = "float-group-country";
+
+            let heading = document.createElement("h5");
+            heading.textContent = countries_data.find((x) => x.code === airport.iso_country).name;
+            let paragraph = document.createElement("p");
+            paragraph.textContent = airport.municipality;
+            div.appendChild(heading);
+            div.appendChild(paragraph);
+            let heading1 = document.createElement("h5");
+            heading1.textContent = airport.iata_code;
+            let p1 = document.createElement("p");
+            p1.textContent = airport.name;
+            div1.appendChild(heading1)
+            div1.appendChild(p1)
+
+            listItem.appendChild(div);
+            listItem.appendChild(div1);
+            listItem.addEventListener("click", function() {
+                document.querySelector(".float-group-second input").value = airport.name + ", " + airport.iata_code+", "+airport.municipality;
+                $(".hide-float-group-second").slideUp();
+            });
+            options.push(listItem);
+        }catch (e) {
+        }
+    })
+    select.empty();
+    select.append(options);
 }
