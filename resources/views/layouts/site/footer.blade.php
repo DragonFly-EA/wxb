@@ -1,12 +1,3 @@
-<script>
-    // Remove focus from input field when clicked outside
-    document.addEventListener('click', function (event) {
-        var input = document.getElementById('myInput');
-        if (event.target !== input) {
-            input.blur();
-        }
-    });
-</script>
 <!-- Scripts -->
 <script type="text/javascript" src="{{asset('assets/site/js/jquery-3.7.1.min.js')}}"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -19,6 +10,7 @@
 
 <script type="text/javascript" src="{{asset(asset('assets/site/js/destinations.js'))}}"></script>
 <script type="text/javascript" src="{{asset(asset('assets/site/js/deals.js'))}}"></script>
+<script type="text/javascript" src="{{asset(asset('assets/site/js/bookingform.js'))}}"></script>
 <script type="text/javascript" src="{{asset('assets/site/js/gsap.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/site/js/ScrollMagic.min.js')}}"></script>
 <script src="https://kit.fontawesome.com/0c32daa30d.js" crossorigin="anonymous"></script>
@@ -39,52 +31,12 @@
 
 <script>
     // Remove focus from input field when clicked outside
-    document.addEventListener('click', function (event) {
-        var input = document.getElementById('myInput');
-        if (event.target !== input) {
-            input.blur();
-        }
-    });
+    // document.addEventListener('click', function (event) {
+    //     var input = document.getElementById('myInput');
+    //     if (event.target !== input) {
+    //         input.blur();
+    //     }
+    // });
 </script>
-<script>
-    class Quantity {
-        constructor(containerId) {
-            this.value = 1;
-            this.container = document.getElementById(containerId);
-            this.render();
-        }
+<script src="{{asset('assets/site/js/passenger_input.js')}}"></script>
 
-        increment() {
-            this.value++;
-            this.render();
-        }
-
-        decrement() {
-            if (this.value > 1) {
-                this.value--;
-                this.render();
-            }
-        }
-
-        render() {
-            this.container.innerHTML = `
-            <div>
-                <p>Set the quantity</p>
-                <div class="quantity-input">
-                    <button class="quantity-input__modifier quantity-input__modifier--left" onclick="quantity.decrement()">—</button>
-                    <input class="quantity-input__screen" type="text" value="${this.value}" readonly>
-                    <button class="quantity-input__modifier quantity-input__modifier--right" onclick="quantity.increment()">+</button>
-                </div>
-            </div>
-        `;
-        }
-    }
-
-    const quantity = new Quantity('app');
-    const quantity1 = new Quantity('app1');
-    const quantity2 = new Quantity('app2');
-    const quantity3 = new Quantity('app3');
-    const quantity4 = new Quantity('app4');
-    const quantity5 = new Quantity('app5');
-
-</script>

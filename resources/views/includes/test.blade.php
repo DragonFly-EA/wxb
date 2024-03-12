@@ -1,4 +1,4 @@
-<div class="home-form-wrapper" data-aos="">
+<div class="home-form-wrapper" >
     <div class="container-rigid">
         <!--Horizontal Tab-->
         <div id="horizontalTab">
@@ -254,7 +254,7 @@
                     </form>
                 </div>
 
-                <div class="flight-status-tab" data-aos="">
+                <div class="flight-status-tab" >
                     <form>
                         <div class="form-tab-title">
                             <div class="form-tab-radio">

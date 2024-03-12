@@ -174,7 +174,7 @@ function appendOfferFrom(airports, countries_data, select, current_location) {
     let offer_deals = fullDeals.filter((x) => {
         return x.city.includes(current_location);
     });
-    console.log(offer_deals);
+    //console.log(offer_deals);
 
     for (let i = 0; i < selected4Airports.length; i++) {
         other_offers += `                        <li data-aos="fade-left">

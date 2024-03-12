@@ -6,7 +6,7 @@
                 <div class="top-desktop-links">
                     <div class="container-rigid">
                         <div class="left-top-desktop-links">
-                            <ul data-aos="">
+                            <ul>
 
                                 <li><a>
                                         <!--<i class="fi fi-rr-info"></i> -->
@@ -16,7 +16,7 @@
                             </ul>
                         </div>
                         <div class="right-top-desktop-links">
-                            <ul data-aos="">
+                            <ul>
 
                                 <li><a href="travel-information.html"><b>Show More</b>
 
@@ -27,14 +27,14 @@
                     </div>
                 </div>
                 <div class="container-rigid bottom-desktop-links">
-                    <div class="desktop-logo-wrapper" data-aos="">
+                    <div class="desktop-logo-wrapper">
                         <figure><a href="{{url('/')}}"><img src="{{asset('assets/site/images/rwandairlogo.png')}}"
                                                             alt="rwandair logo"></a></figure>
                     </div>
                     <div class="desktop-main-links">
                         <ul>
 
-                            <li class="desktop-main-links-visible"><a href="" data-aos="" class="question-link">Explore
+                            <li class="desktop-main-links-visible"><a href="" class="question-link">Explore
                                     <i
                                         class="fi fi-rr-angle-small-down"></i></a>
                                 <ul class="desktop-main-links-invisible">
@@ -83,7 +83,7 @@
                             </li>
 
                             <li class="desktop-main-links-visible">
-                                <a href="" data-aos="" class="question-link">Book<i
+                                <a href="" class="question-link">Book<i
                                         class="fi fi-rr-angle-small-down"></i>
                                 </a>
 
@@ -136,7 +136,7 @@
                             </li>
 
                             <li class="desktop-main-links-visible">
-                                <a href="" data-aos="" class="question-link">Experience <i
+                                <a href="" class="question-link">Experience <i
                                         class="fi fi-rr-angle-small-down"></i> </a>
 
                                 <ul class="desktop-main-links-invisible">
@@ -207,7 +207,7 @@
 
 
                             <li class="desktop-main-links-visible">
-                                <a href="" data-aos="" class="question-link">DreamMiles <i
+                                <a href="" class="question-link">DreamMiles <i
                                         class="fi fi-rr-angle-small-down"></i> </a>
                                 <ul class="desktop-main-links-invisible">
                                     <div class="dropdown-links-columns">
@@ -265,7 +265,7 @@
                             </li>
 
                             <li class="desktop-main-links-visible">
-                                <a href="" data-aos="" class="question-link">Help <i
+                                <a href="" class="question-link">Help <i
                                         class="fi fi-rr-angle-small-down"></i>
                                 </a>
                                 <ul class="desktop-main-links-invisible">
@@ -293,7 +293,6 @@
                                             <li><a href="help-center.html">Reduced Mobility</a></li>
                                         </div>
                                     </div>
-
                                     <div class="dropdown-links-columns">
                                         <h3>Contact Us</h3>
                                         <div class="dropdown-links-style">
@@ -338,7 +337,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="desktop-account-signup" data-aos="">
+                    <div class="desktop-account-signup">
                         <ul>
                             <li><a href="search.html"><i class="fi fi-rr-search"></i></a></li>
                             <li class="desktop-main-links-visible">
@@ -347,7 +346,7 @@
 
 
                                     <div id="lang_selector" class="language-dropdown">
-                                        <a href="" data-aos="" class="question-link">
+                                        <a href="" class="question-link">
                                             <label for="toggle" class="lang-flag lang-en"
                                                    title="Click to select the language">
                                                 <span class="flag"></span>
@@ -426,9 +425,7 @@
                     </div>
                 </div>
             </div>
-
-
-            <div class="mobile-navigation" data-aos="">
+            <div class="mobile-navigation">
                 <div class="visible-mobile">
 
                     <div class="menu-icon">
@@ -445,7 +442,7 @@
 
                     <div class="demo-login-wrapper">
 
-                        <div class="desktop-account-signup" data-aos="">
+                        <div class="desktop-account-signup">
                             <ul>
                                 <li><a href="search.html"><i class="fi fi-rr-search"></i></a></li>
                                 <li>
@@ -486,7 +483,7 @@
                     <div class="desktop-main-links">
                         <ul>
 
-                            <li class="desktop-main-links-visible"><a href="" data-aos="" class="question-link">Explore
+                            <li class="desktop-main-links-visible"><a href="" class="question-link">Explore
                                     <i
                                         class="fi fi-rr-angle-small-down"></i></a>
                                 <ul class="desktop-main-links-invisible">
@@ -535,7 +532,7 @@
                             </li>
 
                             <li class="desktop-main-links-visible">
-                                <a href="" data-aos="" class="question-link">Book<i
+                                <a href="" class="question-link">Book<i
                                         class="fi fi-rr-angle-small-down"></i>
                                 </a>
 
@@ -611,7 +608,7 @@
                             </li>
 
                             <li class="desktop-main-links-visible">
-                                <a href="" data-aos="" class="question-link">Experience <i
+                                <a href="" class="question-link">Experience <i
                                         class="fi fi-rr-angle-small-down"></i> </a>
 
                                 <ul class="desktop-main-links-invisible">
@@ -682,7 +679,7 @@
 
 
                             <li class="desktop-main-links-visible">
-                                <a href="" data-aos="" class="question-link">DreamMiles <i
+                                <a href="" class="question-link">DreamMiles <i
                                         class="fi fi-rr-angle-small-down"></i> </a>
                                 <ul class="desktop-main-links-invisible">
                                     <div class="dropdown-links-columns">
@@ -743,7 +740,7 @@
                             </li>
 
                             <li class="desktop-main-links-visible">
-                                <a href="" data-aos="" class="question-link">Help <i
+                                <a href="" class="question-link">Help <i
                                         class="fi fi-rr-angle-small-down"></i>
                                 </a>
                                 <ul class="desktop-main-links-invisible">
@@ -818,23 +815,21 @@
                     </div>
                 </div>
             </div>
-
         </header><!-- #header -->
-
         <section>
 
             <div class="home-slider-form-wrapper">
 
-                <div class="home-slider-wrapper" data-aos="">
+                <div class="home-slider-wrapper">
                     <ul class="bxslider">
                         <li>
                             <img src="{{asset('assets/site/images/slider_banner.jpg')}}"/>
                             <div class="bx-caption hm-bx-caption">
                                 <!--<div class="display-caption">-->
                                 <!--    <div class="slider-vertical">-->
-                                <h1 data-aos="">Enjoy More Convenience with <br> 6 weekly nonstop flights</h1>
-                                <p data-aos="">Starting 28 October</p>
-                                <a href="" data-aos="">Learn More</a>
+                                <h1>Enjoy More Convenience with <br> 6 weekly nonstop flights</h1>
+                                <p>Starting 28 October</p>
+                                <a href="">Learn More</a>
                             </div>
                         </li>
                     </ul>
@@ -844,9 +839,9 @@
 
             <div class="home-plan-trip-wrapper">
                 <div class="container-rigid">
-                    <!--<h3 data-aos="">Plan your trip</h3>-->
+                    <!--<h3 >Plan your trip</h3>-->
                     <ul>
-                        <li data-aos="">
+                        <li>
                             <a href="{{url("#destination.html")}}">
                                 <figure><img src="{{asset('assets/site/images/book-hotels.png')}}"></figure>
                                 <div class="plan-trip-caption">
@@ -856,7 +851,7 @@
                             </a>
                         </li>
 
-                        <li data-aos="">
+                        <li>
                             <a href="{{url('#travel-requirements.html')}}">
                                 <figure><img src="{{asset('assets/site/images/book-cars.png')}}"></figure>
                                 <div class="plan-trip-caption">
@@ -865,8 +860,7 @@
                                 </div>
                             </a>
                         </li>
-
-                        <li data-aos="">
+                        <li>
                             <a href="{{url('#special-assistance.html')}}">
                                 <figure><img src="{{asset('assets/site/images/book-tours.png')}}"></figure>
                                 <div class="plan-trip-caption">
@@ -875,8 +869,7 @@
                                 </div>
                             </a>
                         </li>
-
-                        <li data-aos="">
+                        <li>
                             <a href="{{url('#travel-insurance.html')}}">
                                 <figure><img src="{{asset('assets/site/images/upgrade.png')}}"></figure>
                                 <div class="plan-trip-caption">
@@ -885,17 +878,15 @@
                                 </div>
                             </a>
                         </li>
-
                     </ul>
                 </div>
             </div>
             <div class="new-next-trip-wrapper">
-
                 <div class="container-rigid">
-                    <h2 data-aos="">Discover your next trip</h2>
+                    <h2>Discover your next trip</h2>
                     <div class="sustainability-sponsors">
                         <ul>
-                            <li data-aos="">
+                            <li>
                                 <figure><img src="{{asset('assets/site/images/sustainability-corporate.jpg')}}">
                                 </figure>
                                 <div class="media-center-caption">
@@ -913,8 +904,9 @@
 
                             </li>
 
-                            <li data-aos="">
-                                <figure><img src="{{asset('assets/site/images/sustainability-sponsorship.jpg')}}" alt="ticket flexibilty">
+                            <li>
+                                <figure><img src="{{asset('assets/site/images/sustainability-sponsorship.jpg')}}"
+                                             alt="ticket flexibilty">
                                 </figure>
                                 <div class="media-center-caption">
                                     <div class="entry-space">
@@ -925,8 +917,7 @@
                                     <a href=""><span>Discover More</span><i class="fi fi-rr-angle-right"></i></a>
                                 </div>
                             </li>
-
-                            <li data-aos="">
+                            <li>
                                 <figure><img src="{{asset('assets/site/images/sustainability-tender.jpg')}}"></figure>
                                 <div class="media-center-caption">
                                     <div class="entry-space">
@@ -941,18 +932,13 @@
                                     <a href=""><span>Check it out</span><i class="fi fi-rr-angle-right"></i></a>
                                 </div>
                             </li>
-
                         </ul>
                     </div>
-
                 </div>
-
-
             </div>
-
             <div class="dont-miss-offer-wrapper">
                 <div class="container-rigid">
-                    <div class="dont-miss-dropselect" data-aos="">
+                    <div class="dont-miss-dropselect">
                         <h3>Don't miss our offers...</h3>
 
                         <div class="cont_select_center">
@@ -983,7 +969,7 @@
                             </ul>
                         </div>
 
-                        <div class="view-more-offers" data-aos=""><p>*Prices, including all taxes, fees and surcharges,
+                        <div class="view-more-offers"><p>*Prices, including all taxes, fees and surcharges,
                                 may
                                 vary and are intended to guide your selection.</p><a href="">View More Offers</a></div>
                     </div>
@@ -1002,11 +988,11 @@
                                 <div class="display-caption">
                                     <div class="slider-vertical">
                                         <div class="dreammiles-caption">
-                                            <h3 data-aos="">Experience a world <br> DreamMiles benefits.</h3>
+                                            <h3>Experience a world <br> DreamMiles benefits.</h3>
                                             <br>
                                             <p>We reward travelers exclusively for flying with us. Joining is simple</p>
                                             <br>
-                                            <a href="dreammiles.html" data-aos="">Explore More</a>
+                                            <a href="dreammiles.html">Explore More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1060,8 +1046,8 @@
                                      style="background-image:none;position:unset;padding-top:60px;padding-left:3em;">
                                     <div class="display-caption">
                                         <div class="slider-vertical">
-                                            <h3 data-aos="">Plan your Travel on your terms</h3>
-                                            <p data-aos="">Plan your travel with ease. seamless booking and more at your
+                                            <h3>Plan your Travel on your terms</h3>
+                                            <p>Plan your travel with ease. seamless booking and more at your
                                                 fingertips</p>
 
                                             <div class="qrcode-download">
@@ -1092,10 +1078,7 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </li>
-
-
                         </ul>
                     </div>
                 </div>
@@ -1109,12 +1092,10 @@
                                 <p>Customers will have the opportunity to spread the cost of...</p>
                                 <a href="">Read More</a>
                             </div>
-
                             <div class="home-news-image">
                                 <figure><img src="{{asset('assets/site/images/home-fly.jpg')}}"></figure>
                             </div>
                         </li>
-
                         <li>
                             <div class="home-news-content">
                                 <h3>Discover our partner Qatar Airways</h3>
@@ -1128,37 +1109,32 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
-
-        </section><!-- #section -->
-
-
+        </section>
         <footer>
-
             <div class="footer-wrapper">
                 <div class="container-rigid">
                     <div class="footer-trip-planning-wrapper">
                         <h3>Start planning your next trip</h3>
                         <ul>
-                            <li data-aos=""><a href="https://flights.rwandair.com/en/flights-to-africa/"
-                                               target="_blank">
+                            <li><a href="https://flights.rwandair.com/en/flights-to-africa/"
+                                   target="_blank">
                                     <figure><img src="{{asset('assets/site/images/continent-africa.svg')}}"></figure>
                                     <p>Flight to Africa</p><i class="fi fi-rr-angle-small-right"></i></a></li>
-                            <li data-aos=""><a href="https://flights.rwandair.com/en/flights-to-europe/"
-                                               target="_blank">
+                            <li><a href="https://flights.rwandair.com/en/flights-to-europe/"
+                                   target="_blank">
                                     <figure><img src="{{asset('assets/site/images/continent-europe.svg')}}"></figure>
                                     <p>Flight to Europe</p><i class="fi fi-rr-angle-small-right"></i></a></li>
-                            <li data-aos=""><a href="https://flights.rwandair.com/en/flights-to-asia/" target="_blank">
+                            <li><a href="https://flights.rwandair.com/en/flights-to-asia/" target="_blank">
                                     <figure><img src="{{asset('assets/site/images/continent-asia.svg')}}"></figure>
                                     <p>Flight to Asia</p><i class="fi fi-rr-angle-small-right"></i></a></li>
-                            <li data-aos=""><a href="https://flights.rwandair.com/en/flights-to-middleeast/"
-                                               target="_blank">
+                            <li><a href="https://flights.rwandair.com/en/flights-to-middleeast/"
+                                   target="_blank">
                                     <figure><img src="{{asset('assets/site/images/continent-middle-east.svg')}}">
                                     </figure>
                                     <p>Flight to Middle East</p><i class="fi fi-rr-angle-small-right"></i></a></li>
-                            <li data-aos=""><a href="https://flights.rwandair.com/en/flights-to-americas/"
-                                               target="_blank">
+                            <li><a href="https://flights.rwandair.com/en/flights-to-americas/"
+                                   target="_blank">
                                     <figure><img src="{{asset('assets/site/images/continent-america.svg')}}"></figure>
                                     <p>Flight to America</p><i class="fi fi-rr-angle-small-right"></i></a></li>
                         </ul>
@@ -1170,7 +1146,7 @@
                     <div class="container-rigid">
 
                         <div class="footer-main-links">
-                            <div class="footer-main-links-columns" data-aos="">
+                            <div class="footer-main-links-columns">
                                 <h4>About Us</h4>
                                 <ul>
                                     <li><a href="about-us.html">Who We Are</a></li>
@@ -1183,7 +1159,7 @@
                                 </ul>
                             </div>
 
-                            <div class="footer-main-links-columns" data-aos="">
+                            <div class="footer-main-links-columns">
                                 <h4>Destinations</h4>
                                 <ul>
                                     <li><a href="https://flights.rwandair.com/en/flights-to-africa/"
@@ -1201,8 +1177,7 @@
                                     <li><a href="route-map.html">Route Map</a></li>
                                 </ul>
                             </div>
-
-                            <div class="footer-main-links-columns" data-aos="">
+                            <div class="footer-main-links-columns">
                                 <h4>Help</h4>
                                 <ul>
                                     <li><a href="contact-us.html">Contact Us</a></li>
@@ -1212,7 +1187,7 @@
                                 </ul>
                             </div>
 
-                            <div class="footer-main-links-columns" data-aos="">
+                            <div class="footer-main-links-columns">
                                 <h4>Cargo Solutions</h4>
                                 <ul>
                                     <li><a href="https://flyingwithdragonfly.com/cargo/" target="_blank">Rwandair
@@ -1224,13 +1199,11 @@
                                 </ul>
                             </div>
                         </div>
-
                         <div class="social-apps-wrapper">
                             <div class="social-apps-columns">
                                 <p>Travel Made Simpler.</p>
                                 <p>Book and manage flights on the go!</p>
                             </div>
-
                             <div class="social-apps-columns">
                                 <ol>
                                     <li>
@@ -1273,7 +1246,6 @@
                                 </ul>
                             </div>
                         </div>
-
                         <div class="important-footer-bottom-links">
                             <ul>
                                 <li><a href="privacy-policy.html">Privacy Policy</a></li>
@@ -1285,16 +1257,10 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
-
             <div class="back-to-top-wrapper">
                 <a href="#" class="go-top"><p>Go Top</p> <i class="fas fa-arrow-up"></i></a>
             </div>
-
         </footer><!-- #footer -->
-
     </main><!-- #main -->
 @endsection
-

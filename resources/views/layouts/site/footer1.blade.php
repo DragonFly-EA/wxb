@@ -5,20 +5,20 @@
             <div class="footer-trip-planning-wrapper">
                 <h3>Start planning your next trip</h3>
                 <ul>
-                    <li data-aos=""><a href="https://flights.rwandair.com/en/flights-to-africa/" target="_blank">
+                    <li ><a href="https://flights.rwandair.com/en/flights-to-africa/" target="_blank">
                             <figure><img src="{{asset('assets/site/images/continent-africa.svg')}}"></figure>
                             <p>Flight to Africa</p><i class="fi fi-rr-angle-small-right"></i></a></li>
-                    <li data-aos=""><a href="https://flights.rwandair.com/en/flights-to-europe/" target="_blank">
+                    <li ><a href="https://flights.rwandair.com/en/flights-to-europe/" target="_blank">
                             <figure><img src="{{asset('assets/site/images/continent-europe.svg')}}"></figure>
                             <p>Flight to Europe</p><i class="fi fi-rr-angle-small-right"></i></a></li>
-                    <li data-aos=""><a href="https://flights.rwandair.com/en/flights-to-asia/" target="_blank">
+                    <li ><a href="https://flights.rwandair.com/en/flights-to-asia/" target="_blank">
                             <figure><img src="{{asset('assets/site/images/continent-asia.svg')}}"></figure>
                             <p>Flight to Asia</p><i class="fi fi-rr-angle-small-right"></i></a></li>
-                    <li data-aos=""><a href="https://flights.rwandair.com/en/flights-to-middleeast/"
+                    <li ><a href="https://flights.rwandair.com/en/flights-to-middleeast/"
                                        target="_blank">
                             <figure><img src="{{asset('assets/site/images/continent-middle-east.svg')}}"></figure>
                             <p>Flight to Middle East</p><i class="fi fi-rr-angle-small-right"></i></a></li>
-                    <li data-aos=""><a href="https://flights.rwandair.com/en/flights-to-americas/" target="_blank">
+                    <li ><a href="https://flights.rwandair.com/en/flights-to-americas/" target="_blank">
                             <figure><img src="{{asset('assets/site/images/continent-america.svg')}}"></figure>
                             <p>Flight to America</p><i class="fi fi-rr-angle-small-right"></i></a></li>
                 </ul>
@@ -30,7 +30,7 @@
             <div class="container-rigid">
 
                 <div class="footer-main-links">
-                    <div class="footer-main-links-columns" data-aos="">
+                    <div class="footer-main-links-columns" >
                         <h4>About Us</h4>
                         <ul>
                             <li><a href="about-us.html">Who We Are</a></li>
@@ -43,7 +43,7 @@
                         </ul>
                     </div>
 
-                    <div class="footer-main-links-columns" data-aos="">
+                    <div class="footer-main-links-columns" >
                         <h4>Destinations</h4>
                         <ul>
                             <li><a href="https://flights.rwandair.com/en/flights-to-africa/"
@@ -61,7 +61,7 @@
                         </ul>
                     </div>
 
-                    <div class="footer-main-links-columns" data-aos="">
+                    <div class="footer-main-links-columns" >
                         <h4>Help</h4>
                         <ul>
                             <li><a href="contact-us.html">Contact Us</a></li>
@@ -71,7 +71,7 @@
                         </ul>
                     </div>
 
-                    <div class="footer-main-links-columns" data-aos="">
+                    <div class="footer-main-links-columns" >
                         <h4>Cargo Solutions</h4>
                         <ul>
                             <li><a href="https://flyingwithdragonfly.com/cargo/" target="_blank">Rwandair Cargo</a>

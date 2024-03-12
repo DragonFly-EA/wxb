@@ -33,10 +33,11 @@ function handleData() {
 
     let destinationsHTML = selectedAirports.map(airport => {
         let priceFrom = getDealPriceFrom(current_city, airport.iata_code);
-        return `<li>
+        return `
+            <li>
                 <a href="">
                     <figure>
-                        <img src="https://wb.digilab.co.ke/img/${airport.iata_code}.jpg" alt="${airport.municipality}" onerror="handleImageError(event)">
+                        <img src="https://wb.digilab.co.ke/img/${airport.iata_code}.jpg" loading="lazy" alt="${airport.municipality}" onerror="handleImageError(event)">
                     </figure>
                     <div class="dont-miss-offer-details">
                         <div class="dont-miss-offer-details-hover">
@@ -58,19 +59,20 @@ function handleData() {
                         </div>
                     </div>
                 </a>
-                </li>`;
+            </li>`;
     }).join("");
-    destinationsHTML+=`                                <li data-aos="">
-                                    <a href="">
-                                        <figure style="opacity:0"><img
-                                                src="https://wb.digilab.co.ke/img/JRO.jpg"></figure>
-                                        <div class="find-more-wrap">
-                                            <h5>Business Class accommodations on extended flights</h5>
-                                            <b>Enhanced, digital, sustainable, revamped dining.</b>
-                                            <span>Find out more</span>
-                                        </div>
-                                    </a>
-                                </li>`
+    destinationsHTML +=
+        `<li >
+            <a href="">
+                <figure style="opacity:0"><img
+                        src="https://wb.digilab.co.ke/img/${current_city}.jpg" loading="lazy" alt="${current_city}"></figure>
+                <div class="find-more-wrap">
+                    <h5>Business Class accommodations on extended flights</h5>
+                    <b>Enhanced, digital, sustainable, revamped dining.</b>
+                    <span>Find out more</span>
+                </div>
+            </a>
+        </li>`
 
     $("#other_offers").html(destinationsHTML);
 }
@@ -89,127 +91,3 @@ function getDealPriceFrom(city, iata_code) {
     }
     return "";
 }
-
-
-// let countries = [];
-// let current_location = [];
-// let airport_data = [];
-// /*
-// * Getting All Destination Based on Current Country/City
-// * */
-// $(document).ready(function () {
-//     // Fetch current location
-//     $.getJSON("https://wb.digilab.co.ke/api/geolocation", function (location) {
-//         current_location = location;
-//     });
-//     // Fetch airports, countries data, and route fares
-//     $.when(
-//         $.getJSON("https://flyingwithdragonfly.com/dist/phoenix/V1.0/phpActions/retrieveAirportsInfo.php"),
-//         $.getJSON("https://flyingwithdragonfly.com/dist/phoenix/V1.0/db/countries.json"),
-//         $.getJSON("https://flyingwithdragonfly.com/dist/phoenix/V1.0/db/routeFares.json")
-//     ).done(function (airports, countries_data, fares) {
-//         handleData(airports[0], countries_data[0], fares[0]);
-//     });
-//     // $("#offers").on("change", function () {
-//     //     loadOffers();
-//     // });
-// });
-//
-// function handleData(airports, countries_data, fares) {
-//     fullDeals = fares.deals;
-//     countries = countries_data;
-//     airport_data = airports;
-//     let current_city = "NBO";
-//     appendOfferFrom(
-//         airports.filter((x) =>
-//             fullDeals
-//                 .find((deal) => deal.city === current_city)
-//                 .routes.map((route) => route.city)
-//                 .includes(x.iata_code)
-//         ),
-//         countries_data,
-//         "#other_offers",
-//         current_city,fullDeals
-//     );
-// }
-//
-// /*
-// * Loading Destinations
-// * */
-// function appendOfferFrom(airports, countries_data, select, current_location,fullDeals) {
-//     $("#other_offers").empty();
-//     const numberOfAirportsToSelect = 7;
-//     const selectedAirports = [];
-//
-//     //
-//     airports.sort((a, b) => {
-//         const municipalityA = a.municipality.toUpperCase();
-//         const municipalityB = b.municipality.toUpperCase();
-//         if (municipalityA < municipalityB) {
-//             return -1;
-//         }
-//         if (municipalityA > municipalityB) {
-//             return 1;
-//         }
-//         return 0;
-//     });
-//     //
-//     for (let i = 0; i < airports.length && selectedAirports.length < numberOfAirportsToSelect; i++) {
-//         const selectedAirport = airports[i];
-//         // Check if the selected airport is not already in the selectedAirports array
-//         if (!selectedAirports.some((airport) => airport.iata_code === selectedAirport.iata_code)) {
-//             selectedAirports.push(selectedAirport);
-//         }
-//     }
-//     //RoutesFares
-//     result = selectedAirports.reduce(function (r, a) {
-//         r[a.iso_country] = r[a.iso_country] || [];
-//         r[a.iso_country].push(a);
-//         return r;
-//     }, Object.create(null));
-//     let destinations = '';
-//     for (let i = 0; i < selectedAirports.length; i++) {
-//         var priceFrom = getDealPriceFrom(current_location,selectedAirports[i].iata_code);
-//         destinations += `<li data-aos="fade-left">
-//                             <figure>
-//                                 <img src="https://wb.digilab.co.ke/img/${selectedAirports[i].iata_code}.jpg" alt="${selectedAirports[i].municipality}" onerror = "handleImageError(event)">
-//                             </figure>
-//                             <div class="dont-miss-offer-details">
-//                                 <div class="dont-miss-offer-details-hover">
-//                                     <div class="dont-miss-offer-details-visible">
-//                                         <b>
-//                                             <h4>${selectedAirports[i].municipality}</h4>
-//                                             <p>${current_location+"-"+selectedAirports[i].iata_code}</p>
-//                                         </b>
-//                                         <b>
-//                                             <p>Economy From</p>
-//                                             <h4>USD ${priceFrom}</h4>
-//                                         </b>
-//                                     </div>
-//                                     <div class="dont-miss-offer-details-invisible">
-//                                         <ul>
-//                                             <li><a href="destination/${selectedAirports[i].municipality}/${selectedAirports[i].iata_code}">Explore</a></li>
-//                                         </ul>
-//                                     </div>
-//                                 </div>
-//                             </div>
-//                            </li>`;
-//
-//         document.getElementById("other_offers").innerHTML = destinations;
-//     }
-// }
-// function handleImageError(event) {
-//     event.target.src =
-//         "https://flyingwithdragonfly.com/dist/phoenix/V1.0/img/destNotfound.sm.jpg";
-// }
-// function getDealPriceFrom(city, iata_code) {
-//     var fullDeal = fullDeals.find((d) => d.city === city);
-//
-//     if (fullDeal && fullDeal.routes) {
-//         var route = fullDeal.routes.find((r) => r.city === iata_code);
-//         if (route) {
-//             return route.priceFrom;
-//         }
-//     }
-//     return "";
-// }

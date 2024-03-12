@@ -2,16 +2,16 @@
 @section('content')
     <section>
         <div class="home-slider-form-wrapper">
-            <div class="home-slider-wrapper" data-aos="">
+            <div class="home-slider-wrapper" >
                 <ul class="bxslider">
                     <li>
                         <img src="{{asset('assets/site/images/slider_banner.jpg')}}"/>
                         <div class="bx-caption">
                             <div class="display-caption">
                                 <div class="slider-vertical">
-                                    <h1 data-aos="">Enjoy More Convenience with <br> 6 weekly nonstop flights</h1>
-                                    <p data-aos="">Starting 28 October</p>
-                                    <a href="" data-aos="">Learn More</a>
+                                    <h1 >Enjoy More Convenience with <br> 6 weekly nonstop flights</h1>
+                                    <p >Starting 28 October</p>
+                                    <a href="" >Learn More</a>
 
                                 </div>
                             </div>
@@ -24,9 +24,9 @@
 
         <div class="home-plan-trip-wrapper">
             <div class="container-rigid">
-                <!--<h3 data-aos="">Plan your trip</h3>-->
+                <!--<h3 >Plan your trip</h3>-->
                 <ul>
-                    <li data-aos="">
+                    <li >
                         <a href="destination.html">
                             <figure><img src="{{asset('assets/site/images/book-hotels.png')}}"></figure>
                             <div class="plan-trip-caption">
@@ -36,7 +36,7 @@
                         </a>
                     </li>
 
-                    <li data-aos="">
+                    <li >
                         <a href="travel-requirements.html">
                             <figure><img src="{{asset('assets/site/images/book-cars.png')}}"></figure>
                             <div class="plan-trip-caption">
@@ -46,7 +46,7 @@
                         </a>
                     </li>
 
-                    <li data-aos="">
+                    <li >
                         <a href="special-assistance.html">
                             <figure><img src="{{asset('assets/site/images/book-tours.png')}}"></figure>
                             <div class="plan-trip-caption">
@@ -56,7 +56,7 @@
                         </a>
                     </li>
 
-                    <li data-aos="">
+                    <li >
                         <a href="travel-insurance.html">
                             <figure><img src="{{asset("assets/site/images/upgrade.png")}}"></figure>
                             <div class="plan-trip-caption">
@@ -73,10 +73,10 @@
         <div class="new-next-trip-wrapper">
 
             <div class="container-rigid">
-                <h2 data-aos="">Discover your next trip</h2>
+                <h2 >Discover your next trip</h2>
                 <div class="sustainability-sponsors">
                     <ul>
-                        <li data-aos="">
+                        <li >
                             <figure><img src="{{asset('assets/site/images/sustainability-corporate.jpg')}}"></figure>
                             <div class="media-center-caption">
                                 <h3>Entry Requirement</h3>
@@ -89,7 +89,7 @@
 
                         </li>
 
-                        <li data-aos="">
+                        <li >
                             <figure><img src="{{asset('assets/site/images/sustainability-sponsorship.jpg')}}"></figure>
                             <div class="media-center-caption">
                                 <h3>Ticket Flexibility</h3>
@@ -100,7 +100,7 @@
                             </div>
                         </li>
 
-                        <li data-aos="">
+                        <li >
                             <figure><img src="{{asset('assets/site/images/sustainability-tender.jpg')}}"></figure>
                             <div class="media-center-caption">
                                 <h3>Deals and Offers</h3>
@@ -122,7 +122,7 @@
 
         <div class="dont-miss-offer-wrapper">
             <div class="container-rigid">
-                <div class="dont-miss-dropselect" data-aos="">
+                <div class="dont-miss-dropselect" >
                     <h3>Don't miss our offers...</h3>
 
                     <div class="cont_select_center">
@@ -158,7 +158,7 @@
                         </ul>
                     </div>
 
-                    <div class="view-more-offers" data-aos=""><p>*Prices, including all taxes, fees and surcharges, may
+                    <div class="view-more-offers" ><p>*Prices, including all taxes, fees and surcharges, may
                             vary and are intended to guide your selection.</p><a href="">View More Offers</a></div>
                 </div>
             </div>
@@ -173,9 +173,9 @@
                     <div class="bx-caption">
                         <div class="display-caption">
                             <div class="slider-vertical">
-                                <h3 data-aos="">Experience a world of convenience <br> with DreamMiles benefits.</h3>
+                                <h3 >Experience a world of convenience <br> with DreamMiles benefits.</h3>
                                 <br><br>
-                                <a href="dreammiles.html" data-aos="">Explore More</a>
+                                <a href="dreammiles.html" >Explore More</a>
 
                             </div>
                         </div>
@@ -217,8 +217,8 @@
                             <div class="bx-caption">
                                 <div class="display-caption">
                                     <div class="slider-vertical">
-                                        <h3 data-aos="">Plan your Travel on your terms</h3>
-                                        <p data-aos="">Plan your travel with ease. seamless booking and more at your
+                                        <h3 >Plan your Travel on your terms</h3>
+                                        <p >Plan your travel with ease. seamless booking and more at your
                                             fingertips</p>
 
                                         <div class="qrcode-download">

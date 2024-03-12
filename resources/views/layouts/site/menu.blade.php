@@ -3,13 +3,13 @@
         <div class="top-desktop-links">
             <div class="container-rigid">
                 <div class="left-top-desktop-links">
-                    <ul data-aos="">
+                    <ul >
 
                         <li><a> <i class="fi fi-rr-info"></i> Daily flight status updates</a></li>
                     </ul>
                 </div>
                 <div class="right-top-desktop-links">
-                    <ul data-aos="">
+                    <ul >
 
                         <li>
                             <a href="travel-information.html"><b>Show More</b></a>
@@ -19,14 +19,14 @@
             </div>
         </div>
         <div class="container-rigid bottom-desktop-links">
-            <div class="desktop-logo-wrapper" data-aos="">
+            <div class="desktop-logo-wrapper" >
                 <figure><a href="index.html"><img src="{{asset('assets/site/images/rwandairlogo.png')}}"></a>
                 </figure>
             </div>
             <div class="desktop-main-links">
                 <ul>
 
-                    <li class="desktop-main-links-visible"><a href="" data-aos="" class="question-link">Explore <i
+                    <li class="desktop-main-links-visible"><a href=""  class="question-link">Explore <i
                                 class="fi fi-rr-angle-small-down"></i></a>
                         <ul class="desktop-main-links-invisible">
                             <div class="dropdown-links-columns">
@@ -72,7 +72,7 @@
                     </li>
 
                     <li class="desktop-main-links-visible">
-                        <a href="" data-aos="" class="question-link">Book<i class="fi fi-rr-angle-small-down"></i>
+                        <a href=""  class="question-link">Book<i class="fi fi-rr-angle-small-down"></i>
                         </a>
 
                         <ul class="desktop-main-links-invisible">
@@ -143,7 +143,7 @@
                     </li>
 
                     <li class="desktop-main-links-visible">
-                        <a href="" data-aos="" class="question-link">Experience <i
+                        <a href=""  class="question-link">Experience <i
                                 class="fi fi-rr-angle-small-down"></i> </a>
 
                         <ul class="desktop-main-links-invisible">
@@ -213,7 +213,7 @@
 
 
                     <li class="desktop-main-links-visible">
-                        <a href="" data-aos="" class="question-link">DreamMiles <i
+                        <a href=""  class="question-link">DreamMiles <i
                                 class="fi fi-rr-angle-small-down"></i> </a>
                         <ul class="desktop-main-links-invisible">
                             <div class="dropdown-links-columns">
@@ -274,7 +274,7 @@
                     </li>
 
                     <li class="desktop-main-links-visible">
-                        <a href="" data-aos="" class="question-link">Help <i class="fi fi-rr-angle-small-down"></i>
+                        <a href=""  class="question-link">Help <i class="fi fi-rr-angle-small-down"></i>
                         </a>
                         <ul class="desktop-main-links-invisible">
                             <div class="dropdown-links-columns">
@@ -345,7 +345,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="desktop-account-signup" data-aos="">
+            <div class="desktop-account-signup" >
                 <ul>
                     <li><a href="search.html"><i class="fi fi-rr-search"></i></a></li>
                     <li class="desktop-main-links-visible">
@@ -354,7 +354,7 @@
 
 
                             <div id="lang_selector" class="language-dropdown">
-                                <a href="" data-aos="" class="question-link">
+                                <a href=""  class="question-link">
                                     <label for="toggle" class="lang-flag lang-en"
                                            title="Click to select the language">
                                         <span class="flag"></span>
@@ -433,7 +433,7 @@
     </div>
 
 
-    <div class="mobile-navigation" data-aos="">
+    <div class="mobile-navigation" >
         <div class="visible-mobile">
 
             <div class="menu-icon">
@@ -450,7 +450,7 @@
 
             <div class="demo-login-wrapper">
 
-                <div class="desktop-account-signup" data-aos="">
+                <div class="desktop-account-signup" >
                     <ul>
                         <li><a href="search.html"><i class="fi fi-rr-search"></i></a></li>
                         <li>
@@ -491,7 +491,7 @@
             <div class="desktop-main-links">
                 <ul>
 
-                    <li class="desktop-main-links-visible"><a href="" data-aos="" class="question-link">Explore <i
+                    <li class="desktop-main-links-visible"><a href=""  class="question-link">Explore <i
                                 class="fi fi-rr-angle-small-down"></i></a>
                         <ul class="desktop-main-links-invisible">
                             <div class="dropdown-links-columns">
@@ -539,7 +539,7 @@
                     </li>
 
                     <li class="desktop-main-links-visible">
-                        <a href="" data-aos="" class="question-link">Book<i class="fi fi-rr-angle-small-down"></i>
+                        <a href=""  class="question-link">Book<i class="fi fi-rr-angle-small-down"></i>
                         </a>
 
                         <ul class="desktop-main-links-invisible">
@@ -614,7 +614,7 @@
                     </li>
 
                     <li class="desktop-main-links-visible">
-                        <a href="" data-aos="" class="question-link">Experience <i
+                        <a href=""  class="question-link">Experience <i
                                 class="fi fi-rr-angle-small-down"></i> </a>
 
                         <ul class="desktop-main-links-invisible">
@@ -684,7 +684,7 @@
 
 
                     <li class="desktop-main-links-visible">
-                        <a href="" data-aos="" class="question-link">DreamMiles <i
+                        <a href=""  class="question-link">DreamMiles <i
                                 class="fi fi-rr-angle-small-down"></i> </a>
                         <ul class="desktop-main-links-invisible">
                             <div class="dropdown-links-columns">
@@ -745,7 +745,7 @@
                     </li>
 
                     <li class="desktop-main-links-visible">
-                        <a href="" data-aos="" class="question-link">Help <i class="fi fi-rr-angle-small-down"></i>
+                        <a href=""  class="question-link">Help <i class="fi fi-rr-angle-small-down"></i>
                         </a>
                         <ul class="desktop-main-links-invisible">
                             <div class="dropdown-links-columns">

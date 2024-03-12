@@ -1,8 +1,6 @@
-<div class="home-form-wrapper" data-aos="">
+<div class="home-form-wrapper">
     <div class="container-rigid">
-        <!--Horizontal Tab-->
         <div id="horizontalTab">
-
             <ul class="resp-tabs-list">
                 <li>
                     <figure><span></span></figure>
@@ -30,43 +28,38 @@
                     <b><img src="{{asset('assets/site/images/active-border-bottom.png')}}"></b>
                 </li>
             </ul>
-
             <div class="resp-tabs-container">
                 <div class="book-flight-tab">
                     <form>
                         <div class="form-tab-title">
                             <div class="form-tab-radio">
                                 <div class="select-customize">
-
                                     <div class="customize-round-trip">
                                         <div class="show-customize-round-trip">
                                             <div class="select-customize-icon">
-                                                <figure><img
-                                                        src="{{asset('assets/site/images/round-cust.png')}}">
+                                                <figure><img src="{{asset('assets/site/images/round-cust.png')}}">
                                                 </figure>
                                             </div>
                                             <div class="select-round-trip">
-                                                            <span><h4>Round Trip</h4><i
-                                                                    class="fi fi-rr-angle-small-down"></i></span>
+                                                <span><h4 id="roundTripValue">Round Trip</h4><i
+                                                        class="fi fi-rr-angle-small-down"></i></span>
                                             </div>
                                         </div>
-
-                                        <div class="hide-customize-round-trip">
+                                        <div class="hide-customize-round-trip trip" id="roundTripOptions"
+                                             style="display: none;">
                                             <div class="round-trip-hide">
-                                                                <span class="active"><i
-                                                                        class="fa-solid fa-check"></i><h4>Round Trip</h4></span>
-
-                                                <span><i
+                                                <span class="active"
+                                                      onclick="getSelectedValue('Round Trip',this,'roundTripValue','trip')"><i
+                                                        class="fa-solid fa-check"></i><h4>Round Trip</h4></span>
+                                                <span
+                                                    onclick="getSelectedValue('One Way',this,'roundTripValue','trip')"><i
                                                         class="fa-solid fa-check"></i><h4>One Way</h4></span>
-
-                                                <span><i
+                                                <span
+                                                    onclick="getSelectedValue('Multi City',this,'roundTripValue','trip')"><i
                                                         class="fa-solid fa-check"></i><h4>Multi-City</h4></span>
                                             </div>
                                         </div>
-
-
                                     </div>
-
                                     <div class="customize-round-trip">
                                         <div class="show-customize-passenger-trip">
                                             <div class="select-customize-icon">
@@ -75,13 +68,10 @@
                                                 </figure>
                                             </div>
                                             <div class="select-round-trip">
-
                                                             <span><h4>1 Passenger</h4><i
                                                                     class="fi fi-rr-angle-small-down"></i></span>
                                             </div>
                                         </div>
-
-
                                         <div class="hide-customize-passenger-trip">
                                             <div class="passenger-hide">
                                                 <ul>
@@ -94,7 +84,6 @@
                                                             <div id="app"></div>
                                                         </div>
                                                     </li>
-
                                                     <li>
                                                         <div class="passenger-hide-persons">
                                                             <h4>Children</h4>
@@ -104,7 +93,6 @@
                                                             <div id="app1"></div>
                                                         </div>
                                                     </li>
-
                                                     <li>
                                                         <div class="passenger-hide-persons">
                                                             <h4>Infants</h4>
@@ -116,48 +104,39 @@
                                                     </li>
                                                 </ul>
                                                 <div class="passenger-hide-ctn">
-                                                    <button>Cancel</button>
-                                                    <button>Done</button>
+                                                    <button type="button">Cancel</button>
+                                                    <button type="button">Done</button>
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
-
                                     <div class="customize-round-trip">
                                         <div class="show-customize-class-trip">
                                             <div class="select-customize-icon">
-                                                <figure><img
-                                                        src="{{asset('assets/site/images/class-cust.png')}}">
+                                                <figure><img src="{{asset('assets/site/images/class-cust.png')}}">
                                                 </figure>
                                             </div>
-                                            <div class="select-round-trip">
-
-                                                            <span><h4>Economy</h4><i
-                                                                    class="fi fi-rr-angle-small-down"></i></span>
-                                            </div>
+                                            <div class="select-round-trip"><span><h4 id="tripClassValue">Economy</h4><i
+                                                        class="fi fi-rr-angle-small-down"></i></span></div>
                                         </div>
-
-
-                                        <div class="hide-customize-class-trip">
+                                        <div class="hide-customize-class-trip tripclass" id="tripclass"
+                                             style="display: none">
                                             <div class="round-trip-hide">
-                                                                <span class="active"><i
-                                                                        class="fa-solid fa-check"></i><h4>Economy</h4></span>
-
-                                                <span><i
+                                                <span class="active"
+                                                      onclick="getSelectedValue('Economy',this,'tripClassValue','tripclass')"><i
+                                                        class="fa-solid fa-check"></i><h4>Economy</h4></span>
+                                                <span
+                                                    onclick="getSelectedValue('Business Class',this,'tripClassValue','tripclass')"><i
                                                         class="fa-solid fa-check"></i><h4>Business Class</h4></span>
-
-                                                <span><i
+                                                <span
+                                                    onclick="getSelectedValue('First Class',this,'tripClassValue','tripclass')"><i
                                                         class="fa-solid fa-check"></i><h4>First Class</h4></span>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                             <div class="award-ticket">
-                                <!--<p><i class="fi fi-rr-arrow-up-right-from-square"></i><b>Award ticket - <a-->
-                                <!--        href=""> Buy a ticket with Dreamiles</a></b></p>-->
                                 <p>Book with miles?</p>
                                 <div class="toggle-button-cover">
                                     <div class="button-cover">
@@ -169,9 +148,8 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-                        <div class="form-tab-lists" id="other_trips" data-aos="">
+                        <div class="form-tab-lists" id="other_trips">
                             <ul>
                                 <li>
                                     <div class="float-group-icon">
@@ -181,15 +159,13 @@
                                             class="float-group float-group-first show-float-group-first">
                                             <input autocomplete="off" required type="text"
                                                    placeholder="Kigali, KGL"/>
-                                            <lable class="float-label float-label1">From</lable>
+                                            <label class="float-label float-label1">From</label>
                                         </div>
-
-
                                         <div
                                             class="float-group float-group-second show-float-group-second">
                                             <input autocomplete="off" required type="text"
                                                    placeholder="Nairobi, NBP"/>
-                                            <lable class="float-label float-label2">To</lable>
+                                            <label class="float-label float-label2">To</label>
                                         </div>
                                     </div>
 
@@ -197,108 +173,96 @@
                                         <div class="float-group-lists">
                                             <ul>
                                                 <li>
-                                                                <span><h4>Flights from:</h4><i
-                                                                        class="fa-solid fa-xmark"></i></span>
+                                                    <span><h4>Flights from:</h4><i class="fa-solid fa-xmark"></i></span>
                                                 </li>
+                                                <span id="selectFrom"></span>
 
-                                                <li>
-                                                    <div class="float-group-country">
-                                                        <h5>Germany</h5>
-                                                        <p>Berlin</p>
-                                                    </div>
-                                                    <div class="float-group-airport">
-                                                        <h5>BER</h5>
-                                                        <p>Berlin Brandenburg Airport</p>
-                                                    </div>
-                                                </li>
+{{--                                                <li>--}}
+{{--                                                    <div class="float-group-country">--}}
+{{--                                                        <h5>Germany</h5>--}}
+{{--                                                        <p>Frankfurt am Main</p>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="float-group-airport">--}}
+{{--                                                        <h5>FRA</h5>--}}
+{{--                                                        <p>FRA, Frankfurt am Main Airport</p>--}}
+{{--                                                    </div>--}}
+{{--                                                </li>--}}
 
-                                                <li>
-                                                    <div class="float-group-country">
-                                                        <h5>Germany</h5>
-                                                        <p>Frankfurt am Main</p>
-                                                    </div>
-                                                    <div class="float-group-airport">
-                                                        <h5>FRA</h5>
-                                                        <p>FRA, Frankfurt am Main Airport</p>
-                                                    </div>
-                                                </li>
+{{--                                                <li>--}}
+{{--                                                    <div class="float-group-country">--}}
+{{--                                                        <h5>Benin</h5>--}}
+{{--                                                        <p>Cotoniu</p>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="float-group-airport">--}}
+{{--                                                        <h5>COO</h5>--}}
+{{--                                                        <p>Cadjehoun Airport</p>--}}
+{{--                                                    </div>--}}
+{{--                                                </li>--}}
 
-                                                <li>
-                                                    <div class="float-group-country">
-                                                        <h5>Benin</h5>
-                                                        <p>Cotoniu</p>
-                                                    </div>
-                                                    <div class="float-group-airport">
-                                                        <h5>COO</h5>
-                                                        <p>Cadjehoun Airport</p>
-                                                    </div>
-                                                </li>
+{{--                                                <li>--}}
+{{--                                                    <div class="float-group-country">--}}
+{{--                                                        <h5>Germany</h5>--}}
+{{--                                                        <p>Berlin</p>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="float-group-airport">--}}
+{{--                                                        <h5>BER</h5>--}}
+{{--                                                        <p>Berlin Brandenburg Airport</p>--}}
+{{--                                                    </div>--}}
+{{--                                                </li>--}}
+{{--                                                <li>--}}
+{{--                                                    <div class="float-group-country">--}}
+{{--                                                        <h5>Germany</h5>--}}
+{{--                                                        <p>Frankfurt am Main</p>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="float-group-airport">--}}
+{{--                                                        <h5>FRA</h5>--}}
+{{--                                                        <p>FRA, Frankfurt am Main Airport</p>--}}
+{{--                                                    </div>--}}
+{{--                                                </li>--}}
 
-                                                <li>
-                                                    <div class="float-group-country">
-                                                        <h5>Germany</h5>
-                                                        <p>Berlin</p>
-                                                    </div>
-                                                    <div class="float-group-airport">
-                                                        <h5>BER</h5>
-                                                        <p>Berlin Brandenburg Airport</p>
-                                                    </div>
-                                                </li>
+{{--                                                <li>--}}
+{{--                                                    <div class="float-group-country">--}}
+{{--                                                        <h5>Benin</h5>--}}
+{{--                                                        <p>Cotoniu</p>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="float-group-airport">--}}
+{{--                                                        <h5>COO</h5>--}}
+{{--                                                        <p>Cadjehoun Airport</p>--}}
+{{--                                                    </div>--}}
+{{--                                                </li>--}}
 
-                                                <li>
-                                                    <div class="float-group-country">
-                                                        <h5>Germany</h5>
-                                                        <p>Frankfurt am Main</p>
-                                                    </div>
-                                                    <div class="float-group-airport">
-                                                        <h5>FRA</h5>
-                                                        <p>FRA, Frankfurt am Main Airport</p>
-                                                    </div>
-                                                </li>
+{{--                                                <li>--}}
+{{--                                                    <div class="float-group-country">--}}
+{{--                                                        <h5>Germany</h5>--}}
+{{--                                                        <p>Berlin</p>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="float-group-airport">--}}
+{{--                                                        <h5>BER</h5>--}}
+{{--                                                        <p>Berlin Brandenburg Airport</p>--}}
+{{--                                                    </div>--}}
+{{--                                                </li>--}}
 
-                                                <li>
-                                                    <div class="float-group-country">
-                                                        <h5>Benin</h5>
-                                                        <p>Cotoniu</p>
-                                                    </div>
-                                                    <div class="float-group-airport">
-                                                        <h5>COO</h5>
-                                                        <p>Cadjehoun Airport</p>
-                                                    </div>
-                                                </li>
+{{--                                                <li>--}}
+{{--                                                    <div class="float-group-country">--}}
+{{--                                                        <h5>Germany</h5>--}}
+{{--                                                        <p>Frankfurt am Main</p>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="float-group-airport">--}}
+{{--                                                        <h5>FRA</h5>--}}
+{{--                                                        <p>FRA, Frankfurt am Main Airport</p>--}}
+{{--                                                    </div>--}}
+{{--                                                </li>--}}
 
-                                                <li>
-                                                    <div class="float-group-country">
-                                                        <h5>Germany</h5>
-                                                        <p>Berlin</p>
-                                                    </div>
-                                                    <div class="float-group-airport">
-                                                        <h5>BER</h5>
-                                                        <p>Berlin Brandenburg Airport</p>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <div class="float-group-country">
-                                                        <h5>Germany</h5>
-                                                        <p>Frankfurt am Main</p>
-                                                    </div>
-                                                    <div class="float-group-airport">
-                                                        <h5>FRA</h5>
-                                                        <p>FRA, Frankfurt am Main Airport</p>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <div class="float-group-country">
-                                                        <h5>Benin</h5>
-                                                        <p>Cotoniu</p>
-                                                    </div>
-                                                    <div class="float-group-airport">
-                                                        <h5>COO</h5>
-                                                        <p>Cadjehoun Airport</p>
-                                                    </div>
-                                                </li>
+{{--                                                <li>--}}
+{{--                                                    <div class="float-group-country">--}}
+{{--                                                        <h5>Benin</h5>--}}
+{{--                                                        <p>Cotoniu</p>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="float-group-airport">--}}
+{{--                                                        <h5>COO</h5>--}}
+{{--                                                        <p>Cadjehoun Airport</p>--}}
+{{--                                                    </div>--}}
+{{--                                                </li>--}}
                                             </ul>
                                         </div>
                                     </div>
@@ -447,7 +411,6 @@
                                 </li>
                             </ul>
                         </div>
-
                         <div id="openModal1" class="modalDialog1">
                             <div class="date-modal">
                                 <div class="date-modal-bg">
@@ -490,11 +453,9 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </form>
                     <form action="">
-                        <div id="multi_city" class="form-tab-lists" data-aos="" style="display: none">
+                        <div id="multi_city" class="form-tab-lists" style="display: none">
                             <ul class="multiCity">
                                 <li>
                                     <div class="cont_select_center">
@@ -598,7 +559,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="my-trips-tab" data-aos="">
+                <div class="my-trips-tab">
                     <form>
                         <div class="form-tab-lists">
                             <ul>
@@ -619,8 +580,7 @@
                         </div>
                     </form>
                 </div>
-
-                <div class="my-trips-tab" data-aos="">
+                <div class="my-trips-tab">
                     <form>
                         <div class="form-tab-lists">
                             <ul>
@@ -641,10 +601,10 @@
                         </div>
                     </form>
                 </div>
-                <div class="book-flight-tab" data-aos="">
+                <div class="book-flight-tab">
                     <form>
 
-                        <div class="form-tab-lists" id="other_trips" data-aos="">
+                        <div class="form-tab-lists" id="other_trips">
                             <ul>
                                 <li>
                                     <div class="float-group-icon">
@@ -917,7 +877,7 @@
 
                     </form>
                 </div>
-                <div class="book-flight-tab" data-aos="">
+                <div class="book-flight-tab">
                     <form>
                         <div class="form-tab-title">
                             <div class="form-tab-radio">
@@ -1056,7 +1016,7 @@
                             </div>
 
                         </div>
-                        <div class="form-tab-lists" id="other_trips" data-aos="">
+                        <div class="form-tab-lists" id="other_trips">
                             <ul>
                                 <li>
                                     <!--<div class="cont_select_center">-->
@@ -1348,8 +1308,6 @@
 
                     </form>
                 </div>
-
-
             </div>
             <div class="height-radius"></div>
         </div>
