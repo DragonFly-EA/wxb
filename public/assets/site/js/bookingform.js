@@ -20,7 +20,6 @@ $(document).ready(function () {
         airport_data = airports[0];
         countries = countries_data[0];
         fullDeals = fares[0].deals;
-        handleData(airport_data, countries, fullDeals);
         appendAirportData(airport_data,countries,current_location)
     });
     // $("#selectFrom").on("change", function () {
@@ -40,9 +39,6 @@ function loadAirports() {
         "#selectTo",
         current_location
     );
-}
-function handleData(airports, countries_data, fares) {
-   appendAirportData(airports, countries_data, current_location);
 }
 function appendAirportData(airports, countries_data, current_location) {
     let select = $("#selectFrom");
@@ -71,12 +67,27 @@ function appendAirportData(airports, countries_data, current_location) {
 
             listItem.appendChild(div);
             listItem.appendChild(div1);
-            options.push(listItem); // Push each list item to the options array
+            // Adding click event listener to handle selection
+            listItem.addEventListener("click", function() {
+                // Update the input field with the selected airport data
+                document.querySelector(".float-group-first input").value = airport.name + ", " + airport.iata_code+", "+airport.municipality;
+            });
+
+            options.push(listItem);
         } catch (e) {
             // Handle error
         }
     });
-
     select.empty();
     select.append(options);
+}
+function searchFromDestinations() {
+    let inputValue = $('.float-group-first input').val().trim().toLowerCase();
+    let filteredAirports = airports.filter(airport => {
+        if (airport.municipality && typeof airport.municipality === 'string') {
+            return airport.municipality.toLowerCase().includes(inputValue) || airport.iata_code.toLowerCase().includes(inputValue);
+        }
+        return false;
+    });
+    appendAirportData(filteredAirports, countries, current_location);
 }
