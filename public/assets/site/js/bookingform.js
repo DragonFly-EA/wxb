@@ -20,12 +20,13 @@ $(document).ready(function () {
         airport_data = airports[0];
         countries = countries_data[0];
         fullDeals = fares[0].deals;
-        appendAirportData(airport_data,countries,current_location)
+        appendAirportData(airport_data, countries, current_location)
     });
     // $("#selectFrom").on("change", function () {
     //     loadAirports();
     // });
 });
+
 function loadAirports() {
     airport = $("#selectFrom").val();
     appendDestinationJson(
@@ -40,6 +41,7 @@ function loadAirports() {
         current_location
     );
 }
+
 function appendAirportData(airports, countries_data, current_location) {
     let select = $("#selectFrom");
     let options = [];
@@ -67,15 +69,19 @@ function appendAirportData(airports, countries_data, current_location) {
 
             listItem.appendChild(div);
             listItem.appendChild(div1);
-            listItem.addEventListener("click", function() {
-                document.querySelector(".float-group-first input").value = airport.name + ", " + airport.iata_code+", "+airport.municipality;
-                appendData(airports.filter((x) =>
+            listItem.addEventListener("click", function () {
+                document.querySelector(".float-group-first input").value = airport.name + ", " + airport.iata_code + ", " + airport.municipality;
+                appendToData(airports.filter((x) =>
                     fullDeals
                         .find((deal) => deal.city === airport.iata_code)
                         .routes.map((route) => route.city)
                         .includes(x.iata_code)
-                ),countries_data)
+                ), countries_data)
                 $(".hide-float-group-first").slideUp();
+                let secondInput = $(".float-group-second input");
+                if (secondInput.val() !== "") {
+                    secondInput.val("");
+                }
             });
             options.push(listItem);
         } catch (e) {
@@ -85,6 +91,7 @@ function appendAirportData(airports, countries_data, current_location) {
     select.empty();
     select.append(options);
 }
+
 function searchFromDestinations() {
     let inputValue = $('.float-group-first input').val().trim().toLowerCase();
     let filteredAirports = airports.filter(airport => {
@@ -95,11 +102,12 @@ function searchFromDestinations() {
     });
     appendAirportData(filteredAirports, countries, current_location);
 }
-function appendData(airports,countries_data) {
+
+function appendToData(airports, countries_data) {
     let select = $("#selectTo");
     let options = [];
     airports.forEach(airport => {
-        try{
+        try {
             let listItem = document.createElement("li"); // Create new list item for each airport
             let div = document.createElement("div");
             let div1 = document.createElement('div');
@@ -121,12 +129,12 @@ function appendData(airports,countries_data) {
 
             listItem.appendChild(div);
             listItem.appendChild(div1);
-            listItem.addEventListener("click", function() {
-                document.querySelector(".float-group-second input").value = airport.name + ", " + airport.iata_code+", "+airport.municipality;
+            listItem.addEventListener("click", function () {
+                document.querySelector(".float-group-second input").value = airport.name + ", " + airport.iata_code + ", " + airport.municipality;
                 $(".hide-float-group-second").slideUp();
             });
             options.push(listItem);
-        }catch (e) {
+        } catch (e) {
         }
     })
     select.empty();
