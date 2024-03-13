@@ -68,7 +68,7 @@
                                                 </figure>
                                             </div>
                                             <div class="select-round-trip">
-                                                            <span><h4>1 Passenger</h4><i
+                                                            <span><h4><b id="passenger_no" style="font-weight: normal">1</b> Passenger</h4><i
                                                                     class="fi fi-rr-angle-small-down"></i></span>
                                             </div>
                                         </div>
@@ -193,7 +193,6 @@
                                     </div>
                                 </li>
                                 <li class="open">
-
                                     <div class="date-inputs-wrapper">
                                         <div class="float-group-dr"><i class="fa-solid fa-minus"></i>
                                         </div>
@@ -206,13 +205,8 @@
                                             <input type="text" id="returnDate" readonly>
                                         </div>
                                     </div>
-
-
                                 </li>
-
-
                                 <li>
-
                                     <div class="submit-form-button">
                                         <button id="findFlights" type="submit">Show Flights</button>
                                     </div>
@@ -243,7 +237,6 @@
                                                     days)</label>
                                             </p>
                                         </div>
-
                                         <div class="pop-date">
                                             <div class="dep-ret-input">
                                                 <input type="" placeholder="07/07/07">
@@ -259,8 +252,11 @@
                                     <div class="input-group">
                                         <div id="datepicker"></div>
                                     </div>
+                                    <div class="input-group">
+                                        <div id="datepicker1"></div>
+                                    </div>
                                     <div class="date-picker-continue">
-                                        <a href="">Continue</a>
+                                        <a href="#">Continues</a>
                                     </div>
                                 </div>
                             </div>

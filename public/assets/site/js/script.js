@@ -79,21 +79,41 @@ $(document).ready(function () {
 
     $(".open").click(function () {
         $(".modalDialog1").modal("show");
+        console.log("Hello");
+        console.log($(".modalDialog1"));
     });
-    $(".thanks-btn1").on('click', function () {
-        $(".modalDialog1").css("display", "none");
-    });
+    // $(".thanks-btn1").on('click', function () {
+    //     $(".modalDialog1").css("display", "none");
+    // });
     $(".close1").on('click', function () {
-        $(".modalDialog1").css("display", "none");
+        $(".modalDialog1").modal('hide');
     });
-    $(".modal-backdrop1").click(function () {
-        $(".modalDialog1").css("display", "none");
-    });
+    // $(".modal-backdrop1").click(function () {
+    //     $(".modalDialog1").css("display", "none");
+    // });
 
     // $('select').niceSelect();
 
 
     $('#datepicker').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        startDate: '+1d',
+
+        // endDate: '+1y',
+        beforeShowDay: function (date) {
+            var price = 100;
+            var currentDate = date.toISOString().slice(0, 10);
+            var cssClass = 'has-price';
+            var content = '<span class="date-price"><b></b><div class="date">' + date.getDate() + '</div> <div class="price">$' + price + '</div></span>';
+            return {
+                classes: cssClass,
+                tooltip: '',
+                content: content
+            };
+        }
+    });
+    $('#datepicker1').datepicker({
         format: 'yyyy-mm-dd',
         autoclose: true,
         startDate: '+1d',

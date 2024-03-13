@@ -22,9 +22,6 @@ $(document).ready(function () {
         fullDeals = fares[0].deals;
         appendAirportData(airport_data, countries, current_location)
     });
-    // $("#selectFrom").on("change", function () {
-    //     loadAirports();
-    // });
 });
 
 function loadAirports() {

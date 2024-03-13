@@ -1,22 +1,27 @@
 class Quantity {
-    constructor(containerId, value) {
+    static totalPassengers = 1;
+    constructor(containerId, value,min,max) {
         this.value = value;
+        this.min = min;
+        this.max= max
         this.container = document.getElementById(containerId);
         this.render();
     }
-
     increment() {
-        this.value++;
-        this.render();
+        if (Quantity.totalPassengers<this.max)
+        {
+            Quantity.totalPassengers++
+            this.value++;
+            this.render();
+        }
     }
-
     decrement() {
-        if (this.value > 0) {
+        if (this.value > this.min) {
+            Quantity.totalPassengers--;
             this.value--;
             this.render();
         }
     }
-
     render() {
         this.container.innerHTML = `
             <div>
@@ -26,20 +31,18 @@ class Quantity {
                     <input class="quantity-input__screen" type="text" value="${this.value}" readonly>
                     <button type="button" class="quantity-input__modifier quantity-input__modifier--right">+</button>
                 </div>
-            </div>
-        `;
-
+            </div>`;
         const decrementButton = this.container.querySelector('.quantity-input__modifier--left');
         decrementButton.addEventListener('click', () => this.decrement());
 
         const incrementButton = this.container.querySelector('.quantity-input__modifier--right');
         incrementButton.addEventListener('click', () => this.increment());
+        $("#passenger_no").text(Quantity.totalPassengers);
     }
 }
-
-const quantity = new Quantity('app', 1);
-const quantity1 = new Quantity('app1', 0);
-const quantity2 = new Quantity('app2', 0);
-const quantity3 = new Quantity('app3', 0);
-const quantity4 = new Quantity('app4', 0);
-const quantity5 = new Quantity('app5', 0);
+new Quantity('app', 1,1,9);
+new Quantity('app1', 0,0,9);
+new Quantity('app2', 0,0,9);
+new Quantity('app3', 0,0,9);
+new Quantity('app4', 0,0,9);
+new Quantity('app5', 0,0,9);
