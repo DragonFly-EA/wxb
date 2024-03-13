@@ -11,6 +11,7 @@
 <script type="text/javascript" src="{{asset(asset('assets/site/js/destinations.js'))}}"></script>
 <script type="text/javascript" src="{{asset(asset('assets/site/js/deals.js'))}}"></script>
 <script type="text/javascript" src="{{asset(asset('assets/site/js/bookingform.js'))}}"></script>
+<script type="text/javascript" src="{{asset(asset('assets/site/js/flightform.js'))}}"></script>
 <script type="text/javascript" src="{{asset('assets/site/js/gsap.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/site/js/ScrollMagic.min.js')}}"></script>
 <script src="https://kit.fontawesome.com/0c32daa30d.js" crossorigin="anonymous"></script>

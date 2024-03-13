@@ -68,7 +68,8 @@
                                                 </figure>
                                             </div>
                                             <div class="select-round-trip">
-                                                            <span><h4><b id="passenger_no" style="font-weight: normal">1</b> Passenger</h4><i
+                                                            <span><h4><b id="passenger_no"
+                                                                         style="font-weight: normal">1</b> Passenger</h4><i
                                                                     class="fi fi-rr-angle-small-down"></i></span>
                                             </div>
                                         </div>
@@ -157,13 +158,14 @@
                                                 class="fa-solid fa-arrow-right-arrow-left"></i></div>
                                         <div
                                             class="float-group float-group-first show-float-group-first">
-                                            <input autocomplete="off" oninput="searchFromDestinations()" required type="text"
+                                            <input autocomplete="off" id="selectFrom" oninput="searchFromDestinations()" required
+                                                   type="text"
                                                    placeholder="Kigali, KGL"/>
                                             <label class="float-label float-label1">From</label>
                                         </div>
                                         <div
                                             class="float-group float-group-second show-float-group-second">
-                                            <input autocomplete="off" required type="text"
+                                            <input autocomplete="off" id="selectTo" required type="text"
                                                    placeholder="Nairobi, NBP"/>
                                             <label class="float-label float-label2">To</label>
                                         </div>
@@ -175,7 +177,7 @@
                                                 <li>
                                                     <span><h4>Flights from:</h4><i class="fa-solid fa-xmark"></i></span>
                                                 </li>
-                                                <span id="selectFrom"></span>
+                                                <span id="selectFromDestinations"></span>
                                             </ul>
                                         </div>
                                     </div>
@@ -187,7 +189,7 @@
                                                                 <span><h4>Flights To:</h4><i
                                                                         class="fa-solid fa-xmark"></i></span>
                                                 </li>
-                                                <span id="selectTo"></span>
+                                                <span id="selectToDestination"></span>
                                             </ul>
                                         </div>
                                     </div>
@@ -209,7 +211,7 @@
                                 </li>
                                 <li>
                                     <div class="submit-form-button">
-                                        <button id="findFlights" type="submit">Show Flights</button>
+                                        <button id="findFlights" type="button">Show Flights</button>
                                     </div>
                                     <div class="promo-code-form">
                                         <input id="promoCode" type="text"
@@ -652,14 +654,9 @@
                                             </ul>
                                         </div>
                                     </div>
-
-
                                 </li>
-
                                 <li class="">
-
                                     <div class="date-inputs-wrapper">
-
                                         <div class="date-inputs date-inputs-first">
                                             <label for="departureDate">Departure Date</label>
                                             <input type="text" id="">
@@ -669,21 +666,14 @@
                                             <input type="text" id="">
                                         </div>
                                     </div>
-
-
                                 </li>
-
-
                                 <li>
-
                                     <div class="submit-form-button">
                                         <button id="findFlights" type="submit">Search Flights</button>
                                     </div>
                                 </li>
                             </ul>
                         </div>
-
-
                     </form>
                 </div>
                 <div class="book-flight-tab">
@@ -704,12 +694,10 @@
                                                                     class="fi fi-rr-angle-small-down"></i></span>
                                             </div>
                                         </div>
-
                                         <div class="hide-customize-round-trip">
                                             <div class="round-trip-hide">
                                                                 <span class="active"><i
                                                                         class="fa-solid fa-check"></i><h4>Round Trip</h4></span>
-
                                                 <span><i
                                                         class="fa-solid fa-check"></i><h4>One Way</h4></span>
 
@@ -717,10 +705,7 @@
                                                         class="fa-solid fa-check"></i><h4>Multi-City</h4></span>
                                             </div>
                                         </div>
-
-
                                     </div>
-
                                     <div class="customize-round-trip">
                                         <div class="show-customize-passenger-trip">
                                             <div class="select-customize-icon">
@@ -734,8 +719,6 @@
                                                                     class="fi fi-rr-angle-small-down"></i></span>
                                             </div>
                                         </div>
-
-
                                         <div class="hide-customize-passenger-trip">
                                             <div class="passenger-hide">
                                                 <ul>
@@ -775,9 +758,7 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
-
                                     <div class="customize-round-trip">
                                         <div class="show-customize-class-trip">
                                             <div class="select-customize-icon">
@@ -791,8 +772,6 @@
                                                                     class="fi fi-rr-angle-small-down"></i></span>
                                             </div>
                                         </div>
-
-
                                         <div class="hide-customize-class-trip">
                                             <div class="round-trip-hide">
                                                                 <span class="active"><i
@@ -810,8 +789,6 @@
                                 </div>
                             </div>
                             <div class="award-ticket">
-                                <!--<p><i class="fi fi-rr-arrow-up-right-from-square"></i><b>Award ticket - <a-->
-                                <!--        href=""> Buy a ticket with Dreamiles</a></b></p>-->
                                 <p>Book with miles?</p>
                                 <div class="toggle-button-cover">
                                     <div class="button-cover">
@@ -828,22 +805,6 @@
                         <div class="form-tab-lists" id="other_trips">
                             <ul>
                                 <li>
-                                    <!--<div class="cont_select_center">-->
-                                    <!--    <div>-->
-                                    <!--        <select class="form-control data-select fromselection drop-select2" name=""-->
-                                    <!--                id="selectFrom">-->
-                                    <!--        </select>-->
-                                    <!--    </div>-->
-                                    <!--</div>-->
-
-                                    <!--<div class="cont_select_center">-->
-                                    <!--    <div>-->
-                                    <!--        <select name="" onchange=""-->
-                                    <!--                class="form-control singleItem data-select toselection drop-select2"-->
-                                    <!--                onclick="return false;" id="selectTo">-->
-                                    <!--        </select>-->
-                                    <!--    </div>-->
-                                    <!--</div>-->
                                     <div class="float-group-icon">
                                         <div class="float-group-bi"><i
                                                 class="fa-solid fa-arrow-right-arrow-left"></i></div>
@@ -1100,13 +1061,8 @@
                                             <input type="text" id="returnDate" readonly>
                                         </div>
                                     </div>
-
-
                                 </li>
-
-
                                 <li>
-
                                     <div class="submit-form-button">
                                         <button id="findFlights" type="submit">Schedule</button>
                                     </div>
@@ -1122,3 +1078,6 @@
         </div>
     </div>
 </div>
+<input type="hidden" id="selectedCountry">
+<input type="hidden" id="selectedLanguage" value="GB">
+<input type="hidden" id="selectedCurrency" value="USD">

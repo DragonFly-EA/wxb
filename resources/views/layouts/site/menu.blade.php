@@ -112,7 +112,7 @@
                                     <ol>
                                         <li class="dreammiles_rewards">
                                             <a class="nav-link text-secondary" href="about-dreammiles.html">
-                                                <img src="images/dreammiles-card.png" alt="dreammiles">
+                                                <img src="{{asset('assets/site/images/dreammiles-card.png')}}" alt="dreammiles">
                                                 <div class="dreamiles_rewards_content">
                                                     <h2>Unlock Exclusive Privileges.</h2>
                                                     <p> Welcome to Dreammiles, where exclusive privileges await.</p>
@@ -126,28 +126,6 @@
 
                                     </ol>
                                 </div>
-
-                                <!--<div class="dropdown-links-columns pic-megamenu">-->
-
-                                <!--    <ol>-->
-                                <!--        <li class="dreammiles_rewards">-->
-                                <!--            <a class="nav-link text-secondary" href="about-dreammiles.html">-->
-                                <!--                <img src="images/dreammiles-card.png" alt="dreammiles">-->
-                                <!--                <div class="dreamiles_rewards_content">-->
-                                <!--                    <h2>Unlock Exclusive Privileges.</h2>-->
-                                <!--                    <p> Welcome to Dreammiles, where exclusive privileges await.</p>-->
-                                <!--                    <span>-->
-                                <!--                            <i class="fa fa-angle-right"></i>-->
-                                <!--                            Learn More-->
-                                <!--                        </span>-->
-                                <!--                </div>-->
-                                <!--            </a>-->
-                                <!--        </li>-->
-
-                                <!--    </ol>-->
-                                <!--</div>-->
-
-
                             </ul>
                         </li>
 
@@ -200,7 +178,7 @@
                                     <ol>
                                         <li class="dreammiles_rewards">
                                             <a class="nav-link text-secondary" href="about-dreammiles.html">
-                                                <img src="images/dreammiles-card.png" alt="dreammiles">
+                                                <img src="{{asset('assets/site/images/dreammiles-card.png')}}" alt="dreammiles">
                                                 <div class="dreamiles_rewards_content">
                                                     <h2>Unlock Exclusive Privileges.</h2>
                                                     <p> Welcome to Dreammiles, where exclusive privileges await.</p>
@@ -259,7 +237,7 @@
                                     <ol>
                                         <li class="dreammiles_rewards">
                                             <a class="nav-link text-secondary" href="about-dreammiles.html">
-                                                <img src="images/dreammiles-card.png" alt="dreammiles">
+                                                <img src="{{asset('assets/site/images/dreammiles-card.png')}}" alt="dreammiles">
                                                 <div class="dreamiles_rewards_content">
                                                     <h2>Unlock Exclusive Privileges.</h2>
                                                     <p> Welcome to Dreammiles, where exclusive privileges await.</p>
@@ -329,7 +307,7 @@
                                     <ol>
                                         <li class="dreammiles_rewards">
                                             <a class="nav-link text-secondary" href="about-dreammiles.html">
-                                                <img src="images/dreammiles-card.png" alt="dreammiles">
+                                                <img src="{{asset('assets/site/images/dreammiles-card.png')}}" alt="dreammiles">
                                                 <div class="dreamiles_rewards_content">
                                                     <h2>Give Feedback</h2>
                                                     <p> Welcome to Dreammiles, where exclusive privileges await.</p>
@@ -362,7 +340,7 @@
                                 <a href="" data-aos="" class="question-link">
                                     <label for="toggle" class="lang-flag lang-en"
                                            title="Click to select the language">
-                                        <span class="flag"></span>
+                                        <b id="flag_section"></b>
                                     </label>
 
                                     <div id="lang_selected">
@@ -489,7 +467,7 @@
                 </label>
 
             </div>
-            <div class="mobile-logo-wrapper"><a href="index.html"><img src="images/rwandairlogo.png"></a></div>
+            <div class="mobile-logo-wrapper"><a href="index.html"><img src="{{asset('assets/site/images/rwandairlogo.png')}}"></a></div>
 
 
         </div>
@@ -579,7 +557,7 @@
                                 <ol>
                                     <li class="dreammiles_rewards">
                                         <a class="nav-link text-secondary" href="about-dreammiles.html">
-                                            <img src="images/dreammiles-card.png" alt="dreammiles">
+                                            <img src="{{asset('assets/site/images/dreammiles-card.png')}}" alt="dreammiles">
                                             <div class="dreamiles_rewards_content">
                                                 <h2>Unlock Exclusive Privileges.</h2>
                                                 <p> Welcome to Dreammiles, where exclusive privileges await.</p>
@@ -599,7 +577,7 @@
                                 <ol>
                                     <li class="dreammiles_rewards">
                                         <a class="nav-link text-secondary" href="about-dreammiles.html">
-                                            <img src="images/dreammiles-card.png" alt="dreammiles">
+                                            <img src="{{asset('assets/site/images/dreammiles-card.png')}}" alt="dreammiles">
                                             <div class="dreamiles_rewards_content">
                                                 <h2>Unlock Exclusive Privileges.</h2>
                                                 <p> Welcome to Dreammiles, where exclusive privileges await.</p>
@@ -667,7 +645,7 @@
                                 <ol>
                                     <li class="dreammiles_rewards">
                                         <a class="nav-link text-secondary" href="about-dreammiles.html">
-                                            <img src="images/dreammiles-card.png" alt="dreammiles">
+                                            <img src="{{asset('assets/site/images/dreammiles-card.png')}}" alt="dreammiles">
                                             <div class="dreamiles_rewards_content">
                                                 <h2>Unlock Exclusive Privileges.</h2>
                                                 <p> Welcome to Dreammiles, where exclusive privileges await.</p>
@@ -729,7 +707,7 @@
                                 <ol>
                                     <li class="dreammiles_rewards">
                                         <a class="nav-link text-secondary" href="about-dreammiles.html">
-                                            <img src="images/dreammiles-card.png" alt="dreammiles">
+                                            <img src="{{asset('assets/site/images/dreammiles-card.png')}}" alt="dreammiles">
                                             <div class="dreamiles_rewards_content">
                                                 <h2>Unlock Exclusive Privileges.</h2>
                                                 <p> Welcome to Dreammiles, where exclusive privileges await.</p>
@@ -799,7 +777,7 @@
                                 <ol>
                                     <li class="dreammiles_rewards">
                                         <a class="nav-link text-secondary" href="about-dreammiles.html">
-                                            <img src="images/dreammiles-card.png" alt="dreammiles">
+                                            <img src="{{asset('assets/site/images/dreammiles-card.png')}}" alt="dreammiles">
                                             <div class="dreamiles_rewards_content">
                                                 <h2>Give Feedback</h2>
                                                 <p> Welcome to Dreammiles, where exclusive privileges await.</p>

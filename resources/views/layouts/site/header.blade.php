@@ -15,16 +15,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap')
     </style>
 
-    <!-- ScrollMagic CDN -->
-    <!--<script src="js/ScrollMagic.min.js"></script>-->
-    <!--<script src="js/debug.addIndicators.min.js"></script>-->
-
     <!-- AOS CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
-    <!--<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>-->
-
-    <!-- GSAP CDN -->
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>-->
 
 
     <link rel="stylesheet" type="text/css" href="{{asset('assets/site/css/style.css')}}">

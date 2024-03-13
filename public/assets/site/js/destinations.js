@@ -11,6 +11,10 @@ $(document).ready(function () {
         $.getJSON("https://flyingwithdragonfly.com/dist/phoenix/V1.0/db/countries.json"),
         $.getJSON("https://flyingwithdragonfly.com/dist/phoenix/V1.0/db/routeFares.json")
     ).done(function (location, airports, countries_data, fares) {
+        $("#selectedCountry").val(location[0][0].iso_code)
+        let flag = ``
+        flag+=`<span class="flag" style="background-image: url('https://www.rwandair.com/dist/phoenix/V1.0/img/flags/1x1/${location[0][0].iso_code.toLowerCase()}.svg')"></span>`
+        $("#flag_section").html(flag);
         current_location = location;
         airport_data = airports[0];
         countries = countries_data[0];

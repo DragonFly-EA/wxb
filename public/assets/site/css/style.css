@@ -605,9 +605,9 @@ img {
     /* border-left: 2px solid #E2162C; */
 }
 
-.language-dropdown .lang-en .flag {
-    background-image: url("../images/rw-flag.png");
-}
+/*.language-dropdown .lang-en .flag {*/
+/*    background-image: url("../images/rw-flag.png");*/
+/*}*/
 
 .language-dropdown .lang-pt {
     /*border-left: 4px solid #1ABC9C;*/

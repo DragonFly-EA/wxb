@@ -25,7 +25,7 @@ $(document).ready(function () {
 });
 
 function loadAirports() {
-    airport = $("#selectFrom").val();
+    airport = $("#selectFromDestinations").val();
     appendDestinationJson(
         airport_data.filter((x) =>
             fullDeals
@@ -34,13 +34,13 @@ function loadAirports() {
                 .includes(x.iata_code)
         ),
         countries,
-        "#selectTo",
+        "#selectToDestination",
         current_location
     );
 }
 
 function appendAirportData(airports, countries_data, current_location) {
-    let select = $("#selectFrom");
+    let select = $("#selectFromDestinations");
     let options = [];
 
     airports.forEach(airport => {
@@ -101,7 +101,7 @@ function searchFromDestinations() {
 }
 
 function appendToData(airports, countries_data) {
-    let select = $("#selectTo");
+    let select = $("#selectToDestination");
     let options = [];
     airports.forEach(airport => {
         try {
