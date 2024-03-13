@@ -79,8 +79,6 @@ $(document).ready(function () {
 
     $(".open").click(function () {
         $(".modalDialog1").modal("show");
-        console.log("Hello");
-        console.log($(".modalDialog1"));
     });
     // $(".thanks-btn1").on('click', function () {
     //     $(".modalDialog1").css("display", "none");
@@ -93,30 +91,33 @@ $(document).ready(function () {
     // });
 
     // $('select').niceSelect();
-
-
-    $('#datepicker').datepicker({
-        format: 'yyyy-mm-dd',
-        autoclose: true,
-        startDate: '+1d',
-
-        // endDate: '+1y',
-        beforeShowDay: function (date) {
-            var price = 100;
-            var currentDate = date.toISOString().slice(0, 10);
-            var cssClass = 'has-price';
-            var content = '<span class="date-price"><b></b><div class="date">' + date.getDate() + '</div> <div class="price">$' + price + '</div></span>';
-            return {
-                classes: cssClass,
-                tooltip: '',
-                content: content
-            };
-        }
+    $(document).ready(function() {
+        $('#datepicker').datepicker({
+            format: 'yyyy-mm-dd',
+            autoclose: true,
+            startDate: '1d',
+            beforeShowDay: function (date) {
+                var price = 100;
+                var currentDate = date.toISOString().slice(0, 10);
+                var cssClass = 'has-price';
+                var content = '<span class="date-price"><b></b><div class="date">' + date.getDate() + '</div> <div class="price">$' + price + '</div></span>';
+                return {
+                    classes: cssClass,
+                    tooltip: '',
+                    content: content
+                };
+            }
+        });
+        // Attach event listener to the 'changeDate' event
+        $('#datepicker').on('changeDate', function(e) {
+            var selectedDate = e.format('yyyy-mm-dd');
+            $('.first-date input').val(selectedDate);
+        });
     });
     $('#datepicker1').datepicker({
         format: 'yyyy-mm-dd',
         autoclose: true,
-        startDate: '+1d',
+        startDate: new Date(new Date().getFullYear(), new Date().getMonth() + 1, 1), // Start from the beginning of next month
 
         // endDate: '+1y',
         beforeShowDay: function (date) {
@@ -131,9 +132,11 @@ $(document).ready(function () {
             };
         }
     });
+    $('#datepicker1').on('changeDate', function(e) {
+        var selectedDate = e.format('yyyy-mm-dd');
+        $('.second-date input').val(selectedDate);
+    });
 });
-
-
 $(document).ready(function () {
     $('.drop-select1').select2({
         minimumResultsForSearch: Infinity

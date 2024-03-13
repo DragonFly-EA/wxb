@@ -203,6 +203,7 @@
                                         <div class="date-inputs date-inputs-second">
                                             <label for="returnDate">Return</label>
                                             <input type="text" id="returnDate" readonly>
+                                            <i class="fa-solid fa-calendar-days"></i>
                                         </div>
                                     </div>
                                 </li>
@@ -238,12 +239,12 @@
                                             </p>
                                         </div>
                                         <div class="pop-date">
-                                            <div class="dep-ret-input">
-                                                <input type="" placeholder="07/07/07">
+                                            <div class="dep-ret-input first-date">
+                                                <input type="text" placeholder="07/07/07">
                                                 <i class="fa-solid fa-calendar-days"></i>
                                             </div>
-                                            <div class="dep-ret-input">
-                                                <input type="" placeholder="07/07/07">
+                                            <div class="dep-ret-input second-date">
+                                                <input type="text" placeholder="07/07/07">
                                                 <i class="fa-solid fa-calendar-days"></i>
                                             </div>
                                         </div>
@@ -256,7 +257,7 @@
                                         <div id="datepicker1"></div>
                                     </div>
                                     <div class="date-picker-continue">
-                                        <a href="#">Continues</a>
+                                        <a onclick="appendDates()">Continue</a>
                                     </div>
                                 </div>
                             </div>

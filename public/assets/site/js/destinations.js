@@ -43,7 +43,7 @@ function handleData() {
                         <div class="dont-miss-offer-details-hover">
                             <div class="dont-miss-offer-details-visible">
                                 <b>
-                                    <h4>${airport.municipality}</h4>
+                                    <span><i class="fa-solid fa-plane"></i><h4>${airport.municipality}</h4></span>
                                     <p>${current_city}-${airport.iata_code}</p>
                                 </b>
                                 <b>

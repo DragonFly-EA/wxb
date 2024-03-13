@@ -137,3 +137,11 @@ function appendToData(airports, countries_data) {
     select.empty();
     select.append(options);
 }
+function appendDates() {
+    event.preventDefault();
+    let firstDate = $('.first-date input').val();
+    let secondDate = $('.second-date input').val();
+    document.getElementById("departureDate").value = firstDate;
+    document.getElementById("returnDate").value = secondDate;
+    $(".modalDialog1").modal('hide');
+}
