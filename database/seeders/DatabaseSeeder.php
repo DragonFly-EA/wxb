@@ -12,11 +12,39 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        $this->call([
+            UsersTableSeeder::class,
+            AboutTableSeeder::class,
+            ValuesTableSeeder::class,
+            BaggageTableSeeder::class,
+            FleetTableSeeder::class,
+            PartnershipTableSeed::class,
+            TravelInsuranceSeed::class,
+            MedicalInformationSeed::class,
+            PaymentOptionSeed::class,
+            SpecialAssistanceSeed::class,
+            AwardTableSeed::class,
+            AccessbilitySeed::class,
+            SeatSeed::class,
+            SpecialAssistanceSeed::class,
+            FaqsSeed::class,
+            CheckInOnlineSeed::class,
+            SustainabilitySeed::class,
+            ContractSeeder::class,
+            TravelRequirementsSeed::class,
+            TravelInformationSeed::class,
+            SiteMapSeed::class,
+            TermsSeed::class,
+            SearchSeeder::class,
+            PrivacyPolicySeed::class,
+//            NewsLetterOfferSeed::class,
+            OnlineFraudSeed::class,
+            LegalSeed::class,
+            LoungesSeeder::class,
+            InflightEntertainmentSeed::class,
+            PermissionSeeder::class,
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+
+        ]);
     }
 }
