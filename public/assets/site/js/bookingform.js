@@ -9,14 +9,13 @@ function getSelectedValue(value, element, appendTo, classes) {
     getTrip(value)
 
 }
+
 function getTrip(value) {
     console.log(value);
-    if (value==="Multi City")
-    {
+    if (value === "Multi City") {
         $("#other_trips").hide();
         $("#multi_city").show();
-    }
-    else{
+    } else {
         $("#other_trips").show();
         $("#multi_city").hide();
     }
@@ -35,6 +34,8 @@ $(document).ready(function () {
         countries = countries_data[0];
         fullDeals = fares[0].deals;
         appendAirportData(airport_data, countries, current_location)
+        appendAirportDataFlightStatus(airport_data, countries, current_location)
+        appendAirportDataSchedule(airport_data, countries, current_location)
     });
 });
 
@@ -103,6 +104,106 @@ function appendAirportData(airports, countries_data, current_location) {
     select.append(options);
 }
 
+function appendAirportDataFlightStatus(airports, countries_data, current_location) {
+    let select = $("#selectFromDestinationsStatus");
+    let options = [];
+
+    airports.forEach(airport => {
+        try {
+            let listItem = document.createElement("li"); // Create new list item for each airport
+            let div = document.createElement("div");
+            let div1 = document.createElement('div');
+            div1.className = "float-group-airport";
+            div.className = "float-group-country";
+
+            let heading = document.createElement("h5");
+            heading.textContent = countries_data.find((x) => x.code === airport.iso_country).name;
+            let paragraph = document.createElement("p");
+            paragraph.textContent = airport.municipality;
+            div.appendChild(heading);
+            div.appendChild(paragraph);
+            let heading1 = document.createElement("h5");
+            heading1.textContent = airport.iata_code;
+            let p1 = document.createElement("p");
+            p1.textContent = airport.name;
+            div1.appendChild(heading1)
+            div1.appendChild(p1)
+
+            listItem.appendChild(div);
+            listItem.appendChild(div1);
+            listItem.addEventListener("click", function () {
+                document.querySelector(".flight-status-first input").value = airport.name + ", " + airport.iata_code + ", " + airport.municipality;
+                appendToDataFlightStatus(airports.filter((x) =>
+                    fullDeals
+                        .find((deal) => deal.city === airport.iata_code)
+                        .routes.map((route) => route.city)
+                        .includes(x.iata_code)
+                ), countries_data)
+                $(".hide-float-group-first").slideUp();
+                let secondInput = $(".flight-status-second input");
+                if (secondInput.val() !== "") {
+                    secondInput.val("");
+                }
+            });
+            options.push(listItem);
+        } catch (e) {
+            // Handle error
+        }
+    });
+    select.empty();
+    select.append(options);
+}
+
+function appendAirportDataSchedule(airports, countries_data, current_location) {
+    let select = $("#flightFromSchedule");
+    let options = [];
+
+    airports.forEach(airport => {
+        try {
+            let listItem = document.createElement("li"); // Create new list item for each airport
+            let div = document.createElement("div");
+            let div1 = document.createElement('div');
+            div1.className = "float-group-airport";
+            div.className = "float-group-country";
+
+            let heading = document.createElement("h5");
+            heading.textContent = countries_data.find((x) => x.code === airport.iso_country).name;
+            let paragraph = document.createElement("p");
+            paragraph.textContent = airport.municipality;
+            div.appendChild(heading);
+            div.appendChild(paragraph);
+            let heading1 = document.createElement("h5");
+            heading1.textContent = airport.iata_code;
+            let p1 = document.createElement("p");
+            p1.textContent = airport.name;
+            div1.appendChild(heading1)
+            div1.appendChild(p1)
+
+            listItem.appendChild(div);
+            listItem.appendChild(div1);
+            listItem.addEventListener("click", function () {
+                document.querySelector(".flight-schedule-first input").value = airport.name + ", " + airport.iata_code + ", " + airport.municipality;
+                appendToDataSchedule(airports.filter((x) =>
+                    fullDeals
+                        .find((deal) => deal.city === airport.iata_code)
+                        .routes.map((route) => route.city)
+                        .includes(x.iata_code)
+                ), countries_data)
+                $(".hide-float-group-first").slideUp();
+                let secondInput = $(".flight-schedule-second input");
+                if (secondInput.val() !== "") {
+                    secondInput.val("");
+                }
+            });
+            options.push(listItem);
+        } catch (e) {
+            // Handle error
+        }
+    });
+    select.empty();
+    select.append(options);
+}
+
 function searchFromDestinations() {
     let inputValue = $('.float-group-first input').val().trim().toLowerCase();
     let filteredAirports = airports.filter(airport => {
@@ -150,6 +251,83 @@ function appendToData(airports, countries_data) {
     })
     select.empty();
     select.append(options);
+}
+
+function appendToDataFlightStatus(airports, countries_data) {
+    let select = $("#selectToDestinationStatus");
+    let options = [];
+    airports.forEach(airport => {
+        try {
+            let listItem = document.createElement("li"); // Create new list item for each airport
+            let div = document.createElement("div");
+            let div1 = document.createElement('div');
+            div1.className = "float-group-airport";
+            div.className = "float-group-country";
+
+            let heading = document.createElement("h5");
+            heading.textContent = countries_data.find((x) => x.code === airport.iso_country).name;
+            let paragraph = document.createElement("p");
+            paragraph.textContent = airport.municipality;
+            div.appendChild(heading);
+            div.appendChild(paragraph);
+            let heading1 = document.createElement("h5");
+            heading1.textContent = airport.iata_code;
+            let p1 = document.createElement("p");
+            p1.textContent = airport.name;
+            div1.appendChild(heading1)
+            div1.appendChild(p1)
+
+            listItem.appendChild(div);
+            listItem.appendChild(div1);
+            listItem.addEventListener("click", function () {
+                document.querySelector(".flight-status-second input").value = airport.name + ", " + airport.iata_code + ", " + airport.municipality;
+                $(".hide-float-group-second").slideUp();
+            });
+            options.push(listItem);
+        } catch (e) {
+        }
+    })
+    select.empty();
+    select.append(options);
+}
+
+function appendToDataSchedule(airports, countries_data) {
+    let select = $("#flightToSchedule");
+    let options = [];
+    airports.forEach(airport => {
+        try {
+            let listItem = document.createElement("li"); // Create new list item for each airport
+            let div = document.createElement("div");
+            let div1 = document.createElement('div');
+            div1.className = "float-group-airport";
+            div.className = "float-group-country";
+
+            let heading = document.createElement("h5");
+            heading.textContent = countries_data.find((x) => x.code === airport.iso_country).name;
+            let paragraph = document.createElement("p");
+            paragraph.textContent = airport.municipality;
+            div.appendChild(heading);
+            div.appendChild(paragraph);
+            let heading1 = document.createElement("h5");
+            heading1.textContent = airport.iata_code;
+            let p1 = document.createElement("p");
+            p1.textContent = airport.name;
+            div1.appendChild(heading1)
+            div1.appendChild(p1)
+
+            listItem.appendChild(div);
+            listItem.appendChild(div1);
+            listItem.addEventListener("click", function () {
+                document.querySelector(".flight-schedule-second input").value = airport.name + ", " + airport.iata_code + ", " + airport.municipality;
+                $(".hide-float-group-second").slideUp();
+            });
+            options.push(listItem);
+        } catch (e) {
+        }
+    })
+    select.empty();
+    select.append(options);
+
 }
 
 function appendDates() {

@@ -43,6 +43,6 @@ class Quantity {
 new Quantity('app', 1,1,9);
 new Quantity('app1', 0,0,9);
 new Quantity('app2', 0,0,9);
-new Quantity('app3', 0,0,9);
-new Quantity('app4', 0,0,9);
-new Quantity('app5', 0,0,9);
+// new Quantity('app3', 0,0,9);
+// new Quantity('app4', 0,0,9);
+// new Quantity('app5', 0,0,9);
