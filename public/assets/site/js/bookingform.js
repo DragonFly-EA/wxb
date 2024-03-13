@@ -6,6 +6,20 @@ function getSelectedValue(value, element, appendTo, classes) {
     var roundTripValueElement = document.getElementById(appendTo);
     roundTripValueElement.innerText = value;
     element.classList.add('active')
+    getTrip(value)
+
+}
+function getTrip(value) {
+    console.log(value);
+    if (value==="Multi City")
+    {
+        $("#other_trips").hide();
+        $("#multi_city").show();
+    }
+    else{
+        $("#other_trips").show();
+        $("#multi_city").hide();
+    }
 }
 
 $(document).ready(function () {

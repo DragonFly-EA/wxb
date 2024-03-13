@@ -26,6 +26,19 @@ $(document).on("click", "#findFlights", (e) => {
         tripflow
     );
 });
+$(document).on("click", "#retreivepnr_SearchFlex", (e) => {
+    e.preventDefault();
+    $("#errorsList").html("");
+    // if (!$("#errorsContent").hasClass("d-none")) {
+    //     $("#errorsContent").addClass("d-none");
+    // }
+    // console.log("delete clicked length=", $(".mltcity").length);
+    selectedCountry = $("#selectedCountry").val();
+    selectedLanguage = $("#selectedLanguage").val();
+    selectedCurrency = $("#selectedCurrency").val();
+
+    retreiveBooking(e, selectedLanguage, tripflow);
+});
 
 function SearchBook(event, selectedCurrency, selectedLanguage, selectedCountry, selectedTripflow) {
     const airportName = $("#selectFrom").val();
@@ -655,4 +668,95 @@ function SearchBook(event, selectedCurrency, selectedLanguage, selectedCountry, 
 
 
     return $(form).appendTo("body").submit();
+}
+function retreiveBooking(event, selectedLanguage, selectedTripflow) {
+    //Start of initialization
+    var error = "";
+    var focusSet = false;
+    var languageval = selectedLanguage;
+    var form = document.createElement("form");
+    $(form).attr("name", selectedTripflow);
+    $(form).attr("action", "https://www.rwandair.com/bookingflow");
+    $(form).attr("method", "GET");
+    $(form).css("display", "none");
+    $(form).append(
+        `<input id="EMBEDDED_TRANSACTION" name="EMBEDDED_TRANSACTION" type="text" value="RetrievePNR"  />`
+    );
+    $(form).append(
+        `<input id="LANGUAGE" name="LANGUAGE" type="text" value="${selectedLanguage}"  />`
+    );
+    $(form).append(
+        `<input id="DIRECT_RETRIEVE_LASTNAME" name="DIRECT_RETRIEVE_LASTNAME" type="text" value="${
+            $("#retreivepnr_lastname").val().length > 0 &&
+            $("#retreivepnr_lastname").val() !== null
+                ? $("#retreivepnr_lastname").val()
+                : ""
+        }"  />`
+    );
+    $(form).append(
+        `<input id="REC_LOC" name="REC_LOC" type="text" value="${
+            $("#retreivepnr_pnr").val().length > 0 &&
+            $("#retreivepnr_pnr").val() !== null
+                ? $("#retreivepnr_pnr").val()
+                : ""
+        }"  />`
+    );
+    //End of initialization
+
+    if (
+        $(`#retreivepnr_lastname`).val() !== null
+            ? $(`#retreivepnr_lastname`).val().length === 0
+            : true
+    ) {
+        error += `<li>${selectedLanguage === "FR" ? "veuillez saisir un nom de famille valide" : "Please enter valid lastname"}</li>`;
+        if (!$(`#retreivepnr_lastname`).hasClass("focusedCustomized"))
+            $(`#retreivepnr_lastname`).addClass("focusedCustomized");
+
+        focusSet = true;
+        event.preventDefault();
+    } else {
+        if ($(`#retreivepnr_lastname`).hasClass("focusedCustomized"))
+            $(`#retreivepnr_lastname`).removeClass("focusedCustomized");
+    }
+
+    if (
+        $(`#retreivepnr_pnr`).val() !== null
+            ? $(`#retreivepnr_pnr`).val().length === 0
+            : true
+    ) {
+        error += `<li>${selectedLanguage === "FR" ? "Veuillez saisir une pièce d'identité de passager valide" : "Please enter valid Passenger ID"}</li>`;
+        if (!$(`#retreivepnr_pnr`).hasClass("focusedCustomized"))
+            $(`#retreivepnr_pnr`).addClass("focusedCustomized");
+
+        focusSet = true;
+        event.preventDefault();
+    } else {
+        if ($(`#retreivepnr_pnr`).hasClass("focusedCustomized"))
+            $(`#retreivepnr_pnr`).removeClass("focusedCustomized");
+    }
+    param = $(form).serialize();
+
+    console.log("retreivepnrFrm parameter:" + param);
+    console.log("focusSet=", focusSet);
+
+    if (focusSet) {
+        $("#errorsContent").removeClass("d-none");
+        $("#errorsList").html(error);
+        $('html, body').animate({
+            scrollTop: $("#errorsContent").offset().top
+        }, 800, function () {
+        });
+        return;
+    }
+    $(event.target)
+        .html(
+            '<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Loading...'
+        )
+        .attr("disabled", true);
+    gtag('event', `RetrievePNR`, {
+        'event_category': 'RetrievePNR',
+        'event_label': 'Search',
+    });
+    $(form).appendTo("body").submit();
+    return $(form).remove();
 }
