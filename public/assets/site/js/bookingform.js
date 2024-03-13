@@ -137,11 +137,21 @@ function appendToData(airports, countries_data) {
     select.empty();
     select.append(options);
 }
+
 function appendDates() {
     event.preventDefault();
-    let firstDate = $('.first-date input').val();
-    let secondDate = $('.second-date input').val();
-    document.getElementById("departureDate").value = firstDate;
-    document.getElementById("returnDate").value = secondDate;
+    let firstDate = new Date($('.first-date input').val()).toLocaleDateString('en-GB', {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric'
+    });
+    let secondDate = new Date($('.second-date input').val()).toLocaleDateString('en-GB', {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric'
+    });
+
+    document.getElementById("DepartDate").value = firstDate;
+    document.getElementById("ArrivalDate").value = secondDate;
     $(".modalDialog1").modal('hide');
 }

@@ -1,12 +1,21 @@
 <!-- Scripts -->
 <script type="text/javascript" src="{{asset('assets/site/js/jquery-3.7.1.min.js')}}"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-64879055-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-64879055-1');
+</script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!-- Bootstrap Datepicker JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>--}}
+<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script src="https://flyingwithdragonfly.com/dist/phoenix/V1.0/js/bootstrap-datepicker.min.js"></script>
 
 <script type="text/javascript" src="{{asset(asset('assets/site/js/destinations.js'))}}"></script>
 <script type="text/javascript" src="{{asset(asset('assets/site/js/deals.js'))}}"></script>

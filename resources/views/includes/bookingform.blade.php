@@ -200,11 +200,11 @@
                                         </div>
                                         <div class="date-inputs date-inputs-first">
                                             <label for="departureDate">Departure</label>
-                                            <input type="text" id="departureDate" readonly>
+                                            <input type="text" id="DepartDate" readonly>
                                         </div>
                                         <div class="date-inputs date-inputs-second">
-                                            <label for="returnDate">Return</label>
-                                            <input type="text" id="returnDate" readonly>
+                                            <label for="returnDate">Returns</label>
+                                            <input type="text" id="ArrivalDate" readonly>
                                             <i class="fa-solid fa-calendar-days"></i>
                                         </div>
                                     </div>
