@@ -1,3 +1,5 @@
+let ticket_prices = '';
+
 function getSelectedValue(value, element, appendTo, classes) {
     var roundTripOptions = document.querySelectorAll('.' + classes + ' .round-trip-hide span');
     roundTripOptions.forEach(function (option) {
@@ -88,7 +90,7 @@ function appendAirportData(airports, countries_data, current_location) {
                         .find((deal) => deal.city === airport.iata_code)
                         .routes.map((route) => route.city)
                         .includes(x.iata_code)
-                ), countries_data)
+                ), countries_data, airport.iata_code)
                 $(".hide-float-group-first").slideUp();
                 let secondInput = $(".float-group-second input");
                 if (secondInput.val() !== "") {
@@ -215,7 +217,7 @@ function searchFromDestinations() {
     appendAirportData(filteredAirports, countries, current_location);
 }
 
-function appendToData(airports, countries_data) {
+function appendToData(airports, countries_data, iata_code) {
     let select = $("#selectToDestination");
     let options = [];
     airports.forEach(airport => {
@@ -244,6 +246,8 @@ function appendToData(airports, countries_data) {
             listItem.addEventListener("click", function () {
                 document.querySelector(".float-group-second input").value = airport.name + ", " + airport.iata_code + ", " + airport.municipality;
                 $(".hide-float-group-second").slideUp();
+                ticket_prices = getTicketPrice(iata_code, airport.iata_code);
+                console.log(ticket_prices)
             });
             options.push(listItem);
         } catch (e) {
@@ -347,3 +351,133 @@ function appendDates() {
     document.getElementById("ArrivalDate").value = secondDate;
     $(".modalDialog1").modal('hide');
 }
+
+function getTicketPrice(city, iata_code) {
+    let fullDeal = fullDeals.find(deal => deal.city === city);
+    if (fullDeal && fullDeal.routes) {
+        let route = fullDeal.routes.find(route => route.city === iata_code);
+        if (route) {
+            return route.priceFrom;
+        }
+    }
+    return "";
+}
+
+// $(document).ready(function () {
+//     $('#datepicker').datepicker({
+//         format: 'yyyy-mm-dd',
+//         autoclose: true,
+//         startDate: '1d',
+//         beforeShowDay: function (date) {
+//             var price = Math.round(ticket_prices);
+//             var currentDate = date.toISOString().slice(0, 10);
+//             var cssClass = 'has-price';
+//             var content = '<span class="date-price"><b></b><div class="date">' + date.getDate() + '</div> <div class="price">$' + price + '</div></span>';
+//             return {
+//                 classes: cssClass,
+//                 tooltip: '',
+//                 content: content
+//             };
+//         }
+//     });
+//     // Attach event listener to the 'changeDate' event
+//     $('#datepicker').on('changeDate', function(e) {
+//         var selectedDate = e.format('yyyy-mm-dd');
+//         $('.first-date input').val(selectedDate);
+//     });
+//
+//     $('#datepicker1').datepicker({
+//         format: 'yyyy-mm-dd',
+//         autoclose: true,
+//         startDate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate() + 1), // Start from tomorrow
+//         endDate: '+1m', // End after one week
+//
+//         beforeShowDay: function (date) {
+//             var price = Math.round(ticket_prices);
+//             var currentDate = date.toISOString().slice(0, 10);
+//             var cssClass = 'has-price';
+//             var content = '<span class="date-price"><b></b><div class="date">' + date.getDate() + '</div> <div class="price">$' + price + '</div></span>';
+//             return {
+//                 classes: cssClass,
+//                 tooltip: '',
+//                 content: content
+//             };
+//         }
+//     });
+//     $('#datepicker1').on('changeDate', function(e) {
+//         var selectedDate = e.format('yyyy-mm-dd');
+//         $('.second-date input').val(selectedDate);
+//     });
+// });
+
+// $(document).ready(function () {
+//     $('#datepicker').daterangepicker({
+//         format: 'yyyy-mm-dd',
+//         autoclose: true,
+//         // startDate: '1d',
+//         opens: 'left', // Adjust this according to your preference
+//         startDate: moment(), // Set initial start date to today
+//         endDate: moment(), // Set initial end date to today
+//        // autoclose: false,
+//        // autoApply: false, // Keep the picker open after applying
+//         locale: {
+//             format: 'YYYY-MM-DD', // Adjust date format as needed
+//         },
+//         beforeShowDay: function (date) {
+//             var price = Math.round(ticket_prices);
+//             var currentDate = date.toISOString().slice(0, 10);
+//             var cssClass = 'has-price';
+//             var content = '<span class="date-price"><b></b><div class="date">' + date.getDate() + '</div> <div class="price">$' + price + '</div></span>';
+//             return {
+//                 classes: cssClass,
+//                 tooltip: '',
+//                 content: content
+//             };
+//         }
+//     });
+//     // Attach event listener to the 'changeDate' event
+//     $('#datepicker').on('changeDate', function (e) {
+//         var selectedDate = e.format('yyyy-mm-dd');
+//         $('.first-date input').val(selectedDate);
+//     });
+// })
+// JavaScript
+// JavaScript
+// JavaScript
+// JavaScript
+$(document).ready(function () {
+    // Initialize date range picker
+    var datepicker = $('#datepicker').daterangepicker({
+        parentEl: '.first-date', // Set the parent element
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        opens: 'left', // Adjust this according to your preference
+        startDate: moment(), // Set initial start date to today
+        endDate: moment(), // Set initial end date to today
+        locale: {
+            format: 'YYYY-MM-DD', // Adjust date format as needed
+        },
+        beforeShowDay: function (date) {
+            var price = Math.round(ticket_prices);
+            var currentDate = date.toISOString().slice(0, 10);
+            var cssClass = 'has-price';
+            var content = '<span class="date-price"><b></b><div class="date">' + date.getDate() + '</div> <div class="price">$' + price + '</div></span>';
+            return {
+                classes: cssClass,
+                tooltip: '',
+                content: content
+            };
+        }
+    }).data('daterangepicker');
+
+    // Keep the calendar open after applying
+    datepicker.hide = function () { };
+
+    // Attach event listener to the 'change' event
+    $('#datepicker').on('change', function (e) {
+        var selectedDate = e.target.value;
+        $('.first-date input').val(selectedDate);
+    });
+});
+
+

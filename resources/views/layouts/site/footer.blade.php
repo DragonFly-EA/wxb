@@ -3,7 +3,11 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64879055-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config', 'UA-64879055-1');
 </script>
@@ -15,7 +19,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>--}}
 <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script src="https://flyingwithdragonfly.com/dist/phoenix/V1.0/js/bootstrap-datepicker.min.js"></script>
+{{--<script src="https://flyingwithdragonfly.com/dist/phoenix/V1.0/js/bootstrap-datepicker.min.js"></script>--}}
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
 <script type="text/javascript" src="{{asset(asset('assets/site/js/destinations.js'))}}"></script>
 <script type="text/javascript" src="{{asset(asset('assets/site/js/deals.js'))}}"></script>
@@ -47,6 +52,26 @@
     //         input.blur();
     //     }
     // });
+</script>
+<script>
+    var startTime = performance.now();
+    let loadTime;
+    window.addEventListener('load', function () {
+        // Measure the time when the page finishes loading
+        var endTime = performance.now();
+        loadTime = endTime - startTime;
+    });
+    // Simulate content loading delay
+
+    setTimeout(function () {
+        // Show the content
+        document.getElementById('content1').classList.remove('hidden1');
+        // Hide the skeleton
+        document.querySelectorAll('.skeleton').forEach(function (skeleton) {
+            skeleton.style.display = 'none';
+        });
+    }, loadTime);
+
 </script>
 <script src="{{asset('assets/site/js/passenger_input.js')}}"></script>
 

@@ -1,3 +1,8 @@
+<style>
+    .highlight {
+        background-color: #000; /* Adjust color as needed */
+    }
+</style>
 <div class="home-form-wrapper">
     <div class="container-rigid">
         <div id="horizontalTab">
@@ -254,7 +259,7 @@
                                     </div>
 
                                     <div class="input-group">
-                                        <div id="datepicker"></div>
+                                        <div id="datepicker">Select Date</div>
                                     </div>
                                     <div class="input-group">
                                         <div id="datepicker1"></div>
