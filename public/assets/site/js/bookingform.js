@@ -411,7 +411,7 @@ function getTicketPrice(city, iata_code) {
 // });
 
 // $(document).ready(function () {
-//     $('#datepicker').daterangepicker({
+//     $('#datepicker').datepicker({
 //         format: 'yyyy-mm-dd',
 //         autoclose: true,
 //         // startDate: '1d',
@@ -445,18 +445,68 @@ function getTicketPrice(city, iata_code) {
 // JavaScript
 // JavaScript
 // JavaScript
+// $(document).ready(function () {
+//     // Initialize date range picker
+//     var datepicker = $('#datepicker').daterangepicker({
+//         parentEl: '.first-date', // Set the parent element
+//         format: 'yyyy-mm-dd',
+//         autoclose: true,
+//         opens: 'left', // Adjust this according to your preference
+//         startDate: moment(), // Set initial start date to today
+//         endDate: moment(), // Set initial end date to today
+//         locale: {
+//             format: 'YYYY-MM-DD', // Adjust date format as needed
+//         },
+//         beforeShowDay: function (date) {
+//             var price = Math.round(ticket_prices);
+//             var currentDate = date.toISOString().slice(0, 10);
+//             var cssClass = 'has-price';
+//             var content = '<span class="date-price"><b></b><div class="date">' + date.getDate() + '</div> <div class="price">$' + price + '</div></span>';
+//             return {
+//                 classes: cssClass,
+//                 tooltip: '',
+//                 content: content
+//             };
+//         }
+//     }).data('daterangepicker');
+//
+//     // Keep the calendar open after applying
+//     datepicker.hide = function () { };
+//
+//     // Attach event listener to the 'change' event
+//     $('#datepicker').on('change', function (e) {
+//         var selectedDate = e.target.value;
+//         $('.first-date input').val(selectedDate);
+//     });
+// });
 $(document).ready(function () {
-    // Initialize date range picker
-    var datepicker = $('#datepicker').daterangepicker({
-        parentEl: '.first-date', // Set the parent element
+    $(document).ready(function() {
+        $('#datepicker').datepicker({
+            format: 'yyyy-mm-dd',
+            autoclose: true,
+            startDate: '1d',
+            beforeShowDay: function (date) {
+                var price = Math.round(ticket_prices);
+                var currentDate = date.toISOString().slice(0, 10);
+                var cssClass = 'has-price';
+                var content = '<span class="date-price"><b></b><div class="date">' + date.getDate() + '</div> <div class="price">$' + price + '</div></span>';
+                return {
+                    classes: cssClass,
+                    tooltip: '',
+                    content: content
+                };
+            }
+        });
+        // Attach event listener to the 'changeDate' event
+        $('#datepicker').on('changeDate', function(e) {
+            var selectedDate = e.format('yyyy-mm-dd');
+            $('.first-date input').val(selectedDate);
+        });
+    });
+    $('#datepicker1').datepicker({
         format: 'yyyy-mm-dd',
         autoclose: true,
-        opens: 'left', // Adjust this according to your preference
-        startDate: moment(), // Set initial start date to today
-        endDate: moment(), // Set initial end date to today
-        locale: {
-            format: 'YYYY-MM-DD', // Adjust date format as needed
-        },
+        startDate: new Date(new Date().getFullYear(), new Date().getMonth() + 1, 1), // Start from the beginning of next month
         beforeShowDay: function (date) {
             var price = Math.round(ticket_prices);
             var currentDate = date.toISOString().slice(0, 10);
@@ -468,16 +518,10 @@ $(document).ready(function () {
                 content: content
             };
         }
-    }).data('daterangepicker');
-
-    // Keep the calendar open after applying
-    datepicker.hide = function () { };
-
-    // Attach event listener to the 'change' event
-    $('#datepicker').on('change', function (e) {
-        var selectedDate = e.target.value;
-        $('.first-date input').val(selectedDate);
     });
-});
-
+    $('#datepicker1').on('changeDate', function(e) {
+        var selectedDate = e.format('yyyy-mm-dd');
+        $('.second-date input').val(selectedDate);
+    });
+})
 

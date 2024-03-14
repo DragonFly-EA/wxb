@@ -259,7 +259,7 @@
                                     </div>
 
                                     <div class="input-group">
-                                        <div id="datepicker">Select Date</div>
+                                        <div id="datepicker"></div>
                                     </div>
                                     <div class="input-group">
                                         <div id="datepicker1"></div>
