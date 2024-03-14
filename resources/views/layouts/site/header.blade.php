@@ -55,7 +55,12 @@
             /* Skeleton color */
             border-radius: 4px;
         }
-        .container-rigid {max-width: 1140px;min-width: 80%;margin: auto;}
+
+        /* Hide the content until it's loaded */
+        .hidden1 {
+            display: none;
+        }
+        .skeleton-container-rigid {max-width: 1140px;min-width: 80%;margin: auto;}
         .skeleton-header-top{}
         .skeleton-header-main{height: 40px;}
         .skeleton-banner{height: 480px;}
@@ -91,7 +96,7 @@
     <div class="skeleton skeleton-header-top"></div>
     <div class="skeleton skeleton-header-main"></div>
     <div class="skeleton skeleton-banner"></div>
-    <div class="container-rigid">
+    <div class="skeleton-container-rigid">
         <div class="skeleton skeleton-form"></div>
         <div class="skeleton skeleton-book">
             <ul>

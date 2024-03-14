@@ -1,6 +1,5 @@
 @extends('layouts.site.main')
 @section('content')
-
     <main class="container">
         <div class="hidden1" id="content1">
             @include('layouts.site.menu')
