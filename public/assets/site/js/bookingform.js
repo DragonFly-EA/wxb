@@ -480,28 +480,26 @@ function getTicketPrice(city, iata_code) {
 //     });
 // });
 $(document).ready(function () {
-    $(document).ready(function() {
-        $('#datepicker').datepicker({
-            format: 'yyyy-mm-dd',
-            autoclose: true,
-            startDate: '1d',
-            beforeShowDay: function (date) {
-                var price = Math.round(ticket_prices);
-                var currentDate = date.toISOString().slice(0, 10);
-                var cssClass = 'has-price';
-                var content = '<span class="date-price"><b></b><div class="date">' + date.getDate() + '</div> <div class="price">$' + price + '</div></span>';
-                return {
-                    classes: cssClass,
-                    tooltip: '',
-                    content: content
-                };
-            }
-        });
-        // Attach event listener to the 'changeDate' event
-        $('#datepicker').on('changeDate', function(e) {
-            var selectedDate = e.format('yyyy-mm-dd');
-            $('.first-date input').val(selectedDate);
-        });
+    $('#datepicker').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        startDate: '1d',
+        beforeShowDay: function (date) {
+            var price = Math.round(ticket_prices);
+            var currentDate = date.toISOString().slice(0, 10);
+            var cssClass = 'has-price';
+            var content = '<span class="date-price"><b></b><div class="date">' + date.getDate() + '</div> <div class="price">$' + price + '</div></span>';
+            return {
+                classes: cssClass,
+                tooltip: '',
+                content: content
+            };
+        }
+    });
+    // Attach event listener to the 'changeDate' event
+    $('#datepicker').on('changeDate', function (e) {
+        var selectedDate = e.format('yyyy-mm-dd');
+        $('.first-date input').val(selectedDate);
     });
     $('#datepicker1').datepicker({
         format: 'yyyy-mm-dd',
@@ -519,9 +517,37 @@ $(document).ready(function () {
             };
         }
     });
-    $('#datepicker1').on('changeDate', function(e) {
+    $('#datepicker1').on('changeDate', function (e) {
         var selectedDate = e.format('yyyy-mm-dd');
         $('.second-date input').val(selectedDate);
     });
-})
+    $("#one_way_checkbox").on('click', function (e) {
+        if (e.target.checked) {
+            $("#ArrivalDateWrapper").hide();
+            if ($("#ArrivalDate").parent().next(".validation").length) {
+                $("#ArrivalDate").parent().next(".validation").hide();
+            } else if ($("#DepartureDateWrapper").hasClass("col-md-6")) {
+                $("#DepartureDateWrapper").addClass("col-md-12");
+            }
+            $(".float-group-dr").hide();
+            $(".second-date").hide();
+            $(".first-date").addClass('first_date_input');
+            $("#calendar-icon").hide();
+            $("#DepartureDateWrapper").css("border-right", "1px solid #666");
+        } else {
+            $("#ArrivalDateWrapper").show();
+            if ($("#ArrivalDate").parent().next(".validation").length) {
+                $("#ArrivalDate").parent().next(".validation").show();
+            } else if ($("#DepartureDateWrapper").hasClass("col-md-6")) {
+                $("#DepartureDateWrapper").removeClass("col-md-12");
+            }
+            $(".float-group-dr").show();
+            $(".second-date").show();
+            $(".first-date").removeClass('first_date_input');
+            $("#calendar-icon").show();
+            $("#DepartureDateWrapper").css("border-right", "");
+        }
+    })
+    $()
+});
 

@@ -2,6 +2,9 @@
     .highlight {
         background-color: #000; /* Adjust color as needed */
     }
+    .first_date_input{
+        width: 100%;
+    }
 </style>
 <div class="home-form-wrapper">
     <div class="container-rigid">
@@ -33,6 +36,7 @@
                     <b><img src="{{asset('assets/site/images/active-border-bottom.png')}}"></b>
                 </li>
             </ul>
+            <div id="errorsContent"></div>
             <div class="resp-tabs-container">
                 <div class="book-flight-tab">
                     <form>
@@ -53,13 +57,13 @@
                                         <div class="hide-customize-round-trip trip" id="roundTripOptions"
                                              style="display: none;">
                                             <div class="round-trip-hide">
-                                                <span class="active"
+                                                <span class="tripflow active"
                                                       onclick="getSelectedValue('Round Trip',this,'tripValue','trip')"><i
                                                         class="fa-solid fa-check"></i><h4>Round Trip</h4></span>
-                                                <span
+                                                <span class="tripflow"
                                                     onclick="getSelectedValue('One Way',this,'tripValue','trip')"><i
                                                         class="fa-solid fa-check"></i><h4>One Way</h4></span>
-                                                <span
+                                                <span class="tripflow"
                                                     onclick="getSelectedValue('Multi City',this,'tripValue','trip')"><i
                                                         class="fa-solid fa-check"></i><h4>Multi-City</h4></span>
                                             </div>
@@ -192,8 +196,7 @@
                                         <div class="float-group-lists">
                                             <ul>
                                                 <li>
-                                                                <span><h4>Flights To:</h4><i
-                                                                        class="fa-solid fa-xmark"></i></span>
+                                                    <span><h4>Flights To:</h4><i class="fa-solid fa-xmark"></i></span>
                                                 </li>
                                                 <span id="selectToDestination"></span>
                                             </ul>
@@ -204,11 +207,11 @@
                                     <div class="date-inputs-wrapper">
                                         <div class="float-group-dr"><i class="fa-solid fa-minus"></i>
                                         </div>
-                                        <div class="date-inputs date-inputs-first">
+                                        <div class="date-inputs date-inputs-first" id="DepartureDateWrapper">
                                             <label for="departureDate">Departure</label>
                                             <input type="text" id="DepartDate" readonly>
                                         </div>
-                                        <div class="date-inputs date-inputs-second">
+                                        <div class="date-inputs date-inputs-second" id="ArrivalDateWrapper">
                                             <label for="returnDate">Returns</label>
                                             <input type="text" id="ArrivalDate" readonly>
                                             <i class="fa-solid fa-calendar-days"></i>
@@ -237,8 +240,8 @@
                                     <div class="pop-check-date">
                                         <div action="#" class="pop-check">
                                             <p>
-                                                <input type="checkbox" id="test1"/>
-                                                <label for="test1">One Way</label>
+                                                <input type="checkbox" id="one_way_checkbox"/>
+                                                <label for="one_way_checkbox">One Way</label>
                                             </p>
                                             <p>
                                                 <input type="checkbox" id="test2"/>
@@ -253,11 +256,10 @@
                                             </div>
                                             <div class="dep-ret-input second-date">
                                                 <input type="text" placeholder="07/07/07">
-                                                <i class="fa-solid fa-calendar-days"></i>
+                                                <i class="fa-solid fa-calendar-days" id="calendar-icon"></i>
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="input-group">
                                         <div id="datepicker"></div>
                                     </div>

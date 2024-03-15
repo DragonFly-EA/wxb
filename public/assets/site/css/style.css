@@ -9690,6 +9690,7 @@ body.modal-open {
 .pop-date {
     display: flex;
     justify-content: space-between;
+    width: 50%;
 }
 
 .dep-ret-input {

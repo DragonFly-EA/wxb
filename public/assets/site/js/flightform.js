@@ -3,42 +3,78 @@ numberofadultv = 1;
 numberofyouthv = 0;
 numberofchildv = 0;
 numberofinfantv = 0;
-$(document).on("click", "#findFlights", (e) => {
-    e.preventDefault();
-    // console.log("delete clicked length=", $(".mltcity").length);
-    selectedCountry = $("#selectedCountry").val();
-    selectedLanguage = $("#selectedLanguage").val();
-    selectedCurrency = $("#selectedCurrency").val();
-    // console.log(
-    //     "onClick errorsContent=",
-    //     !$("#errorsContent").hasClass("d-none")
-    // );
-    // $("#errorsList").html("");
-    // if (!$(".errorsContent").hasClass("d-none")) {
-    //     $("#errorsContent").addClass("d-none");
-    // }
+$(function () {
+    $(document).on("click", "#findFlights", (e) => {
+        e.preventDefault();
+        // console.log("delete clicked length=", $(".mltcity").length);
+        selectedCountry = $("#selectedCountry").val();
+        selectedLanguage = $("#selectedLanguage").val();
+        selectedCurrency = $("#selectedCurrency").val();
+        // console.log(
+        //     "onClick errorsContent=",
+        //     !$("#errorsContent").hasClass("d-none")
+        // );
+        // $("#errorsList").html("");
+        // if (!$(".errorsContent").hasClass("d-none")) {
+        //     $("#errorsContent").addClass("d-none");
+        // }
 
-    SearchBook(
-        e,
-        selectedCurrency,
-        selectedLanguage,
-        selectedCountry,
-        tripflow
-    );
-});
-$(document).on("click", "#retreivepnr_SearchFlex", (e) => {
-    e.preventDefault();
-    $("#errorsList").html("");
-    // if (!$("#errorsContent").hasClass("d-none")) {
-    //     $("#errorsContent").addClass("d-none");
-    // }
-    // console.log("delete clicked length=", $(".mltcity").length);
-    selectedCountry = $("#selectedCountry").val();
-    selectedLanguage = $("#selectedLanguage").val();
-    selectedCurrency = $("#selectedCurrency").val();
+        SearchBook(
+            e,
+            selectedCurrency,
+            selectedLanguage,
+            selectedCountry,
+            tripflow
+        );
+    });
+    $(document).on("click", "#retreivepnr_SearchFlex", (e) => {
+        e.preventDefault();
+        $("#errorsList").html("");
+        // if (!$("#errorsContent").hasClass("d-none")) {
+        //     $("#errorsContent").addClass("d-none");
+        // }
+        // console.log("delete clicked length=", $(".mltcity").length);
+        selectedCountry = $("#selectedCountry").val();
+        selectedLanguage = $("#selectedLanguage").val();
+        selectedCurrency = $("#selectedCurrency").val();
 
-    retreiveBooking(e, selectedLanguage, tripflow);
-});
+        retreiveBooking(e, selectedLanguage, tripflow);
+    });
+    $(document).on("click", ".tripflow", (e) => {
+        e.preventDefault();
+        if (!$("#errorsContent").hasClass("d-none")) {
+            $("#errorsContent").addClass("d-none");
+        }
+        tripflow = e.target.innerText;
+        console.log("tripflow tripflow", tripflow);
+        if (tripflow === "One Way") {
+            $("#ArrivalDateWrapper").hide();
+            if ($("#ArrivalDate").parent().next(".validation").length) {
+                $("#ArrivalDate").parent().next(".validation").hide();
+            } else if ($("#DepartureDateWrapper").hasClass("col-md-6")) {
+                $("#DepartureDateWrapper").addClass("col-md-12");
+            }
+            $(".second-date").hide();
+            $(".first-date").addClass('first_date_input');
+            $("#calendar-icon").hide();
+            $(".float-group-dr").hide();
+            $("#DepartureDateWrapper").css("border-right", "1px solid #666");
+
+        } else {
+            $("#ArrivalDateWrapper").show();
+            if ($("#ArrivalDate").parent().next(".validation").length) {
+                $("#ArrivalDate").parent().next(".validation").show();
+            } else if ($("#DepartureDateWrapper").hasClass("col-md-6")) {
+                $("#DepartureDateWrapper").removeClass("col-md-12");
+            }
+            $(".float-group-dr").show();
+            $(".second-date").show();
+            $(".first-date").removeClass('first_date_input');
+            $("#calendar-icon").show();
+            $("#DepartureDateWrapper").css("border-right", "");
+        }
+    });
+})
 
 function SearchBook(event, selectedCurrency, selectedLanguage, selectedCountry, selectedTripflow) {
     const airportName = $("#selectFrom").val();
@@ -627,7 +663,7 @@ function SearchBook(event, selectedCurrency, selectedLanguage, selectedCountry, 
     //             console.log("OK confirmed");
     //             $(form).append(
     //                 `<input id="IS_REDEMPTION" name="IS_REDEMPTION" type="text" value="TRUE"
-	// 		).val()}  />`
+    // 		).val()}  />`
     //             );
     //             $(event.target)
     //                 .html(
@@ -641,7 +677,7 @@ function SearchBook(event, selectedCurrency, selectedLanguage, selectedCountry, 
     //         } else {
     //             $(form).append(
     //                 `<input id="IS_REDEMPTION" name="IS_REDEMPTION" type="text" value="FALSE"
-	// 		).val()}  />`
+    // 		).val()}  />`
     //             );
     //             $(event.target)
     //                 .html(
@@ -669,6 +705,7 @@ function SearchBook(event, selectedCurrency, selectedLanguage, selectedCountry, 
 
     return $(form).appendTo("body").submit();
 }
+
 function retreiveBooking(event, selectedLanguage, selectedTripflow) {
     //Start of initialization
     var error = "";
