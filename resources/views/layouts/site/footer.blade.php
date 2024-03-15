@@ -41,9 +41,6 @@
 <!-- Debugging scripts, if needed -->
 <script src="{{asset('assets/site/js/debug.addIndicators.min.js')}}"></script>
 
-{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"></script>--}}
-{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.min.js"></script>--}}
-
 <script>
     // Remove focus from input field when clicked outside
     // document.addEventListener('click', function (event) {
@@ -53,44 +50,6 @@
     //     }
     // });
 </script>
-<script>
-    var startTime = performance.now();
-    // let loadTime;
-    // window.addEventListener('load', function () {
-    //     // Measure the time when the page finishes loading
-    //     var endTime = performance.now();
-    //     loadTime = endTime - startTime;
-    // });
-    // Measure the time when the page starts loading
-    // var startTime = performance.now();
-
-    // Add an event listener for the readystatechange event
-    document.addEventListener('readystatechange', function () {
-        // Check if the readyState is 'complete'
-        if (document.readyState === 'complete') {
-            // Measure the time when the page finishes loading
-            var endTime = performance.now();
-
-            // Calculate the time difference between the start and end time
-            let loadTime = endTime - startTime;
-
-            // Log the load time in milliseconds
-            console.log('Page load time: ' + loadTime + ' milliseconds');
-
-            setTimeout(function () {
-                // Show the content
-                document.getElementById('content1').classList.remove('hidden1');
-                // Hide the skeleton
-                document.querySelectorAll('.skeleton').forEach(function (skeleton) {
-                    skeleton.style.display = 'none';
-                });
-            }, loadTime);
-        }
-
-    });
-
-    // Simulate content loading delay
-
-</script>
+<script src="{{asset('assets/site/js/skeleton.js')}}"></script>
 <script src="{{asset('assets/site/js/passenger_input.js')}}"></script>
 

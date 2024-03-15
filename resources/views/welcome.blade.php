@@ -10,7 +10,7 @@
                         <ul class="bxslider">
                             <li>
                                 <img src="{{asset('assets/site/images/slider_banner.jpg')}}"/>
-                                <div class="bx-caption hm-bx-caption">
+                                <div class="bx-caption hm-bx-caption" id="slider_content">
                                     <!--<div class="display-caption">-->
                                     <!--    <div class="slider-vertical">-->
                                     <h1>Enjoy More Convenience with <br> 6 weekly nonstop flights</h1>
