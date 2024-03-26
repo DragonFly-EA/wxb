@@ -43,8 +43,6 @@ class DatabaseSeeder extends Seeder
             LoungesSeeder::class,
             InflightEntertainmentSeed::class,
             PermissionSeeder::class,
-
-
         ]);
     }
 }
