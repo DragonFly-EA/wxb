@@ -74,6 +74,145 @@ $(function () {
             $("#DepartureDateWrapper").css("border-right", "");
         }
     });
+    $(document).on("click", "#checkinbtn", function (e) {
+        e.preventDefault();
+        $(e.target)
+            .html(
+                '<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Loading...'
+            )
+            .attr("disabled", true);
+        var form = document.createElement("form");
+        $(form).attr("action", "https://www.rwandair.com/checkin/");
+        $(form).attr("method", "GET");
+        $(form).css("display", "none");
+        return $(form).appendTo("body").submit();
+    });
+
+    $(document).on("click", "#addAdult", (event) => {
+        // let total =
+        //     parseInt($("#numberofinfant").val()) +
+        //     parseInt($("#numberofchild").val()) +
+        //     parseInt($("#numberofadult").val());
+        // console.log(total);
+        // if (total < 9) {
+        //     numberadult = parseInt($("#numberofadult").val()) + 1;
+        //     $("#numberofadult").val(numberadult);
+        // }
+        $("#passenger").val(
+            `${$("#numberofadult").val()} adults, ${$(
+                "#numberofchild"
+            ).val()} children, ${$("#numberofinfant").val()} infants`
+        );
+        numberofadultv = parseInt($("#numberofadult").val());
+        numberofyouthv = $("#numberofyouth").length
+            ? parseInt($("#numberofyouth").val())
+            : 0;
+        numberofchildv = parseInt($("#numberofchild").val());
+        numberofinfantv = parseInt($("#numberofinfant").val());
+    });
+    $(document).on("click", "#removeAdult", function (event) {
+        // let total = $("#numberofyouth").length
+        //     ? parseInt($("#numberofyouth").val())
+        //     : 0 + parseInt($("#numberofadult").val());
+        // if (total > 1 && parseInt($("#numberofadult").val()) > 0) {
+        //     numberadult = parseInt($("#numberofadult").val()) - 1;
+        //     $("#numberofadult").val(numberadult);
+        // }
+        $("#passenger").val(
+            `${$("#numberofadult").val()} adults, ${$(
+                "#numberofchild"
+            ).val()} children, ${$("#numberofinfant").val()} infants`
+        );
+        numberofadultv = parseInt($("#numberofadult").val());
+        numberofyouthv = $("#numberofyouth").length
+            ? parseInt($("#numberofyouth").val())
+            : 0;
+        numberofchildv = parseInt($("#numberofchild").val());
+        numberofinfantv = parseInt($("#numberofinfant").val());
+    });
+    $(document).on("click", "#removeChild", function (event) {
+        // if ($("#numberofchild").val() > 0) {
+        //     numberchild = parseInt($("#numberofchild").val()) - 1;
+        //     $("#numberofchild").val(numberchild);
+        // }
+        $("#passenger").val(
+            `${$("#numberofadult").val()} adults, ${$(
+                "#numberofchild"
+            ).val()} children, ${$("#numberofinfant").val()} infants`
+        );
+        numberofadultv = parseInt($("#numberofadult").val());
+        numberofyouthv = $("#numberofyouth").length
+            ? parseInt($("#numberofyouth").val())
+            : 0;
+        numberofchildv = parseInt($("#numberofchild").val());
+        numberofinfantv = parseInt($("#numberofinfant").val());
+    });
+
+    $(document).on("click", "#addChild", function (event) {
+        // let total =
+        //     parseInt($("#numberofinfant").val()) +
+        //     parseInt($("#numberofchild").val()) +
+        //     parseInt($("#numberofadult").val());
+        // if (total < 9) {
+        //     numberchild = parseInt($("#numberofchild").val()) + 1;
+        //     $("#numberofchild").val(numberchild);
+        // }
+        $("#passenger").val(
+            `${$("#numberofadult").val()} adults, ${$(
+                "#numberofchild"
+            ).val()} children, ${$("#numberofinfant").val()} infants`
+        );
+        numberofadultv = parseInt($("#numberofadult").val());
+        numberofyouthv = $("#numberofyouth").length
+            ? parseInt($("#numberofyouth").val())
+            : 0;
+        numberofchildv = parseInt($("#numberofchild").val());
+        numberofinfantv = parseInt($("#numberofinfant").val());
+    });
+
+    $(document).on("click", "#removeInfant", function (event) {
+        // if ($("#numberofinfant").val() > 0) {
+        //     numberinfant = parseInt($("#numberofinfant").val()) - 1;
+        //     $("#numberofinfant").val(numberinfant);
+        // }
+        $("#passenger").val(
+            `${$("#numberofadult").val()} adults, ${$(
+                "#numberofchild"
+            ).val()} children, ${$("#numberofinfant").val()} infants`
+        );
+        numberofadultv = parseInt($("#numberofadult").val());
+        numberofyouthv = $("#numberofyouth").length
+            ? parseInt($("#numberofyouth").val())
+            : 0;
+        numberofchildv = parseInt($("#numberofchild").val());
+        numberofinfantv = parseInt($("#numberofinfant").val());
+    });
+
+    $(document).on("click", "#addInfant", function (event) {
+        // let total =
+        //     parseInt($("#numberofinfant").val()) +
+        //     parseInt($("#numberofchild").val()) +
+        //     parseInt($("#numberofadult").val());
+        //
+        // if (
+        //     total < 9 &&
+        //     parseInt($("#numberofinfant").val()) < parseInt($("#numberofadult").val())
+        // ) {
+        //     numberinfant = parseInt($("#numberofinfant").val()) + 1;
+        //     $("#numberofinfant").val(numberinfant);
+        // }
+        $("#passenger").val(
+            `${$("#numberofadult").val()} adults, ${$(
+                "#numberofchild"
+            ).val()} children, ${$("#numberofinfant").val()} infants`
+        );
+        numberofadultv = parseInt($("#numberofadult").val());
+        numberofyouthv = $("#numberofyouth").length
+            ? parseInt($("#numberofyouth").val())
+            : 0;
+        numberofchildv = parseInt($("#numberofchild").val());
+        numberofinfantv = parseInt($("#numberofinfant").val());
+    });
 })
 
 function SearchBook(event, selectedCurrency, selectedLanguage, selectedCountry, selectedTripflow) {
@@ -703,7 +842,7 @@ function SearchBook(event, selectedCurrency, selectedLanguage, selectedCountry, 
     });
 
 
-    return $(form).appendTo("body").submit();
+    //return $(form).appendTo("body").submit();
 }
 
 function retreiveBooking(event, selectedLanguage, selectedTripflow) {

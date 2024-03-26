@@ -1,0 +1,762 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, ul, li {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-size: 100%;
+    background: transparent;
+    text-decoration: none;
+    quotes: none;
+    list-style: none;
+    font-family: "Lato";
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+::selection {
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+}
+
+article, aside, footer, header, hgroup, nav, section, figure, figcaption {
+    display: block;
+    margin: 0px;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input, textarea {
+    border-radius: 0px;
+    font-family: 'Lato';
+}
+
+input[type="submit"], input[type="button"] {
+    appearance: none;
+}
+
+button {
+    font-family: 'Lato';
+}
+
+span {
+    font-family: 'Lato';
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+    content: none;
+}
+
+:focus {
+    outline: 0px;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    transition: all 0.9s ease 0s;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Lato';
+    font-weight: 400;
+}
+
+.clearfloat {
+    clear: both;
+}
+
+body h1 {
+    font-size: 42px;
+    font-family: 'Lato';
+    font-weight: bold;
+    color: #005daf;
+}
+
+body h2 {
+    font-size: 20px;
+    font-family: 'Lato';
+    font-weight: bold;
+    color: #005daf;
+}
+
+body h3 {
+    font-size: 20px;
+    font-family: 'Lato';
+    font-weight: 900;
+    color: #005daf;
+}
+
+body h4 {
+    font-size: 16px;
+    font-family: 'Lato';
+    font-weight: bold;
+    color: #005daf;
+}
+
+body h5 {
+    font-size: 14px;
+    font-family: 'Lato';
+    font-weight: bold;
+    color: #005daf;
+}
+
+body h6 {
+    font-size: 12px;
+    font-family: 'Lato';
+    font-weight: bold;
+}
+
+body p {
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: normal;
+    font-family: 'Lato';
+    margin: 0px;
+    padding: 0px;
+    color: #6c757d;
+}
+
+img {
+    width: 100%;
+    display: block;
+    transition: all 1s ease 0s;
+    margin: auto;
+}
+
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    text-align: center;
+    z-index: 999999;
+}
+
+#status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url(../images/spinner.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+}
+
+.container {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+.container-fluid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.container-rigid {
+    max-width: 1140px;
+    min-width: 80%;
+    margin: auto;
+}
+
+.home-form-wrapper {
+    width: 100%;
+    float: left;
+    position: relative;
+    margin: -13em 0 0 0;
+    z-index: 9;
+}
+
+
+#horizontalTab ul {
+    width: 100%;
+    float: left;
+
+}
+
+#horizontalTab ul.resp-tabs-list {
+    display: block;
+    background-color: #fff;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 0 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.height-radius {
+    width: 100%;
+    float: left;
+    height: 15px;
+    border-bottom-left-radius: 15px;
+    overflow: hidden;
+    border-bottom-right-radius: 15px;
+    background-color: #fff;
+}
+
+#horizontalTab ul.resp-tabs-list li {
+    margin: 0 35px 0 0;
+}
+
+#horizontalTab ul.resp-tabs-list li figure {
+    width: 20px;
+    height: 20px;
+}
+
+#horizontalTab ul.resp-tabs-list li figure span {
+    background-size: contain;
+    float: left;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+#horizontalTab ul.resp-tabs-list li b {
+    opacity: 0;
+    display: block;
+    margin: 35px 0 -3px 0;
+}
+
+#horizontalTab ul.resp-tabs-list li.resp-tab-active b {
+    opacity: 1;
+}
+
+#horizontalTab ul.resp-tabs-list li:nth-child(1) {
+}
+
+#horizontalTab ul.resp-tabs-list li:nth-child(1) figure {
+}
+
+#horizontalTab ul.resp-tabs-list li:nth-child(1) figure span {
+    background-image: url(../images/flights-icon-active.png);
+}
+
+#horizontalTab ul.resp-tabs-list li:nth-child(1) h3 {
+}
+
+#horizontalTab ul.resp-tabs-list li:nth-child(2) {
+}
+
+#horizontalTab ul.resp-tabs-list li:nth-child(2) figure {
+}
+
+#horizontalTab ul.resp-tabs-list li:nth-child(2) figure span {
+    background-image: url(../images/trips-icon-active.png);
+}
+
+#horizontalTab ul.resp-tabs-list li:nth-child(2) h3 {
+}
+
+#horizontalTab ul.resp-tabs-list li:nth-child(3) {
+}
+
+#horizontalTab ul.resp-tabs-list li:nth-child(3) figure {
+}
+
+#horizontalTab ul.resp-tabs-list li:nth-child(3) figure span {
+    background-image: url(../images/flights-icon-active.png);
+}
+
+#horizontalTab ul.resp-tabs-list li:nth-child(3) h3 {
+}
+
+#horizontalTab ul.resp-tabs-list li:nth-child(4) {
+}
+
+#horizontalTab ul.resp-tabs-list li:nth-child(4) figure {
+}
+
+#horizontalTab ul.resp-tabs-list li:nth-child(4) figure span {
+    background-image: url(../images/status-icon-active.png);
+}
+
+#horizontalTab ul.resp-tabs-list li:nth-child(4) h3 {
+}
+
+#horizontalTab ul.resp-tabs-list li:nth-child(5) {
+}
+
+#horizontalTab ul.resp-tabs-list li:nth-child(5) figure {
+}
+
+#horizontalTab ul.resp-tabs-list li:nth-child(5) figure span {
+    background-image: url(../images/schedule-icon-active.png);
+}
+
+#horizontalTab ul.resp-tabs-list li:nth-child(5) h3 {
+}
+
+
+#horizontalTab ul li {
+    width: auto;
+    float: left;
+}
+
+#horizontalTab ul li figure {
+    float: left;
+}
+
+#horizontalTab ul li figure i {
+    font-size: 17px;
+    color: #00509E;
+}
+
+#horizontalTab ul li h3 {
+    float: left;
+    margin-bottom: 0;
+    color: #005daf;
+    font-size: 15px;
+    padding: 0 15px;
+    font-weight: 500;
+}
+
+.resp-tabs-container form {
+    width: 100%;
+    float: left;
+}
+
+.form-tab-title {
+    width: 100%;
+    float: left;
+}
+
+.form-tab-radio {
+    float: left;
+    position: relative;
+    width: auto;
+    padding: 0 10px;
+}
+
+.award-ticket {
+    float: right;
+    padding: 0 10px;
+    display: flex;
+}
+
+.award-ticket p {
+    padding: 5px 0 0 0;
+    font-weight: 600;
+}
+
+.award-ticket p i {
+}
+
+.award-ticket p b {
+    padding: 0 10px;
+}
+
+.award-ticket p a {
+    color: #109eda;
+}
+
+.form-tab-lists {
+    width: 100%;
+    float: left;
+}
+
+#horizontalTab .form-tab-lists ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+
+#horizontalTab .form-tab-lists ul li {
+    width: 33.333%;
+    display: inline-block;
+    float: left;
+    padding: 10px;
+}
+
+#horizontalTab .my-trips-tab .form-tab-lists ul li:nth-child(1) {
+    width: 42%;
+}
+
+#horizontalTab .my-trips-tab .form-tab-lists ul li:nth-child(2) {
+    width: 42%;
+}
+
+#horizontalTab .my-trips-tab .form-tab-lists ul li:nth-child(3) {
+    width: 16%;
+}
+
+#horizontalTab .my-trips-tab .check-in {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+}
+
+#horizontalTab .my-trips-tab .check-in button {
+    padding: 20px 45px;
+}
+
+#horizontalTab .book-flight-tab .form-tab-lists ul li:nth-child(1) {
+    width: 50%;
+    position: relative;
+}
+
+#horizontalTab .book-flight-tab .form-tab-lists ul li:nth-child(2) {
+    width: 35%;
+}
+
+#horizontalTab .book-flight-tab .form-tab-lists ul li:nth-child(3) {
+    width: 15%;
+}
+
+#horizontalTab .book-flight-tab .form-tab-lists ul li:nth-child(1) .cont_select_center {
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+
+#horizontalTab .book-flight-tab .form-tab-lists ul li:nth-child(2) .cont_select_center {
+    width: 42%;
+    height: 100%;
+}
+
+#horizontalTab .book-flight-tab .form-tab-lists ul li:nth-child(3) .cont_select_center {
+    width: 16%;
+}
+
+#horizontalTab .book-flight-tab .form-tab-lists ul li:nth-child(1) .cont_select_center .select_mate1 {
+    position: relative;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#horizontalTab .book-flight-tab .form-tab-lists ul li:nth-child(1) .cont_select_center .select_mate2 {
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.icon_select_mate-round {
+    float: right;
+    margin: -11px -27px 0 0;
+}
+
+.icon_select_mate-round figure {
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+    padding: 8px 0 0 0;
+}
+
+.icon_select_mate-round figure img {
+    width: 22px;
+}
+
+#horizontalTab .my-trips-tab .form-tab-lists ul li:nth-child(3) .submit-form-button {
+    width: 100%;
+}
+
+#horizontalTab .my-trips-tab .form-tab-lists ul li:nth-child(3) .submit-form-button button {
+    width: 100%;
+}
+
+#horizontalTab .form-tab-lists ul li input {
+    width: 100%;
+    height: 100%;
+    float: left;
+    padding: 20px 25px 20px 10px;
+    border: 1px solid #666;
+    border-radius: 3px;
+    color: #303030;
+    font-size: 16px;
+}
+
+#horizontalTab .form-tab-lists ul li input:placeholder {
+    color: #303030;
+}
+
+
+#horizontalTab .cont_list_select_mate ul.cont_select_int {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 999;
+    overflow: hidden;
+    height: 0px;
+    width: 100%;
+    background-color: #fff;
+    padding: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border-radius: 0px 0px 3px 3px;
+    box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.2);
+    transition: all 375ms ease-in-out;
+}
+
+#horizontalTab .cont_list_select_mate ul.cont_select_int li {
+    position: relative;
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #E0E0E0;
+    background-color: #F5F5F5;
+    list-style-type: none;
+    padding: 10px 2%;
+    margin: 0px;
+    transition: all 275ms ease-in-out;
+    display: block;
+    cursor: pointer;
+}
+
+#horizontalTab .cont_list_select_mate ul.cont_select_int:last-child {
+    border-radius: 3px;
+    border-bottom: 0px;
+}
+
+#horizontalTab .cont_list_select_mate ul.cont_select_int li:hover {
+    background-color: #EEEEEE;
+}
+
+#horizontalTab .cont_list_select_mate ul.cont_select_int .active {
+    background-color: #EEEEEE;
+}
+
+#horizontalTab .select_mate {
+    width: 100%;
+    min-width: 100%;
+    border: 1px solid #666;
+    height: 100%;
+}
+
+.date-picker-form .demo__item {
+    margin-bottom: 0;
+    width: 100%;
+    float: left;
+    height: 100%;
+}
+
+.date-picker-form {
+    width: 100%;
+    height: 100%;
+}
+
+.date-picker-form-height {
+    width: 100%;
+    height: 100%;
+}
+
+.date-picker-form .demo__input {
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.date-picker-form .demo__input input {
+    width: 100% !important;
+    height: 100%;
+    border-radius: 3px;
+    border: 1px solid #efefef;
+    color: #969696;
+    padding: 10px;
+}
+
+.date-picker-form .demo__input input::placeholder {
+    color: #969696;
+}
+
+.submit-form-button {
+    float: right;
+}
+
+.submit-form-button button {
+    border: 1px solid #E49700;
+    border-radius: 3px;
+    background-color: #E49700;
+    color: #fff;
+    transition: all 0.9s ease;
+    padding: 20px 4px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.submit-form-button button:hover {
+    color: #E49700;
+    background-color: #fff;
+    transition: all 0.9s ease;
+}
+
+.promo-code-form {
+    width: 90%;
+    height: auto;
+    float: right;
+}
+
+#horizontalTab .book-flight-tab .form-tab-lists ul li .promo-code-form input {
+    /*width:100%;height:auto;border: none;text-align: right;*/
+    padding: 1px 10px 20px 10px;
+    color: #355D99;
+    opacity: 1;
+    margin: 20px 0 0 0;
+}
+
+#horizontalTab .book-flight-tab .form-tab-lists ul li .promo-code-form input::placeholder {
+    color: #355D99;
+    opacity: 1;
+    font-size: 10px;
+}
+
+#horizontalTab .book-flight-tab .submit-form-button {
+    width: 100%;
+    height: auto;
+    padding: 0 0 0 0px;
+}
+
+#horizontalTab .book-flight-tab .submit-form-button button {
+    width: 100%;
+    height: auto;
+}
+
+.new-next-trip-wrapper {
+    width: 100%;
+    float: left;
+}
+
+.new-next-trip-wrapper h2 {
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px 10px 18px 10px;
+}
+
+.drop-select2 .select2-container--default .select2-selection--single {
+    border: 1px solid #ccc;
+}
+
+#horizontalTab {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 11px 26px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    float: left;
+    border-radius: 15px;
+    /*overflow:hidden;*/
+}
+
+#horizontalTab ul.resp-tabs-list li.resp-tab-active {
+    /*background-color: #fff;*/
+    /*border-bottom:5px solid #00509E;*/
+}
+
+#horizontalTab ul.resp-tabs-list li.resp-tab-active figure i {
+    color: #5a5a5a;
+}
+
+#horizontalTab ul.resp-tabs-list li.resp-tab-active h3 {
+    font-weight: 550;
+}
+
+#horizontalTab ul.resp-tabs-list li.resp-tab-active:nth-child(1) {
+}
+
+#horizontalTab ul.resp-tabs-list li.resp-tab-active:nth-child(1) figure {
+}
+
+#horizontalTab ul.resp-tabs-list li.resp-tab-active:nth-child(1) figure span {
+    background-image: url(../images/flights-icon.png);
+}
+
+#horizontalTab ul.resp-tabs-list li.resp-tab-active:nth-child(2) {
+}
+
+#horizontalTab ul.resp-tabs-list li.resp-tab-active:nth-child(2) figure {
+}
+
+#horizontalTab ul.resp-tabs-list li.resp-tab-active:nth-child(2) figure span {
+    background-image: url(../images/trips-icon.png);
+}
+
+#horizontalTab ul.resp-tabs-list li.resp-tab-active:nth-child(3) {
+}
+
+#horizontalTab ul.resp-tabs-list li.resp-tab-active:nth-child(3) figure {
+}
+
+#horizontalTab ul.resp-tabs-list li.resp-tab-active:nth-child(3) figure span {
+    background-image: url(../images/flights-icon.png);
+}
+
+#horizontalTab ul.resp-tabs-list li.resp-tab-active:nth-child(4) {
+}
+
+#horizontalTab ul.resp-tabs-list li.resp-tab-active:nth-child(4) figure {
+}
+
+#horizontalTab ul.resp-tabs-list li.resp-tab-active:nth-child(4) figure span {
+    background-image: url(../images/status-icon.png);
+}
+
+#horizontalTab ul.resp-tabs-list li.resp-tab-active:nth-child(5) {
+}
+
+#horizontalTab ul.resp-tabs-list li.resp-tab-active:nth-child(5) figure {
+}
+
+#horizontalTab ul.resp-tabs-list li.resp-tab-active:nth-child(5) figure span {
+    background-image: url(../images/schedule-icon.png);
+}
+
+
+@media handheld, only screen and (max-width: 768px) {
+    #horizontalTab ul.resp-tabs-list {
+        display: none;
+    }
+
+    #horizontalTab .book-flight-tab .form-tab-lists ul li:nth-child(1) {
+        width: 100%;
+    }
+
+    #horizontalTab .book-flight-tab .form-tab-lists ul li:nth-child(2) {
+        width: 100%;
+    }
+
+    #horizontalTab .book-flight-tab .form-tab-lists ul li:nth-child(3) {
+        width: 100%;
+    }
+
+    #horizontalTab .form-tab-lists ul {
+        display: block;
+    }
+
+    #horizontalTab .my-trips-tab .form-tab-lists ul li:nth-child(1) {
+        width: 100%;
+    }
+
+    #horizontalTab .my-trips-tab .form-tab-lists ul li:nth-child(2) {
+        width: 100%;
+    }
+
+    #horizontalTab .my-trips-tab .form-tab-lists ul li:nth-child(3) {
+        width: 100%;
+    }
+}

@@ -58,10 +58,7 @@ $(document).ready(function () {
         $(".hide-float-group-first").slideToggle();
         $(".hide-float-group-second").slideUp();
     });
-    $(".show-float-group-first").on('input',function () {
-        $(".hide-float-group-first").slideDown();
-        // $(".hide-float-group-second").slideUp();
-    })
+
     $(".show-float-group-second").click(function () {
         $(".hide-float-group-second").slideToggle();
         $(".hide-float-group-first").slideUp();
@@ -80,18 +77,40 @@ $(document).ready(function () {
     $(".open").click(function () {
         $(".modalDialog1").modal("show");
     });
-    // $(".thanks-btn1").on('click', function () {
-    //     $(".modalDialog1").css("display", "none");
-    // });
-    $(".close1").on('click', function () {
-        $(".modalDialog1").modal('hide');
+    $(".thanks-btn1").on('click', function () {
+        $(".modalDialog1").css("display", "none");
     });
-    // $(".modal-backdrop1").click(function () {
-    //     $(".modalDialog1").css("display", "none");
-    // });
+    $(".close1").on('click', function () {
+        $(".modalDialog1").css("display", "none");
+    });
+    $(".modal-backdrop1").click(function () {
+        $(".modalDialog1").css("display", "none");
+    });
 
     // $('select').niceSelect();
+
+
+    $('#datepicker').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        startDate: '+1d',
+
+        // endDate: '+1y',
+        beforeShowDay: function (date) {
+            var price = 100;
+            var currentDate = date.toISOString().slice(0, 10);
+            var cssClass = 'has-price';
+            var content = '<span class="date-price"><b></b><div class="date">' + date.getDate() + '</div> <div class="price">$' + price + '</div></span>';
+            return {
+                classes: cssClass,
+                tooltip: '',
+                content: content
+            };
+        }
+    });
 });
+
+
 $(document).ready(function () {
     $('.drop-select1').select2({
         minimumResultsForSearch: Infinity
@@ -221,30 +240,78 @@ $(".faqs .question").bind('click', function (e) {
 });
 
 
-$(".desktop-main-links ul .question-link").bind('click', function (e) {
+// $(".desktop-main-links ul .question-link").bind('click', function(e){
+//     if(!$(this).parent("li").hasClass("desktop-main-links-visible")){
+//         $(".desktop-main-links ul li").removeClass("desktop-main-links-visible");
+//         $(".desktop-main-links ul .desktop-main-links-invisible").slideUp(200);
+//     }
+//     $(this).next('.desktop-main-links-invisible').slideToggle(200).end().parent('li').toggleClass('desktop-main-links-visible');
+//     e.preventDefault();
+
+
+// });
+
+// $(".desktop-main-links ul .question-link").bind('click', function (e) {
+//     e.preventDefault();
+//     $(".desktop-main-links ul .question-link").removeClass("active-link");
+
+//     if (!$(this).parent("li").hasClass("desktop-main-links-visible")) {
+//         $(".desktop-main-links ul li").removeClass("desktop-main-links-visible");
+//         $(".desktop-main-links ul .desktop-main-links-invisible").slideUp(200);
+//         $(this).removeClass("active-link");
+//     } else {
+//         $(this).next('.desktop-main-links-invisible').slideDown(200).end();
+//         $(this).addClass("active-link");
+//         $(this).parent('li').addClass('desktop-main-links-visible')
+//     }
+//     //$(this).parent('li').toggleClass('desktop-main-links-visible')
+
+// });
+
+$(".desktop-main-links ul li").removeClass("desktop-main-links-visible");
+
+$(".desktop-main-links ul .question-link").click(function(e) {
+    // Remove active-link class from all question links
+    $(".desktop-main-links ul .question-link").removeClass("active-link");
+
+
     if (!$(this).parent("li").hasClass("desktop-main-links-visible")) {
         $(".desktop-main-links ul li").removeClass("desktop-main-links-visible");
         $(".desktop-main-links ul .desktop-main-links-invisible").slideUp(200);
     }
-    $(this).next('.desktop-main-links-invisible').slideToggle(200).end().parent('li').toggleClass('desktop-main-links-visible');
+
+    // Toggle visibility for clicked question-link
+    var $nextInvisible = $(this).next('.desktop-main-links-invisible');
+    $nextInvisible.slideToggle(200);
+
+    // Toggle desktop-main-links-visible class for parent li
+    $(this).parent('li').toggleClass('desktop-main-links-visible');
+
+    // Add active-link class to the clicked question-link
+    $(this).addClass("active-link");
+
+    // Remove active-link class if parent li does not have desktop-main-links-visible class
+    if (!$(this).parent('li').hasClass('desktop-main-links-visible')) {
+        $(this).removeClass("active-link");
+    }
+
     e.preventDefault();
-
-
 });
 
 
-// $(function () {
-//     $('#file-7').checkFileType({
-//         allowedExtensions: ['', ''],
-//         success: function () {
-//             alert('Success');
-//         },
-//         error: function () {
-//             alert('Error');
-//         }
-//     });
-//
-// });
+
+$(function () {
+    $('#file-7').checkFileType({
+        allowedExtensions: ['', ''],
+        success: function () {
+            alert('Success');
+        },
+        error: function () {
+            alert('Error');
+        }
+    });
+
+});
 
 var button, list;
 
@@ -498,7 +565,7 @@ $('.go-top').click(function (event) {
 })
 
 window.onscroll = function () {
-    //  scrollFunction()
+    scrollFunction()
 };
 
 
@@ -634,3 +701,24 @@ function showContent(index) {
     // Apply the translation to slide in the desired content
     content.style.transform = 'translateX(' + translateValue + ')';
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

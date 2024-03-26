@@ -346,13 +346,12 @@ img {
     display: none;
 }
 
-.desktop-main-links ul li a:hover {
-    color: #005d9f;
-}
 
 .desktop-account-signup {
     float: right;
     width: auto;
+    height:100%;
+    /*padding: 5px 0 0 0;*/
 }
 
 .desktop-account-signup ul {
@@ -388,7 +387,7 @@ img {
 .desktop-account-signup ul li:nth-child(2) a p {
     color: #005d9f;
     font-size: 14px;
-    font-weight: 550px;
+    font-weight: 550;
     padding: 0 0 0 5px;
 }
 
@@ -407,12 +406,12 @@ img {
 .desktop-account-signup ul li a:hover i {
 }
 
-.desktop-main-links ul li:nth-child(4) a:hover {
-    color: #fff;
-}
+/*.desktop-main-links ul li:nth-child(4) a:hover {*/
+/*    color: #fff;*/
+/*}*/
 
 .desktop-account-signup ul li:nth-child(4) {
-    margin: -5px 0 0 0;
+    /*margin: -5px 0 0 0;*/
 }
 
 .desktop-account-signup ul li:nth-child(4) a {
@@ -421,7 +420,7 @@ img {
     /*background-color: #109ed9;*/
     border-radius: 200px;
     color: #005d9f;
-    padding: 5px 10px;
+    padding: 7px 12px;
 }
 
 .desktop-account-signup ul li:nth-child(4) a:hover {
@@ -449,13 +448,13 @@ img {
 
 .desktop-account-signup ul li:nth-child(4) a b {
     float: left;
-    padding: 3px 0 0 5px;
+    padding: 2px 0 0 5px;
     font-weight: 600;
     font-size: 14px;
 }
 
 .desktop-account-signup ul li:nth-child(3) {
-    padding: 0 10px 0 10px;
+    padding: 0 7px 0 7px;
 }
 
 .desktop-account-signup ul li:nth-child(1) {
@@ -487,8 +486,6 @@ img {
     color: #f6db31;
 }
 
-.desktop-account-signup ul li:nth-child(3) {
-}
 
 .desktop-account-signup ul li:nth-child(3) a {
 }
@@ -499,7 +496,7 @@ img {
     margin: auto;
     padding: 0;
     position: absolute;
-    top: 108px;
+    top: 115px;
     left: 0;
     right: 0;
     z-index: 10000;
@@ -510,8 +507,8 @@ img {
     /*transition: transform 0.9s cubic-bezier(0.5, 0, 0.5, 1.5);*/
     width: 80%;
     padding: 30px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
     display: none;
 }
 
@@ -529,10 +526,10 @@ img {
     background: #eee;
 }
 
-.desktop-main-links ul li:hover > a {
-    color: #333;
-    /*background: #ddd;*/
-}
+/*.desktop-main-links ul li:hover > a {*/
+/*    color: #333;*/
+/*background: #ddd;*/
+/*}*/
 
 .desktop-main-links ul li:hover > ul {
     /*visibility: visible;*/
@@ -562,6 +559,7 @@ img {
     padding: 0 0 8px 0;
     font-weight: 400;
     color: #333;
+    font-weight:600;
 }
 
 .dropdown-links-style {
@@ -578,15 +576,42 @@ img {
     width: 100%;
     text-align: left;
     padding: 7px 0 !important;
-    font-size: 13px;
+    font-size: 14px;
+    color:#333;
+    font-weight:normal;
 }
 
 .desktop-main-links ul li .dropdown-links-style li a:hover {
+    color:#00509E;
 }
 
 .dropdown-links-style-width li {
-    width: 50%;
+    width: 100%;
     float: left;
+}
+
+.desktop-main-links ul li a.question-link{
+    position:relative;
+    padding:22px 15px;
+}
+
+.desktop-main-links ul li a.active-link:after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: -2px;
+    content: "";
+    display: block;
+    height: 4px;
+    left: 50%;
+    position: absolute;
+    background: #00509E;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    width: 80%;
+    left: 10%;
+}
+
+.desktop-main-links ul li a.question-link:hover:after {
+
 }
 
 .dest-cont-wrap {
@@ -605,9 +630,9 @@ img {
     /* border-left: 2px solid #E2162C; */
 }
 
-/*.language-dropdown .lang-en .flag {*/
-/*    background-image: url("../images/rw-flag.png");*/
-/*}*/
+.language-dropdown .lang-en .flag {
+    background-image: url("../images/rw-flag.png");
+}
 
 .language-dropdown .lang-pt {
     /*border-left: 4px solid #1ABC9C;*/
@@ -734,7 +759,7 @@ img {
 
 .country-language {
     float: left;
-    padding: 5px 5px; /* border:1px solid #005daf; */
+    padding: 7px 12px; /* border:1px solid #005daf; */
     cursor: pointer;
     transition: all 0.9s ease;
     border-radius: 100px;
@@ -748,7 +773,7 @@ img {
 .desktop-account-signup ul.display-align li:nth-child(2) {
     cursor: pointer;
     transition: all 0.9s ease;
-    padding: 5px 5px;
+    padding: 7px 12px;
     border-radius: 100px;
 }
 
@@ -1154,7 +1179,7 @@ img {
     padding: 10px 8px;
     border-radius: 10px;
     font-size: 13px;
-    margin: -38px 0 0 0;
+    margin: -10px 0 0 0;
 }
 
 .best-discover a:hover {
@@ -1885,6 +1910,11 @@ img {
     padding: 5px 10px 0 0;
 }
 
+.dont-miss-offer-details-visible b:nth-child(1) i img{
+    width:16px;
+    float:left;
+}
+
 .dont-miss-offer-details-visible b:nth-child(1) p {
 
 }
@@ -2029,7 +2059,7 @@ img {
 .find-more-wrap span {
     background-color: transparent;
     color: #fff;
-    padding: 5px 15px;
+    padding: 12px 25px;
     margin: auto;
     border-radius: 200px;
     border: 1px solid #fff;
@@ -3616,7 +3646,7 @@ h2.resp-accordion:first-child {
 
 .award-ticket p {
     padding: 5px 0 0 0;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .award-ticket p i {
@@ -3846,8 +3876,8 @@ h2.resp-accordion:first-child {
 }
 
 .submit-form-button button:hover {
-    color: #E49700;
-    background-color: #fff;
+    /*color: #E49700;*/
+    /*background-color: #fff;*/
     transition: all 0.9s ease;
 }
 
@@ -3859,11 +3889,14 @@ h2.resp-accordion:first-child {
 
 #horizontalTab .book-flight-tab .form-tab-lists ul li .promo-code-form input {
     /*width:100%;height:auto;border: none;text-align: right;*/
-    padding: 1px 10px 20px 10px;
+    padding: 15px 10px 15px 10px;
     color: #355D99;
     opacity: 1;
     margin: 20px 0 0 0;
+    border-color:transparent;
 }
+
+#horizontalTab .book-flight-tab .form-tab-lists ul li .promo-code-form input:focus{border-color:#666;}
 
 #horizontalTab .book-flight-tab .form-tab-lists ul li .promo-code-form input::placeholder {
     color: #355D99;
@@ -9376,6 +9409,12 @@ body.modal-open {
     font-size: 13px;
 }
 
+.float-group input:focus ~ .float-label-promo,
+.float-group input:not(:focus):valid ~ .float-label-promo{
+    top: 20px;
+    color:#355d99;
+}
+
 .float-group-icon {
     width: 100%;
     display: flex;
@@ -9419,6 +9458,7 @@ body.modal-open {
 .float-label2 {
     left: 20px;
 }
+.float-label-promo{top:32px;font-size:13px;font-weight:400;color:#355d99;}
 
 .float-group-bi {
     position: absolute;
@@ -9690,7 +9730,6 @@ body.modal-open {
 .pop-date {
     display: flex;
     justify-content: space-between;
-    width: 50%;
 }
 
 .dep-ret-input {

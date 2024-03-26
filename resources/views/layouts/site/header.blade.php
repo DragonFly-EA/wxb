@@ -19,9 +19,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
 
 
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/site/css/style.css')}}">
+
     <link rel="stylesheet" type="text/css" href="{{asset('assets/site/css/skeleton.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/site/css/style3.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/site/css/nice-select.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/site/css/select2.min.css')}}">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-brands/css/uicons-brands.css'>
@@ -34,6 +33,10 @@
     <link href="{{asset('assets/site/css/jquery.bxslider.css')}}" rel="stylesheet"/>
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/site/css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/site/css/style5.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/site/css/style3.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/site/css/bookingform.css')}}">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 

@@ -2,7 +2,8 @@
     .highlight {
         background-color: #000; /* Adjust color as needed */
     }
-    .first_date_input{
+
+    .first_date_input {
         width: 100%;
     }
 </style>
@@ -61,10 +62,10 @@
                                                       onclick="getSelectedValue('Round Trip',this,'tripValue','trip')"><i
                                                         class="fa-solid fa-check"></i><h4>Round Trip</h4></span>
                                                 <span class="tripflow"
-                                                    onclick="getSelectedValue('One Way',this,'tripValue','trip')"><i
+                                                      onclick="getSelectedValue('One Way',this,'tripValue','trip')"><i
                                                         class="fa-solid fa-check"></i><h4>One Way</h4></span>
                                                 <span class="tripflow"
-                                                    onclick="getSelectedValue('Multi City',this,'tripValue','trip')"><i
+                                                      onclick="getSelectedValue('Multi City',this,'tripValue','trip')"><i
                                                         class="fa-solid fa-check"></i><h4>Multi-City</h4></span>
                                             </div>
                                         </div>
@@ -76,10 +77,10 @@
                                                         src="{{asset('assets/site/images/passenger-cust.png')}}">
                                                 </figure>
                                             </div>
-                                            <div class="select-round-trip">
-                                                            <span><h4><b id="passenger_no"
-                                                                         style="font-weight: normal">1</b> Passenger</h4><i
-                                                                    class="fi fi-rr-angle-small-down"></i></span>
+                                            <div class="select-round-trip"><span><h4><input type="hidden"
+                                                                                            id="passenger"><b
+                                                            id="passenger_no" style="font-weight: normal">1</b> Passenger</h4><i
+                                                        class="fi fi-rr-angle-small-down"></i></span>
                                             </div>
                                         </div>
                                         <div class="hide-customize-passenger-trip">
@@ -344,106 +345,6 @@
                                     </div>
                                 </li>
                             </ul>
-                            {{--                            <ul class="multiCity">--}}
-                            {{--                                <li>--}}
-                            {{--                                    <div class="cont_select_center">--}}
-                            {{--                                        <div>--}}
-                            {{--                                            <select class="form-control from_multi_city" name=""--}}
-                            {{--                                                    id="selectFrom_multi_city0">--}}
-                            {{--                                            </select>--}}
-                            {{--                                        </div>--}}
-                            {{--                                    </div>--}}
-                            {{--                                </li>--}}
-                            {{--                                <li>--}}
-                            {{--                                    <div class="cont_select_center">--}}
-                            {{--                                        <div>--}}
-                            {{--                                            <select class="to_multi_city" name="" onchange=""--}}
-                            {{--                                                    onclick="return false;"--}}
-                            {{--                                                    id="selectTo_multi_city0">--}}
-                            {{--                                            </select>--}}
-                            {{--                                        </div>--}}
-                            {{--                                    </div>--}}
-                            {{--                                </li>--}}
-                            {{--                                <li>--}}
-                            {{--                                    <div class="input-group">--}}
-                            {{--                                        <input type="text" id="departDate0"--}}
-                            {{--                                               class="form-control multy_city_date"--}}
-                            {{--                                               placeholder="Select Date">--}}
-                            {{--                                        <div class="input-group-append">--}}
-                            {{--                                              <span class="input-group-text">--}}
-                            {{--                                                <i class="fa fa-calendar"></i>--}}
-                            {{--                                              </span>--}}
-                            {{--                                        </div>--}}
-                            {{--                                    </div>--}}
-                            {{--                                </li>--}}
-                            {{--                                <span id="flight_inputs"></span>--}}
-                            {{--                                <div class="add_flight_button">--}}
-                            {{--                                    <button class="submit-form-button" id="add_multi_city_flight">--}}
-                            {{--                                        Add Flight--}}
-                            {{--                                        <i class="fi fi-rr-plus-small"></i>--}}
-                            {{--                                    </button>--}}
-                            {{--                                </div>--}}
-                            {{--                                <li>--}}
-                            {{--                                    <div class="cont_select_center">--}}
-                            {{--                                        <!-- Custom select structure -->--}}
-                            {{--                                        <div class="select_mate" data-mate-select="active">--}}
-                            {{--                                            <select name="" onchange="" onclick="return false;"--}}
-                            {{--                                                    id="passenger">--}}
-                            {{--                                                <option value=""><h5>Passenger(s) </h5> 1 adult, 0--}}
-                            {{--                                                    children, 0 infants--}}
-                            {{--                                                </option>--}}
-                            {{--                                                <option value="1"><h5>Passenger(s) </h5> 1 adult, 0--}}
-                            {{--                                                    children, 0 infants--}}
-                            {{--                                                </option>--}}
-                            {{--                                                <option value="2"><h5>Passenger(s) </h5> 1 adult, 0--}}
-                            {{--                                                    children, 0 infants--}}
-                            {{--                                                </option>--}}
-                            {{--                                                <option value="3"><h5>Passenger(s) </h5> 1 adult, 0--}}
-                            {{--                                                    children, 0 infants--}}
-                            {{--                                                </option>--}}
-                            {{--                                            </select>--}}
-                            {{--                                            <p class="selecionado_opcion"--}}
-                            {{--                                               onclick="open_select(this)"></p>--}}
-                            {{--                                            <span onclick="open_select(this)" class="icon_select_mate">--}}
-                            {{--                                                                <i class="fi fi-rr-angle-small-down"></i>--}}
-                            {{--                                                            </span>--}}
-                            {{--                                            <div class="cont_list_select_mate">--}}
-                            {{--                                                <ul class="cont_select_int"></ul>--}}
-                            {{--                                            </div>--}}
-                            {{--                                        </div>--}}
-                            {{--                                    </div> <!-- End div center   -->--}}
-                            {{--                                </li>--}}
-                            {{--                                <li>--}}
-                            {{--                                    <div class="cont_select_center">--}}
-                            {{--                                        <!-- Custom select structure -->--}}
-                            {{--                                        <div class="select_mate" data-mate-select="active">--}}
-                            {{--                                            <select name="cabin" onchange="" onclick="return false;"--}}
-                            {{--                                                    id="cabin">--}}
-                            {{--                                                <option value="ECONOMY">Economy</option>--}}
-                            {{--                                                <option value="BUSINESS">Business</option>--}}
-                            {{--                                            </select>--}}
-                            {{--                                            <p class="selecionado_opcion"--}}
-                            {{--                                               onclick="open_select(this)"></p>--}}
-                            {{--                                            <span onclick="open_select(this)" class="icon_select_mate">--}}
-                            {{--                                                                <i class="fi fi-rr-angle-small-down"></i>--}}
-                            {{--                                                            </span>--}}
-                            {{--                                            <div class="cont_list_select_mate">--}}
-                            {{--                                                <ul class="cont_select_int"></ul>--}}
-                            {{--                                            </div>--}}
-                            {{--                                        </div>--}}
-                            {{--                                    </div>--}}
-                            {{--                                </li>--}}
-                            {{--                                <li>--}}
-                            {{--                                    <div class="promo-code-form">--}}
-                            {{--                                        <input id="promoCode" type="text"--}}
-                            {{--                                               placeholder="+ Add Promo Code">--}}
-                            {{--                                    </div>--}}
-                            {{--                                    <div class="submit-form-button">--}}
-                            {{--                                        <button id="findFlightsMultiCity" type="button">Show Flights--}}
-                            {{--                                        </button>--}}
-                            {{--                                    </div>--}}
-                            {{--                                </li>--}}
-                            {{--                            </ul>--}}
                         </div>
                     </form>
                 </div>
@@ -472,15 +373,10 @@
                     <form>
                         <div class="form-tab-lists">
                             <ul>
-                                <li><input type="text" placeholder="Booking Reference"
-                                           id="retreivepnr_pnr"
-                                           name="retreivepnr_pnr"></li>
-                                <li><input type="text" placeholder="Last Name" id="retreivepnr_lastname"
-                                           name="retreivepnr_lastname"></li>
-                                <li>
+                                <li class="check-in">
                                     <div class="submit-form-button">
-                                        <button type="submit" class="bottompdng"
-                                                id="retreivepnr_SearchFlex_Checkin"
+                                        <button type="button" class="bottompdng"
+                                                id="checkinbtn"
                                                 name="retreivepnr_SearchFlex">Check In
                                         </button>
                                     </div>
