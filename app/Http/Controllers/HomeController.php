@@ -32,7 +32,6 @@ class HomeController extends Controller
         //
         $devices = Analytics::get(Period::days(365), (array)"activeUsers", (array)"deviceCategory");
         $active_devices = $devices->toArray();
-        //  dd($active_devices);
 
         $activeDevices = 0;
         $device_keys = array_keys($active_devices);
@@ -52,9 +51,7 @@ class HomeController extends Controller
         \Lava::DonutChart('topDevices', $topDevices, [
             'title' => 'Top Devices'
         ]);
-        //Active Users
         $active_data = Analytics::fetchTotalVisitorsAndPageViews(Period::days(365));
-//        $active_data = Analytics::fetchVisitorsAndPageViewsByDate(Period::days(365));
         $active = $active_data->toArray();
         $activeUsers = 0;
         $keys_active  = array_keys($active);
